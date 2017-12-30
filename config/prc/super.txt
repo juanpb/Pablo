@@ -1,0 +1,6 @@
+//id;nombre;se imprime; descuento (si 20% => poner 20)
+1;Makro (10-000-2783-18);v
+2;Carrefour (398300);v;33
+3;Coto;v;30
+4;Jumbo;f
+5;Wal-mart;v

@@ -1,0 +1,153 @@
+c:/99
+arch prog: 3gb
+arch prog (x86): 10gb
+usuarios 26 gb
+windows: 73GB
+
+
+C:\Windows\Logs\CBS
+C:\Windows\Temp
+
+dns arnet:200.45.191.35
+dns arnet:200.45.48.233
+8.8.4.4
+___________________________________________
+___________________________________________
+                                                                    
+
+David Gilmour - Live At Pompeii Show (2017) 2: 0.6.0
+parques nacionales 4: 0.8.0
+
+Pink Floyd, The Early Years 1965-1972:
+	04 1970 Devi_Ation: 1.52.10
+	05 1971 Reverber_Ation
+	06 1972 Obfusc_Ation
+	07 Bonus ContinuAtion
+
+bates motel
+Un Gallo Para Esculapio (2017)
+the deuce 1 - b
+mr rob 3 - b
+the young pope - v 
+Silicon Valley 5 - e
+homeland 7 - e
+Mozart In The Jungle 4 - e 
+Fargo 4 - e 
+el chapó 2 - e
+Better call saul 4 - e
+House of c 6 - e
+the americans 6 - e
+orange 6 - e
+narcos 4 - e
+
+
+cromo - falta bajar caps
+Person of Interest - bajar
+Stranger Things - bajar
+
+
+chkdsk g: /f /x /r
+powercfg -h on
+
+_____________________________
+Line Rate - Upstream (Kbps):	1022
+Line Rate - Downstream (Kbps):	17657
+_____________________________
+backup:
+ibook WD, 500GB  --3-sep-13
+Fotos s/videos
+Música incomp.
+
+IOEMGA 1.8 TB   --17-oct-13
+Música
+Fotos
+java
+posters
+
+_____________________________
+
+control remmoto samnsung. INFO - MENU - MUTE - POWER.
+______________________
+vmWare	UC7T0-2PXDM-H857Q-DWYNE-Y68E0
+_________________________
+
+_____________________
+path=J:\Java\apache-ant-1.8.1\bin;
+CP=J:\Java\ProyectosJava\Pablo\classes
+JARS=J:\Java\ProyectosJava\Pablo\jar
+ANT_HOME=J:\Java\apache-ant-1.8.1
+
+
+____________________________
+--- BEGIN LICENSE KEY ---
+HkOCHHXmEk2mNvJ-wM3634+b-20xxzd-y0JJDb-EoeDPVJZtBMXxvfqRi
+l63mPOZun1OxwRq7gy4WSePwrnY17M1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+B1YE9CRtl6yc2E6WgRPUO+9IUeLowpxFpByXzo7TfEw7b+xZS8Kb4QLb1
+0XGw1GeUreZBpocyq-7NUC6+AzPKtM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+jlqdmG-2r2GKQnW0KIGMC-biSCpHb1tsaWSR1teFMKyX66qebAH-EWrR-
+J50coeY7aXiIs7lIL8BiPR-BtYuMNM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+GVRzv9nkgpVCO0zYRpRQb-OrFoGYsgHHFI2uvR0p35BTcVESTSF5Y21QW
+D3ITBx8LQ4uC+llhkt-DIXOhDFiIdM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+lnCoqYSjhkLRzMKnyi3d8S9aqIJUjSUmQW4NpR1TGhiB4Bpz6pMMUEjM9
+KaHFSnpcvfY5y4KTCrG6-YvNcHgTtM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+Oi1u3UiSFC-joktsEVvbhcc4DfiFPtUBHKJv7bppzy47naiY-Fu1pRFYI
+vQ9cII-GhUhJW1bmeL1VsFKLxd-3NM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
++y3IDF8YGjXr1kWZjNkb+u8lAB+CBgGRj7Ay+xxvDCI2nZPx2O+DjRgWI
+9xy07yN+RHrTr-DF7Eye0XADVH347M1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+
+--- BEGIN LICENSE KEY ---
+qfZCZ2UABLxnQSi06-rFS7Qnu6d3JLZczl0JX4ZrNKtNIW9u3dKTm3CjA
+c7LXdHmBIJHvnU7oBnSotvEelSD6NM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+Wgf6snFLp2CnUbf0KXISDb-ED-qpboD6j12lNEXD-yx8wZ5fVLuSQ1KJ+
+j+e6oqnKPUk1z6wIibwwwJLXRiwKdM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+kQR4kMtAWUzPmJA9FlW4bsY-VQzsGKmJgcHI1Mxyzzut4JP-wOrJZ7-W2
+SSqF-ff2bD72BWIoQMh9XTxJeMhF7M1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+Qlrl2S2cjGYRk6v413ucL-yIuLlxjXpUGc+cJLYWzMPzQVd8l5k+cdRbW
+v5EmcS6JZ8HsgIjlH5+nAwMKVME1NM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+Pppa8duIMnJlqHsH6+ZkxJJuevmjLo1swlvYRBIUXFFOSpj4iSK5vFTVH
+KDz4m43QMqYxAu2Lo7kVQFE-Ys9HtM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+qOSvHZin2p6YiboWrq26vWozktkEUydKk1QzKndJXUktmrIniKqgZoew4
+q5+jPrbZNqZ0u7EFFyJMcYFV3v5ONM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+--- BEGIN LICENSE KEY ---
+GGHlkdN3fWG9R1LlqBOqdBXhaef0p9bN8dEb2DVusBGZ1tXb8nz0JiyiH
+-YuogrZFlUGyx49GfboResGEOdG7NM1PrkfQr96Czn52qQhjN+bgTr0If
+atliY4hUdXp40AB64mdbjGOJfeMDNXyaxnzS394D1HS4Hp7O1+Vqwul1U+
+--- END LICENSE KEY -----
+
