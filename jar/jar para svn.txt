@@ -1,0 +1,1 @@
+Los jars para svn tienen que estar en el ANT_HOME/lib

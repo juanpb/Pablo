@@ -1,0 +1,15 @@
+RECYCLER
+web
+System Volume Information
+irene
+j2re1.4.0_02
+otros
+_backup
+_bridge
+___videos
+_bittorrent
+_Configuración local
+_emule
+_emuleListos
+Archivos de programa
+WUTemp

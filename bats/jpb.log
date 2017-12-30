@@ -1,0 +1,17 @@
+11:56:32,903|Config cargado con:
+11:56:32,904|     tiempoPorFoto: 10000
+11:56:32,904|     framesPorSegundo: 1
+11:56:32,904|     repetir: true
+11:56:32,904|     recursivo: false
+11:56:32,904|     bloquearPc: true
+11:56:32,904|     agrandar_para_llenar_pantalla: true
+11:56:32,905|     directorios: [D:\P\_env\Mati\seleccionadasPlus, D:\P\_env\Mati\Juli sel]
+11:56:32,905|     directoriosSinFiltrar: null
+11:56:32,906|     extensiones: [jpg, jpgeg, gif, ras, bmp]
+11:56:32,910|     modo_visualizacion: AJUSTAR_A_PANTALLA
+11:56:32,911|     mostrarMezclado: true
+11:56:32,912|     arrancarSlideShow: true
+11:56:33,559|Se cargarán fotos con las extensiones: [jpg, jpgeg, gif, ras, bmp]
+11:56:35,365|Se mostrarán las fotos de los directorios: [D:\P\_env\Mati\seleccionadasPlus, D:\P\_env\Mati\Juli sel], null, que tienen 127 fotos.
+11:56:35,366|Arranca desde la posición: 33
+12:12:15,429|se repetirán las fotos
