@@ -1,0 +1,37 @@
+#! /bin/sh
+
+case $1 in
+    make)
+        find -iname "*.class"|xargs rm
+
+# Reicht leider nicht mehr. Zu viele Klassen werden dynamisch geladen
+#        javac id3.java
+	find -iname "*.java" >files.txt
+	javac @files.txt
+    ;;
+
+    jar)
+        find -iname "*.class"|xargs rm
+	find -iname "*.java" >files.txt
+	javac @files.txt
+        jar -cvf id3.jar `find -iname "*.class"` 
+    ;;
+
+    clean)
+        rm `find -iname "*.class"`
+        rm `find -iname "*.bak"`
+        rm `find -iname "*~"`
+        rm `find -iname "*.jar"`
+    ;;
+
+    doc)
+	find -iname "*.java" >files.txt
+	javadoc -use -d doc/javadoc @files.txt
+	rm files.txt
+    ;;
+
+
+    *)
+        echo Unknown command $1 used in create
+    ;;
+esac

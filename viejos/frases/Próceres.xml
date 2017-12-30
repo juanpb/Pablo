@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--!DOCTYPE Frases SYSTEM "Frases.dtd"-->
+
+<?xml-stylesheet type="text/xsl" href="frases.xsl"?>
+<Frases>
+    <Frase>
+        <Texto>...no nos indignamos demasiado porque los ingleses exterminen algunas tribus de negros en África Central ¿puede reprocharse a los europeos su penetración en África porque se acompaña de  crueldades?</Texto>
+        <Autor>Juan B. Justo</Autor>
+        <Libro>Teoría y práctica de la historia</Libro>
+        <Pagina>122</Pagina>
+        <Otro>Citado por J. A. Ramos en Rev.  y C. en la Arg., pág. 294</Otro>        
+    </Frase>
+</Frases>

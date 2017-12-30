@@ -1,0 +1,16 @@
+AGENDA
+
+que la agenda reciba el xml como parámetro (ahora está cableado en el Model)
+
+-------------------------------------------
+VER FOTOS
+
+scroll, editConfig;
+evento teclado b-> name, tamaño  i/cantCarpeta, nroCar/tot Carp
+clase p. manejar ev. tclado
+browser
+-------------------------------------------
+PRECIOS
+
+FilterList, al cliquear sobre item no selecciona
+que avise cuando generó la salida

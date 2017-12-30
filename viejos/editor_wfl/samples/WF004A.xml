@@ -1,0 +1,159 @@
+<ProcessesWfl >
+    <ProcessWfl processDefId="id" version="1.00" processDefName="name" processTrace=" " >
+        <Mark markId="H1" markName="Hito 1" markDeletable="N" />
+        <State stateId="E1" stateName="E1x" position="I" maskType="+" maskValue="1" />
+        <State stateId="E2" stateName="E2" position="I" maskType="-" maskValue="1" />
+        <State stateId="E3" stateName="E3" >
+            <DynamicParalelism action="C" finalStateId="E8" pathName="crm.workflow.test.WflDinamicParalelismTestFunction" libraryName="" methodName="" />
+        </State >
+        <State stateId="E4" stateName="E4" />
+        <State stateId="E5" stateName="E5" />
+        <State stateId="E6" stateName="E6" />
+        <State stateId="E7" stateName="E7" />
+        <State stateId="E8" stateName="E8" >
+            <DynamicParalelism action="F" />
+        </State >
+        <State stateId="E9" stateName="E9" />
+        <State stateId="E10" stateName="E10" />
+        <State stateId="E11" stateName="E11" />
+        <State stateId="E12" stateName="E12" />
+        <State stateId="E13" stateName="E13" />
+        <State stateId="E14" stateName="E14" />
+        <State stateId="E15" stateName="E15" />
+        <State stateId="E16" stateName="E16" position="F" />
+        <State stateId="E17" stateName="E17" position="F" />
+        <State stateId="E18" stateName="E18" position="F" maskType="+" maskValue="1" />
+        <State stateId="E19" stateName="E19" position="F" />
+        <State stateId="E20" stateName="E20" >
+            <DynamicParalelism action="C" finalStateId="E24" pathName="crm.workflow.test.WflDinamicParalelismTestFunction" libraryName="" methodName="" />
+            <StateMark markId="H1" action="A" />
+        </State >
+        <State stateId="E21" stateName="E21" />
+        <State stateId="E22" stateName="E22" />
+        <State stateId="E23" stateName="E23" />
+        <State stateId="E24" stateName="E24" position="F" >
+            <DynamicParalelism action="F" />
+            <StateMark markId="H1" action="M" />
+        </State >
+        <State stateId="E25" stateName="E25" >
+            <DynamicParalelism action="C" finalStateId="E27" pathName="crm.workflow.test.WflDinamicParalelismTestFunction" libraryName="" methodName="" />
+        </State >
+        <State stateId="E26" stateName="E26" />
+        <State stateId="E27" stateName="E27" position="F" >
+            <DynamicParalelism action="F" />
+        </State >
+        <Function functionId="F1" functionName="F1" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="CI" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F2" functionName="F2" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F3" functionName="F3" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F4" functionName="F4" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F5" functionName="F5" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F6" functionName="F6" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F7" functionName="F7" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F8" functionName="F8" priority="5" carryContext=" " type="I" >
+            <Rollback executionSyncro="A" executionType="CI" functionClass="sfasdfdsf" />
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" executionName="" />
+        </Function >
+        <Function functionId="F9" functionName="F9" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F10" functionName="F10" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F11" functionName="F11" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F12" functionName="F12" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F13" functionName="F13" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F14" functionName="F14" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F15" functionName="F15" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SA" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F16" functionName="F16" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SA" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F17" functionName="F17" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SA" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F18" functionName="F18" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F19" functionName="F19" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SA" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <Function functionId="F20" functionName="F20" priority="5" carryContext=" " type="I" >
+            <Forward executionSyncro="S" executionType="SS" functionClass="crm.workflow.test.WflTestSrvExecutableFunction" />
+        </Function >
+        <PreFunction stateId="E1" functionId="F1" />
+        <PreFunction stateId="E2" functionId="F2" />
+        <PreFunction stateId="E3" functionId="F3" />
+        <PreFunction stateId="E4" functionId="F4" />
+        <PreFunction stateId="E5" functionId="F5" />
+        <PreFunction stateId="E6" functionId="F6" />
+        <PreFunction stateId="E7" functionId="F7" />
+        <PreFunction stateId="E20" functionId="F15" />
+        <PreFunction stateId="E22" functionId="F16" />
+        <PreFunction stateId="E21" functionId="F17" />
+        <PreFunction stateId="E8" functionId="F8" />
+        <PreFunction stateId="E9" functionId="F8" />
+        <PreFunction stateId="E10" functionId="F8" />
+        <PreFunction stateId="E11" functionId="F9" />
+        <PreFunction stateId="E23" functionId="F18" />
+        <PreFunction stateId="E12" functionId="F10" />
+        <PreFunction stateId="E25" functionId="F19" />
+        <PreFunction stateId="E13" functionId="F11" />
+        <PreFunction stateId="E14" functionId="F12" />
+        <PreFunction stateId="E15" functionId="F13" />
+        <PreFunction stateId="E26" functionId="F20" />
+        <PreFunction stateId="E18" functionId="F14" />
+        <PosFunction functionId="F1" stateId="E3" />
+        <PosFunction functionId="F1" stateId="E4" />
+        <PosFunction functionId="F1" stateId="E5" />
+        <PosFunction functionId="F2" stateId="E6" maskType="+" maskValue="1" />
+        <PosFunction functionId="F2" stateId="E7" maskType="-" maskValue="1" />
+        <PosFunction functionId="F2" stateId="E20" />
+        <PosFunction functionId="F2" stateId="E22" />
+        <PosFunction functionId="F3" stateId="E8" />
+        <PosFunction functionId="F4" stateId="E9" />
+        <PosFunction functionId="F5" stateId="E10" />
+        <PosFunction functionId="F6" stateId="E11" />
+        <PosFunction functionId="F7" stateId="E11" />
+        <PosFunction functionId="F15" stateId="E21" />
+        <PosFunction functionId="F16" stateId="E23" />
+        <PosFunction functionId="F17" stateId="E24" />
+        <PosFunction functionId="F8" stateId="E12" maskType="+" maskValue="1" />
+        <PosFunction functionId="F9" stateId="E12" maskType="+" maskValue="1" />
+        <PosFunction functionId="F18" stateId="E25" />
+        <PosFunction functionId="F10" stateId="E13" maskType="+" maskValue="1" />
+        <PosFunction functionId="F10" stateId="E14" maskType="-" maskValue="1" />
+        <PosFunction functionId="F10" stateId="E15" />
+        <PosFunction functionId="F19" stateId="E26" />
+        <PosFunction functionId="F11" stateId="E16" />
+        <PosFunction functionId="F12" stateId="E17" />
+        <PosFunction functionId="F13" stateId="E18" />
+        <PosFunction functionId="F20" stateId="E27" />
+        <PosFunction functionId="F14" stateId="E19" />
+        <XMLAlias name="nombre" type="C" className="java.util.Name" fieldName="" />
+		<XMLAlias name="nombre2" type="C" className="java.util.Name" fieldName="" />
+	    <XMLAlias name="nombre3" type="C" className="java.util.Name" fieldName="" />
+    </ProcessWfl >
+</ProcessesWfl >

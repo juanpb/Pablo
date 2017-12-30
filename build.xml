@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="jpb" default="compilar" basedir=".">
+
+    <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpath="jar\svnant.jar" /> 
+	    
+	<property environment="env"/>           
+	
+    <property name="TESIS_DIR_ROOT"  value="D:\P\tesis\Formalex\codigo\flts"/>
+    <property name="TESIS_DIR_SRC"  value="${TESIS_DIR_ROOT}\src"/>
+
+    <property name="DIR_ROOT"  value="J:\Java\ProyectosJava\Pablo"/>
+    <property name="DIR_ROOT_PENDRIVE"  value="D:\java\Pablo"/>
+
+    <property name="DIR_SRC"  value="${DIR_ROOT}\src"/>
+    <property name="DIR_BAT"  value="${DIR_ROOT}\bats"/>
+    <property name="DIR_SRC_PENDRIVE"  value="${DIR_ROOT_PENDRIVE}\src"/>
+    <property name="DIR_BAT_PENDRIVE"  value="${DIR_ROOT_PENDRIVE}\bats"/>
+
+    <property name="DIR_CONFIG"  value="${DIR_ROOT}\config"/>
+    <property name="DIR_CONFIG_PENDRIVE"  value="${DIR_ROOT_PENDRIVE}\config"/>
+
+
+    <property name="src" location="src"/>
+    <property name="build" location="classes"/>
+    <property name="jar"  location="jar"/>
+
+	<!-- SVN-->
+	<property name="svn_information_xml" value="SvnInfo.xml"/>
+	<available file="${svn_information_xml}" property="svn_information_xml_available"/>
+	<xmlproperty file="${svn_information_xml}" />
+	<property name="svnUsername" value="${SvnInformation.SvnUsername}"/> 
+	<property name="svnPassword" value="${SvnInformation.SvnPassword}"/>      
+
+				
+ 
+    <property name="jar_rt"  value="{env.JAVA_HOME}\jre\lib\rt.jar" />
+    	
+    <property name="jars"  value="
+        ${jar}\commons-io-2.4.jar;
+        ${jar}\metadata-extractor-2.3.1.jar;
+        ${jar}\jdom.jar;
+        ${jar}\junit-4.4.jar;
+        ${jar}\log4j.jar;
+        ${jar}\tools.jar;
+		${jar}\javamail-1.2\imap.jar;
+		${jar}\javamail-1.2\mail.jar;
+		${jar}\javamail-1.2\mailapi.jar;
+		${jar}\javamail-1.2\pop3.jar;
+		${jar}\javamail-1.2\smtp.jar;		
+		${jar}\velocity-1.7.jar;			
+        "/>
+
+
+    <target name="compilar" depends="init"  >
+        <echo message="javaHome = ${env.JAVA_HOME}"/>
+        <echo message="classpath = ${jars}"/>
+        <javac  srcdir="${src}" 
+                destdir="${build}"
+                classpath="${jars}"
+				debug="true" debuglevel="lines,vars,source"/>
+		
+		<!-- copio resources -->
+		<copy todir="${build}">
+			<fileset dir="src"
+				includes="**/*.xml,**/*.properties,**/*.txt,**/*.ico, **/*.JPG" />
+		</copy>
+
+    </target>
+
+    <target name="init">
+        <mkdir dir="${build}"/>
+    </target>
+ 
+	<!-- ejemplo para hacer jar, falta setear variables, 	-->
+	<target name="hacerJar">
+		<jar destfile="${jar}/p.jar" basedir="${build}"/>
+	</target>
+ 
+	<target name="svn_update" description="Realiza el update de un repositorio svn." >	
+		<svn username="${svnUsername}" password="${svnPassword}">
+		  <!--update dir="." /-->
+		  <update dir="{$DIR_SRC}" />
+		</svn>
+	</target>
+	
+	<target name="svn_commit" description="Integra los cambios realizados en el repositorio svn.">
+        <svn username="${svnUsername}" password="${svnPassword}">
+		    <add dir="${DIR_SRC}" force="true" />
+            <!--commit message=""-->
+            <commit message="">
+		  	    <fileset dir="${DIR_SRC}" includes="**/*" />
+		    </commit>		  
+		</svn>
+	</target>
+
+
+    <target name="sincronizarJavaYCompilar" description="comitea fuentes del pendrive y del HD, luego hace update en ambos. compila los fuentes del HD" >
+        <antcall target="sincronizarJava" />
+        <antcall target="compilar" />
+    </target>
+
+    <target name="--" description="comitea fuentes del pendrive y del HD, luego hace update en ambos" >
+        <svn username="${svnUsername}" password="${svnPassword}">
+            <commit message="">
+                <fileset dir="${DIR_SVN}" includes="**/*" />
+            </commit>
+            <commit message="">
+                <fileset dir="${DIR_SVN_PENDRIVE}" includes="**/*" />
+            </commit>
+
+            <update dir="${DIR_SVN}" />
+            <update dir="${DIR_SVN_PENDRIVE}" />
+        </svn>
+    </target>
+
+    <target name="sincronizarJava" description="comitea fuentes del pendrive y del HD, luego hace update en ambos" >
+		<echo message="Comiteando ${DIR_CONFIG}"/>
+		<echo message="Comiteando ${DIR_SRC}"/>
+		<echo message="Comiteando ${DIR_BAT}"/>
+		<echo message="Comiteando ${DIR_CONFIG_PENDRIVE}"/>
+		<echo message="Comiteando ${DIR_SRC_PENDRIVE}" />
+		<echo message="Comiteando ${DIR_BAT_PENDRIVE}" />
+        <svn username="${svnUsername}" password="${svnPassword}">			
+            <commit message="">
+                <fileset dir="${DIR_CONFIG}" includes="**/*" />
+                <fileset dir="${DIR_SRC}" includes="**/*" />
+                <fileset dir="${DIR_BAT}" includes="**/*" />
+                <fileset dir="${DIR_CONFIG_PENDRIVE}" includes="**/*" />
+                <fileset dir="${DIR_SRC_PENDRIVE}" includes="**/*" />
+                <fileset dir="${DIR_BAT_PENDRIVE}" includes="**/*" />
+            </commit>
+
+            <update>
+                <fileset dir="${DIR_CONFIG}" includes="**/*" />
+                <fileset dir="${DIR_SRC}" includes="**/*" />
+                <fileset dir="${DIR_CONFIG_PENDRIVE}" includes="**/*" />
+                <fileset dir="${DIR_SRC_PENDRIVE}" includes="**/*" />
+                <fileset dir="${DIR_BST_PENDRIVE}" includes="**/*" />
+            </update>
+        </svn>
+    </target>
+
+    <target name="commitYUpdate" >
+        <svn username="${svnUsername}" password="${svnPassword}">
+            <commit message="">
+                <fileset dir="." includes="**/*" />
+            </commit>
+
+            <update>
+                <fileset dir="." includes="**/*" excludes="classes/**"  />
+            </update>
+        </svn>
+    </target>
+	
+    <target name="commitYUpdateTrab" >
+        <svn username="${svnUsername}" password="${svnPassword}">		
+            <commit message="" file="./src/todo.txt">
+				
+				<!--fileset dir="./src/" includes="**/*">   
+				</fileset>   
+				<fileset dir="./src/" /-->	
+            </commit>
+
+            <!--update>
+                <fileset dir="." includes="**/*" excludes="classes/**"  />
+            </update-->
+        </svn>
+    </target>
+
+	
+	<svnSetting
+        id="svn.settings"
+        svnkit="false"
+        javahl="false"
+        username="${svnUsername}"
+        password="${svnPassword}" />
+
+    <target name="commitFile" >
+		<echo message="path = ${env.ANT_HOME}"/>
+		<echo message="svn_information_xml_available = ${svn_information_xml_available}"/>
+		<echo message="Comiteando username = ${svnUsername}"/>		
+		<svn refid="svn.settings">
+            <commit message="-" >
+				<fileset file="${nombre}" />				
+            </commit>
+        </svn>		
+    </target>
+
+
+    <target name="correrJavaCC" >
+        <javacc
+                target="${TESIS_DIR_SRC}/ar/uba/dc/formalex/parser/FL.jj"
+                outputdirectory="${TESIS_DIR_SRC}/ar/uba/dc/formalex/parser"
+                javacchome="D:\P\tesis\Formalex\codigo\flts\lib"
+        />
+    </target>
+
+    <target name="copiarVelocity" >
+        <copy todir="D:\P\java\codigo\Pablo\classes\templates">
+            <fileset dir="D:\P\java\codigo\Pablo\src\p\pruebas\velocity\apuntesTesis"
+                     includes="*.vm" />
+        </copy>
+    </target>
+</project>

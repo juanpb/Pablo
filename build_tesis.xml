@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="jpb" default="compilar" basedir=".">
+
+	<property environment="env"/>           
+	
+    <property name="TESIS_DIR_ROOT"  value="D:\P\tesis\Formalex\codigo\flts"/>
+    <property name="TESIS_DIR_SRC"  value="${TESIS_DIR_ROOT}\src"/>
+
+    <property name="src" location="src"/>
+    <property name="build" location="classes"/>
+    <property name="dist" location="dist"/>
+    <property name="jar"  location="jar"/>
+ 
+    	
+    <property name="jars"  value="
+        ${jar}\metadata-extractor-2.3.1.jar;
+        ${jar}\jdom.jar;
+        ${jar}\junit-4.4.jar;
+        ${jar}\log4j.jar;
+        ${jar}\tools.jar;
+		${jar}\javamail-1.2\imap.jar;
+		${jar}\javamail-1.2\mail.jar;
+		${jar}\javamail-1.2\mailapi.jar;
+		${jar}\javamail-1.2\pop3.jar;
+		${jar}\javamail-1.2\smtp.jar;		
+        "/>
+
+
+    <target name="hacerJarQC">
+        <jar destfile="${dist}/lib/app.jar" basedir="${build}"
+             includes="p/proc/velocity/Prueba.*,
+                       p/util/UtilFile.*,
+                       p/proc/velocity/AsigSevHs.*,
+                       templates/**,
+                        ">
+            <!--manifest>
+                <attribute name="Main-Class"
+                           value="p.proc.velocity.Prueba"/>
+            </manifest-->
+        </jar>
+    </target>
+
+    <target name="compilar" depends="init"  >
+        <echo message="javaHome = ${env.JAVA_HOME}"/>
+        
+        <javac  srcdir="${src}" 
+                destdir="${build}"
+                classpath="${jars}"/>
+		
+		<!-- copio resources -->
+		<copy todir="${build}">
+			<fileset dir="src"
+				includes="**/*.xml,**/*.properties,**/*.txt,**/*.ico, **/*.JPG" />
+		</copy>
+
+    </target>
+
+    <target name="init">
+        <mkdir dir="${build}"/>
+    </target>
+
+    <target name="correrJavaCC" >
+        <javacc
+                target="${TESIS_DIR_SRC}/ar/uba/dc/formalex/parser/FL.jj"
+                outputdirectory="${TESIS_DIR_SRC}/ar/uba/dc/formalex/parser"
+                javacchome="D:\P\tesis\Formalex\codigo\flts\lib"
+        />
+    </target>
+
+    <target name="copiarVelocity" >
+        <copy todir="D:\P\java\codigo\Pablo\classes\templates">
+            <fileset dir="D:\P\java\codigo\Pablo"
+                     includes="*.vm" />
+        </copy>
+    </target>
+</project>

@@ -1,0 +1,11 @@
+<root>
+    <item name='p.proc.velocity.AsigSevHs java.lang.String toString()'>
+        <annotation name='java.lang.Override'>
+        </annotation>
+    </item>
+    <item name='p.proc.velocity.AsigSevHs'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;ALL&quot;"/>
+        </annotation>
+    </item>
+</root>

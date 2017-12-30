@@ -1,0 +1,68 @@
+<crm.core.wfl.editor.function.WflServiceTypeDefinition-array>
+  <crm.core.wfl.editor.function.WflServiceTypeDefinition>
+    <id>JS</id>
+    <description>JavaScript</description>
+    <scriptable>true</scriptable>
+    <scriptCompiler>crm.core.wfl.editor.function.js.WflJavaScriptCompiler</scriptCompiler>    
+    <scriptEditor>crm.core.wfl.editor.function.js.WflJavaScriptEditor</scriptEditor>        
+    <defaultFunction>crm.appl.wfl.base.js.WflJavaScriptFunction</defaultFunction>
+    <defaultScript><![CDATA[
+// definition: Definicion del proceso de negocio.
+// control   : Datos de control de la instancia corriente.
+// data      : Bolsa de datos, objetos, properties, etc.
+function myFunction(definition, control, data) {
+
+		/* 
+		// Acceso a los datos de la bolsa
+		var dataBag = data.getDataBag();		// Bolsa de Datos
+		var objBag = data.getObjectBag();		// Bolsa de Objetos
+		var propBag = data.getPropertyBag();	// Bolsa de Properties
+		*/
+
+		// Armado del valor de retorno.
+		var returnStatus = new WflStatus();
+		returnStatus.setOk();
+
+		/*
+		// Invocacion a un web service.
+
+		var payLoad = <miXML></miXML>; // Poner aca el XML del WebService
+		try {		  
+			// Invoko el webservice
+			WflJsLogger.debug(definition, "Invocando al WS con " + payLoad.toXMLString());			
+			
+			var returnedPayLoad = WflWsInvoker.invoke("http://targetURL", // Poner aca la URL del WS
+													  "urn:serviceName",  // Poner aca el nombre del servicio
+													  payLoad);
+			
+		}
+		catch(e) {
+			WflJsLogger.error(definition, "Error " + e);
+			returnStatus.setError("Error " + e);
+		}
+		*/
+
+		// Devuelve el status
+		return returnStatus;
+
+}]]></defaultScript>
+  </crm.core.wfl.editor.function.WflServiceTypeDefinition>
+  <crm.core.wfl.editor.function.WflServiceTypeDefinition>
+    <id>J</id>
+    <description>Java</description>
+    <scriptable>false</scriptable>
+    <scriptCompiler></scriptCompiler>        
+    <scriptEditor></scriptEditor>        
+    <defaultFunction></defaultFunction>
+    <defaultScript>aaaaaaaaaaaaaa</defaultScript>
+  </crm.core.wfl.editor.function.WflServiceTypeDefinition>
+  <crm.core.wfl.editor.function.WflServiceTypeDefinition>
+    <id>AS</id>
+    <description>Action Script</description>
+    <scriptable>false</scriptable>
+    <scriptCompiler></scriptCompiler>    
+    <scriptEditor></scriptEditor>                    
+    <defaultFunction></defaultFunction>
+    <defaultScript></defaultScript>
+  </crm.core.wfl.editor.function.WflServiceTypeDefinition>
+</crm.core.wfl.editor.function.WflServiceTypeDefinition-array>

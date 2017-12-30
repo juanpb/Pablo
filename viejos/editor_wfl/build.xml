@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="wfl_editor" default="all" basedir=".">
+	<property name="mod" value="wfl_editor"/>
+	<property name="archetype" value="library"/>
+
+  <target name="generate_tar"  description="Genera el tar del modulo.">
+    <!--Verificacion de dependencias SNAPSHOT para un release oficial-->
+    <antcall target="validate_snapshot_dependencies">
+      <param name="pomFile" value="${pom_java}" />
+    </antcall>
+    <delete dir="${dir_tar}" />
+    <mkdir dir="${dir_tar}" />
+    <!--Directorio temporal donde se arma el contenido del tar-->
+    <delete dir="${tmp_tar}" />
+    <mkdir dir="${tmp_tar}" />
+    <!--Version del paquete-->
+    <xmlproperty file="pom.xml" />
+    <property name="mod_version" value="${project.version}" />
+    <copy todir="${tmp_tar}">
+      <fileset dir="${dir_src_resources_install}">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+    <mkdir dir="${tmp_tar}/lib" />
+    <copy todir="${tmp_tar}/lib">
+      <fileset dir="${dir_lib_java}">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+    <!--Se copian los jars del modulo-->
+    <copy overwrite="yes" todir="${tmp_tar}">
+      <fileset dir="${dir_target_java}">
+        <include name="*.jar" />
+      </fileset>
+    </copy>
+	<!--Se genera el tar-->
+    <tar destfile="${dir_tar}/${mod}-${mod_version}.tar"
+		basedir="${tmp_tar}">
+	</tar>
+  </target>
+	
+  <!-- Se pone la importacion abajo para que tome primero el target generate_tar propio -->
+  <property environment="env" />
+  <import file="${env.ANT_HOME}/atuin/build.xml" />
+	
+</project>
+
+
+

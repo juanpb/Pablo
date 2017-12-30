@@ -1,0 +1,7 @@
+<!ELEMENT Frases (Frase*)>
+<!ELEMENT Frase (Texto, Autor, Libro?, Pagina?, Otro?)>
+<!ELEMENT Texto (#PCDATA)>
+<!ELEMENT Autor (#PCDATA)>
+<!ELEMENT Libro (#PCDATA)>
+<!ELEMENT Pagina (#PCDATA)>
+<!ELEMENT Otro  (#PCDATA)>
