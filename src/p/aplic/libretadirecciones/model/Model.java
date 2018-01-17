@@ -40,7 +40,7 @@ public class Model {
         if (direcciones != null)
             return direcciones;
         if (xmlFile == null){
-            throw new RuntimeException("No se defini� el xml con los datos");
+            throw new RuntimeException("No se definió el xml con los datos");
         }
 
         archivo = new File(xmlFile);
@@ -102,19 +102,19 @@ public class Model {
             dir.setCorreo(el.getText());
         }
 
-        List children = per.getChildren("Categor�a");
+        List children = per.getChildren("Categoría");
         if (children != null){
             for(Object o : children) {
                 dir.addCategoria(((Element)o).getText());
             }
         }
 
-        el = per.getChild("Direcci�n");
+        el = per.getChild("Dirección");
         if (el != null){
             dir.setDirec(el.getText());
         }
 
-        el = per.getChild("M�vil");
+        el = per.getChild("Móvil");
         if (el != null){
             dir.setMovil(el.getText());
         }
@@ -141,7 +141,7 @@ public class Model {
 
        hacerBackup(salida);
         try{
-            Element raiz = new Element("Ra�z");
+            Element raiz = new Element("Raíz");
             Document docSal = new Document(raiz);
 
             Ordenar.ordenar(dirs);
@@ -163,16 +163,16 @@ public class Model {
         }
     }
 
-    //lo �nico que hace es renombrar el archivo
+    //lo único que hace es renombrar el archivo
     private static void hacerBackup(String salida) {
         File f = new File(salida);
         String nuevo = salida + "_" + Fechas.getAAAADDMMHHMMSS("");
         boolean b = f.renameTo(new File(nuevo));
         if (!b)
-            throw new RuntimeException("Fall� buckup de archivo. Ver Model.hacerBackup()");
+            throw new RuntimeException("Falló buckup de archivo. Ver Model.hacerBackup()");
     }
 
-    //HACER BACKUP ANTES DE LLAMAR A ESTE M�TODO
+    //HACER BACKUP ANTES DE LLAMAR A ESTE MÉTODO
     private static void grabar(Document docSal, String salida) throws Exception {
         XMLOutputter out = new XMLOutputter();
         Format format = out.getFormat();
@@ -203,7 +203,7 @@ public class Model {
         List<String> cates = dir.getCategorias();
         if (cates != null){
             for(String c : cates) {
-                Element el = new Element("Categor�a");
+                Element el = new Element("Categoría");
                 el.setText(c);
                 per.addContent(el);
             }
@@ -218,14 +218,14 @@ public class Model {
 
         str = dir.getDirec();
         if (str != null && !str.equals("")){
-            Element el = new Element("Direcci�n");
+            Element el = new Element("Dirección");
             el.setText(str);
             per.addContent(el);
         }
 
         str = dir.getMovil();
         if (str != null && !str.equals("")){
-            Element el = new Element("M�vil");
+            Element el = new Element("Móvil");
             el.setText(str);
             per.addContent(el);
         }
@@ -261,7 +261,7 @@ public class Model {
 
         if (dir.isHistorico()){
             Element el = new Element("Historico");
-            el.setText("S�");
+            el.setText("Sí");
             per.addContent(el);
         }
         return per;
@@ -271,8 +271,8 @@ public class Model {
         List<String> res = new Vector<String>();
 
         res.add("Trabajo");
-        res.add("M�dicos Mat�as");
-        res.add("M�dicos JP");
+        res.add("Médicos Matías");
+        res.add("Médicos JP");
         res.add("Particular");
         res.add("Auto");
         res.add("Exactas");
@@ -286,21 +286,21 @@ public class Model {
     }
 
     public static void agregarDireccion(Direccion d) throws IOException {
-        String s = "Direcci�n nueva:\n    " + d.toString();
+        String s = "Dirección nueva:\n    " + d.toString();
         log(s);
         direcciones.add(d);
         guardar();
     }
 
     public static void borrar(Direccion d) throws IOException {
-        String s = "Direcci�n borrada:\n    " + d.toString();
+        String s = "Dirección borrada:\n    " + d.toString();
         log(s);
         direcciones.remove(d);
         guardar();
     }
 
     public static void modificar(Direccion vieja, Direccion nueva) throws IOException {
-        String s = "Direcci�n modificada:\n    " +
+        String s = "Dirección modificada:\n    " +
                 "Vieja: " + vieja.toString() + "\n    " +
                 "Nueva: " + nueva.toString();
         log(s);

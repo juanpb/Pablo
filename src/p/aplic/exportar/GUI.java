@@ -18,6 +18,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -838,7 +839,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         String n = txtRenNuevo.getText();
         if (v.length() == 0)
             return ;
-        
+
         List<String> list = getTextAsList();
         int pos = 0;
         for(String s : list) {
@@ -953,12 +954,42 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         int pos = 0;
 
         StringBuilder sb = new StringBuilder();
+        //agrego cabecera
+        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER).append("Precio total").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
+                append(Constantes.NUEVA_LINEA) ;
+
+        double acumSinIva = 0;
+        double acumConIva = 0;
+        DecimalFormat df = new DecimalFormat("#.##");
+
         for(int i = 0; i< list.size()-2; i=i+3) {
             String prod = list.get(i);
-            String cant = list.get(i+1);
+            String cant = list.get(i+1); //ej:6.00
+//            cant = cant.replace(".", ","); //cambio separador de decimales
             String prec = list.get(i+2);
-            sb.append(prod).append(Constantes.TAB_CHARACTER).append(cant).append(Constantes.TAB_CHARACTER).append(prec).append(Constantes.NUEVA_LINEA) ;
+//            prec = prec.replace(".", ","); //cambio separador de decimales
+            prec = prec.replace("$", ""); //cambio separador de decimales
+
+            double cantDouble = Double.parseDouble(cant);
+            double precioDouble = Double.parseDouble(prec);
+            double precioPorUnidad = precioDouble / cantDouble;
+            double precioPorUnidadSinIva = precioPorUnidad / 1.21; //asume iva 21%
+            double precioTotalSinIva = precioPorUnidadSinIva * cantDouble; //asume iva 21%
+
+            acumConIva +=precioDouble;
+            acumSinIva +=precioTotalSinIva;
+
+            sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER).
+                    append(df.format(precioPorUnidad)).append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
+                    append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
+                    append(Constantes.NUEVA_LINEA) ;
         }
+        sb.append("Total").append(Constantes.TAB_CHARACTER).append(Constantes.TAB_CHARACTER).
+                append(Constantes.TAB_CHARACTER).append(df.format(acumConIva)).append(Constantes.TAB_CHARACTER).
+                append(Constantes.TAB_CHARACTER).append(df.format(acumSinIva)).append(Constantes.TAB_CHARACTER).
+                append(Constantes.NUEVA_LINEA) ;
         list.clear();
         list.add(sb.toString());
         mostrar(list);

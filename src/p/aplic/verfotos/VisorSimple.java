@@ -286,8 +286,7 @@ public class VisorSimple extends JFrame {
                 else
                     salir();
             }
-            else if (keyCode == KeyEvent.VK_P
-                        ||keyCode == KeyEvent.VK_SPACE){
+            else if (keyCode == KeyEvent.VK_P){
                 log.debug("es pausa/reanudar");
                 pausado = !pausado;
             }
@@ -351,7 +350,8 @@ public class VisorSimple extends JFrame {
                 apuntarAProximaFoto(true);
                 mostrarFotoActual();
             }
-            else if (keyCode == KeyEvent.VK_PAGE_DOWN){
+            else if (keyCode == KeyEvent.VK_PAGE_DOWN
+                    ||keyCode == KeyEvent.VK_SPACE){
                 log.debug("es PAGE DOWN");
                 apuntarAProximaFoto();
                 mostrarFotoActual();

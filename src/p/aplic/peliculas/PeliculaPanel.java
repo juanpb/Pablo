@@ -184,7 +184,10 @@ public class PeliculaPanel extends JPanel {
             String dirRaizCarpetaHD = System.getProperty("dirRaizCarpetaHD" + cont);
 
             if (dirRaizCarpetaHD == null)  {
-                throw new RuntimeException("No se definió carpeta para el año " + annus);
+                String msj = "No se definió carpeta para el año " + annus;
+                JOptionPane.showMessageDialog(null, msj);
+
+                throw new RuntimeException();
             }
             //formato (0-2009)L:\\películas\\
             int j = dirRaizCarpetaHD.indexOf(")");
