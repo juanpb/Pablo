@@ -8,11 +8,10 @@
 10-"F:\Mis documentos\exe\T-Clock 2010 (build X - Release to DC)\x64\Clock.EXE"
 5-C:\WINDOWS\explorer.exe Z:\torrent
 10-C:\WINDOWS\explorer.exe F:\
-10-C:\WINDOWS\explorer.exe R:\películas
+10-C:\WINDOWS\explorer.exe S:\películas
 //20-c:\Program Files\Babylon Translator\babylon.exe"
 10-"C:\Program Files (x86)\Notepad++\notepad++.exe"
 10-cmd /c start F:\Java\ProyectosJava\Pablo\bats\Peliculas.bat F:\Java\ProyectosJava\Pablo\config\pelis\config.ini
 50-cmd /c start F:\Java\ProyectosJava\Pablo\bats\ping.bat 
 //50-"C:\Program Files (x86)\JetBrains\IntelliJ IDEA 11.1.2\bin\idea.exe"
-20-"c:\Program Files (x86)\Winamp\winamp.exe"
-//10-"C:\Program Files (x86)\Babylon\Babylon-Pro\Babylon.exe"
+//20-"c:\Program Files (x86)\Winamp\winamp.exe"
