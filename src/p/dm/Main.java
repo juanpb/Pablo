@@ -27,7 +27,7 @@ public class Main {
         Filtros.sacarComillas(ds);
         Filtros.trim(ds);
         StringBuffer sal = GeneradorSalida.salida(ds, Constantes.TAB_CHARACTER+"");
-        Util.pergarEnElPortapapeles(sal.toString());
+        Util.pegarEnElPortapapeles(sal.toString());
         JOptionPane.showMessageDialog(null, "Se pegó la salida en el portapapeles");
     }
 

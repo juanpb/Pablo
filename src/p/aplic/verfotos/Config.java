@@ -19,6 +19,8 @@ import java.util.StringTokenizer;
 public class Config {
     private ModoVisualizacion modoVisualizacion = ModoVisualizacion.TAMANO_REAL_A_PANTALLA;
     private List<String> directorios = null;
+    private String txtConListaDeFotos = null;
+    private String txtConListaDeFotosABorrar = null;
     private List<String> directoriosSinFiltrar = null;
     private List<String> extensiones = null;
     private long tiempoPorFoto = 4000;
@@ -57,7 +59,7 @@ public class Config {
         for (String s : lst) {
             //si el nombre de una propiedad es prefijo de otra => ponerla después
 
-            if (s.startsWith("tiempo_por_foto"))
+           if (s.startsWith("tiempo_por_foto"))
                 tiempoPorFoto = getLong(s);
             else if (s.startsWith("frames_por_segundo"))
                 framesPorSegundo = getLong(s);
@@ -85,11 +87,17 @@ public class Config {
                 directoriosSinFiltrar = getList(s, SEPARADOR);
             else if (s.startsWith("directorios"))
                 directorios = getList(s, SEPARADOR);
+           else if (s.startsWith("txt_con_lista_de_fotos_a_borrar"))
+               txtConListaDeFotosABorrar = getValue(s);
+            else if (s.startsWith("txt_con_lista_de_fotos"))
+                txtConListaDeFotos = getValue(s);
+            else if (s.startsWith("txt_con_lista_de_fotos"))
+               txtConListaDeFotos = getValue(s);
             else if (s.startsWith("filtroFotos"))
                 filtroFotos = getList(s, SEPARADOR);
             else if (s.startsWith("extensiones"))
                 extensiones = getList(s, SEPARADOR);
-            else if (s.startsWith("modo_visualizacion"))
+           else if (s.startsWith("modo_visualizacion"))
                 modoVisualizacion = ModoVisualizacion.parse(getValue(s));
             else if (s.startsWith("numeroDeMonitor"))
                 numeroDeMonitor = getInt(s);
@@ -138,6 +146,15 @@ public class Config {
     private Boolean getBoolean(String s) {
         String v = getValue(s).toLowerCase();
         return v.startsWith("s") || v.startsWith("y") || v.startsWith("t") || v.startsWith("v");
+    }
+
+    public String getTxtConListaDeFotos() {
+        return txtConListaDeFotos;
+    }
+
+
+    public String getTxtConListaDeFotosABorrar() {
+        return txtConListaDeFotosABorrar;
     }
 
     /**
@@ -311,7 +328,7 @@ public class Config {
     }
 
     public Character getTeclaDesbloqueo() {
-        if (teclaDesbloqueo == null)
+        if (teclaDesbloqueo == null || teclaDesbloqueo.length() ==0)
             return null;
         else
             return teclaDesbloqueo.charAt(0);

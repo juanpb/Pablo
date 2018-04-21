@@ -126,7 +126,7 @@ public class PrincipalPanelDirecciones extends JPanel{
             d = d.substring(2);
         if (d.endsWith(";"))
             d = d.substring(0, d.length()-1);
-        Util.pergarEnElPortapapeles(d);
+        Util.pegarEnElPortapapeles(d);
     }
 
     private void pasarAHistorico(int sr) {

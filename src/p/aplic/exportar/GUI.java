@@ -754,7 +754,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
     private void mostrar(String txt){
         textArea.setText(txt);
         if (chkPegarEnPortapapeles.isSelected())
-            Util.pergarEnElPortapapeles(txt);
+            Util.pegarEnElPortapapeles(txt);
     }
     private void mostrarDlg(String txt){
         JOptionPane.showMessageDialog(frame, txt);
@@ -956,8 +956,9 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         StringBuilder sb = new StringBuilder();
         //agrego cabecera
         sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
-                append("Precio unidad").append(Constantes.TAB_CHARACTER).append("Precio total").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
+                */
                 append(Constantes.NUEVA_LINEA) ;
 
         double acumSinIva = 0;
@@ -982,14 +983,16 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
             acumSinIva +=precioTotalSinIva;
 
             sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER).
-                    append(df.format(precioPorUnidad)).append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
+                    append(df.format(precioPorUnidad))./*.append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
                     append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
+                    */
                     append(Constantes.NUEVA_LINEA) ;
         }
+        /*
         sb.append("Total").append(Constantes.TAB_CHARACTER).append(Constantes.TAB_CHARACTER).
                 append(Constantes.TAB_CHARACTER).append(df.format(acumConIva)).append(Constantes.TAB_CHARACTER).
                 append(Constantes.TAB_CHARACTER).append(df.format(acumSinIva)).append(Constantes.TAB_CHARACTER).
-                append(Constantes.NUEVA_LINEA) ;
+                append(Constantes.NUEVA_LINEA) ;      */
         list.clear();
         list.add(sb.toString());
         mostrar(list);

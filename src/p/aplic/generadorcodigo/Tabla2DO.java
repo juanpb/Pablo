@@ -189,7 +189,7 @@ public class Tabla2DO {//multiple top level classes
 
         txt = salida.toString();
         textArea.setText(txt);
-        p.util.Util.pergarEnElPortapapeles(txt);
+        p.util.Util.pegarEnElPortapapeles(txt);
         String msg = "Se pegó el código generado en el portapapeles." +
                 nuevaLinea + "Agregar @Id adonde corresponda."+
                 nuevaLinea + "Modificar las relaciones con otros objetos."+

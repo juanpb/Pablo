@@ -414,6 +414,14 @@ public class UtilFile {
         return getArchivoPorLinea(f, null);
     }
 
+    public static List<String> getArchivoPorLinea(String f, boolean sacarLineasVacias) throws IOException {
+        return getArchivoPorLinea(new File(f), sacarLineasVacias);
+    }
+
+    public static List<String> getArchivoPorLinea(File f, boolean sacarLineasVacias) throws IOException {
+        return getArchivoPorLinea(f, Integer.MAX_VALUE, null, sacarLineasVacias);
+    }
+
     public static List<String> getArchivoPorLinea(File f, String excluirSiEmpiezaCon) throws IOException {
         if (!f.exists()){
             String s = "No existe el archivo = '" + f.getAbsolutePath() + "'";
@@ -433,6 +441,12 @@ public class UtilFile {
     public static List<String> getArchivoPorLinea(File f, int cantMaxLineas,
                                                   String excluirSiEmpiezaCon)
 			throws IOException{
+        return getArchivoPorLinea(f, cantMaxLineas, excluirSiEmpiezaCon, false);
+    }
+
+    public static List<String> getArchivoPorLinea(File f, int cantMaxLineas,
+                                                  String excluirSiEmpiezaCon, boolean sacarLineasVacias)
+			throws IOException{
         LineNumberReader lnr = null;
         int cont = 0;
         try{
@@ -443,8 +457,10 @@ public class UtilFile {
                 if (excluirSiEmpiezaCon != null && linea.startsWith(excluirSiEmpiezaCon))
                     ;
                 else
-                    res.add(linea);
-                cont++;
+                    if (!sacarLineasVacias || !linea.trim().equals("")){
+                        res.add(linea);
+                        cont++;
+                    }
             }
             return res;
         }
@@ -566,6 +582,9 @@ public class UtilFile {
      * @param destino
      */
     public static void agregarAlFinal(String txt, String destino) throws IOException {
+        System.out.println("txt = " + txt);
+
+        System.out.println("destino = " + destino);
         agregarAlFinal(txt, new File(destino));
     }
 

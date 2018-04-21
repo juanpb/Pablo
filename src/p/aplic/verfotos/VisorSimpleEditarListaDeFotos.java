@@ -2,8 +2,6 @@ package p.aplic.verfotos;
 
 import org.apache.log4j.Logger;
 import p.aplic.verfotos.estrVisul.Basica;
-import p.pruebas.Antibloqueo;
-import p.util.DirFileFilter;
 import p.util.GUI;
 import p.util.Util;
 import p.util.UtilFile;
@@ -76,7 +74,7 @@ public class VisorSimpleEditarListaDeFotos extends JFrame {
         basica.setOffset(offset);
 
         basica.setConfig(config);
-        cargarFotosDeArchivo();
+        cargarFotos();
 
         basica.setPorcentaje(0.0d);
 
@@ -251,12 +249,6 @@ public class VisorSimpleEditarListaDeFotos extends JFrame {
                 salir();
             }
 
-            if (config.getTeclaDesbloqueo() != null){
-                if (config.getTeclaDesbloqueo() == (e.getKeyChar())){
-                    salir();
-                }
-            }
-
 
             log.debug("Procesando evento de teclado, keyCode =  " + keyCode);
             if (keyCode == KeyEvent.VK_ESCAPE ){
@@ -346,8 +338,16 @@ public class VisorSimpleEditarListaDeFotos extends JFrame {
                 fotosAMostrar.remove(indiceFotos);
                 mostrarFotoActual();
             }
+            else if (keyCode == KeyEvent.VK_DELETE){
+                System.out.println("Se borrará la foto nro: " + indiceFotos);
+                File file = fotosAMostrar.get(indiceFotos);
+                fotosAMostrar.remove(indiceFotos);
+                mostrarFotoActual();
+            }
         }
     }
+
+
 
     private void mostrarFotoActual(){
         Image imagen = getImagen();
@@ -388,19 +388,15 @@ public class VisorSimpleEditarListaDeFotos extends JFrame {
         }
     }
 
-    private void cargarFotosDeArchivo()  {
+    private void cargarFotos()  {
         log.info("Se cargarán fotos del archivo: " + config.getDirectorios());
         try {
-            List<String> archivoPorLinea = UtilFile.getArchivoPorLinea(config.getDirectorios().get(0));
+            List<String> archivoPorLinea = UtilFile.getArchivoPorLinea(config.getDirectorios().get(0), true);
             fotosAMostrar = new ArrayList<File>();
             for (String ar : archivoPorLinea) {
                 File e = new File(ar);
-                if (e.exists())
-                    fotosAMostrar.add(e);
-                else
-                    System.out.println("No existe el archivo: '" + e.getAbsolutePath() + "'");
+                fotosAMostrar.add(e);
             }
-
 
             if (config.isMostrarMezclado())
                 Collections.shuffle(fotosAMostrar);

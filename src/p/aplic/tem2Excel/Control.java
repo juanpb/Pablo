@@ -159,7 +159,7 @@ public class Control {
 
     public static void main(String[] args) throws Exception {
         String lista = getLista(dirTem);
-        Util.pergarEnElPortapapeles(lista);
+        Util.pegarEnElPortapapeles(lista);
         System.out.println("Pegado en el portapapeles");
         File f = guardarM3U();
         System.out.println("Creado el m3u: " + f.getAbsolutePath());

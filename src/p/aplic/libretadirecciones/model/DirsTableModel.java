@@ -58,17 +58,17 @@ public class DirsTableModel extends DefaultTableModel{
             if (visibles[COLUMNA_TELEFONO])
                 colIds.add("Casa");
             if (visibles[COLUMNA_MOVIL])
-                colIds.add("Móvil");
+                colIds.add("Movil");
             if (visibles[COLUMNA_CORREO])
                 colIds.add("Correo");
             if (visibles[COLUMNA_DIRECCION])
-                colIds.add("Dirección");
+                colIds.add("Direccion");
             if (visibles[COLUMNA_NOTA])
                 colIds.add("Nota");
             if (visibles[COLUMNA_TEL_TRABAJO])
                 colIds.add("Trabajo");
             if (visibles[COLUMNA_CATEGORIA])
-                colIds.add("Categoría");
+                colIds.add("Categoria");
             setColumnIdentifiers(colIds);
         } catch (IOException e) {
             logger.error(e.getMessage(), e);

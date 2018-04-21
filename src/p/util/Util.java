@@ -140,7 +140,7 @@ public class Util {
         }
     }
 
-    public static void pergarEnElPortapapeles(String txt){
+    public static void pegarEnElPortapapeles(String txt){
         //Obtengo el clipboard
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
 

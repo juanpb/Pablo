@@ -131,7 +131,7 @@ public class PeliculaPanel extends JPanel {
 
     private void copiarNombreCarpetaAlPP() {
         String s = nombre.getText() + " (" + annus.getText() + ")";
-        p.util.Util.pergarEnElPortapapeles(s);
+        p.util.Util.pegarEnElPortapapeles(s);
     }
 
     private void crearYAbrirCarpetaHD() {
@@ -160,7 +160,7 @@ public class PeliculaPanel extends JPanel {
                 System.out.println(e.getMessage());
             }
         }
-        p.util.Util.pergarEnElPortapapeles(f.getAbsolutePath());
+        p.util.Util.pegarEnElPortapapeles(f.getAbsolutePath());
     }
 
     private String getRaizHD_old(String annus) {
@@ -406,7 +406,7 @@ public class PeliculaPanel extends JPanel {
     public void panelAPortaPap(){
         Pelicula pel = getPelicula();
         String x = Util.pelicula2XML(pel);
-        p.util.Util.pergarEnElPortapapeles(x);
+        p.util.Util.pegarEnElPortapapeles(x);
     }
 
     public void limpiar(){

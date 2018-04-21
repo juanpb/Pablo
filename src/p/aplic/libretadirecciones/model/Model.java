@@ -9,9 +9,7 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 import p.aplic.libretadirecciones.bobj.Direccion;
 import p.aplic.libretadirecciones.proc.Ordenar;
-import p.util.Constantes;
 import p.util.Fechas;
-import p.util.UtilFile;
 
 import javax.swing.*;
 import java.io.File;
@@ -45,7 +43,10 @@ public class Model {
 
         archivo = new File(xmlFile);
         if (!archivo.exists()){
-            throw new RuntimeException("No existe el xml con los datos: " + xmlFile);
+
+            String message = "No existe el xml con los datos: " + xmlFile;
+            JOptionPane.showMessageDialog(null, message);
+            throw new RuntimeException(message);
         }
 
         direcciones = getDirecciones(archivo);
@@ -102,19 +103,19 @@ public class Model {
             dir.setCorreo(el.getText());
         }
 
-        List children = per.getChildren("Categoría");
+        List children = per.getChildren("Categoria");
         if (children != null){
             for(Object o : children) {
                 dir.addCategoria(((Element)o).getText());
             }
         }
 
-        el = per.getChild("Dirección");
+        el = per.getChild("Direccion");
         if (el != null){
             dir.setDirec(el.getText());
         }
 
-        el = per.getChild("Móvil");
+        el = per.getChild("Movil");
         if (el != null){
             dir.setMovil(el.getText());
         }
@@ -141,7 +142,7 @@ public class Model {
 
        hacerBackup(salida);
         try{
-            Element raiz = new Element("Raíz");
+            Element raiz = new Element("Raiz");
             Document docSal = new Document(raiz);
 
             Ordenar.ordenar(dirs);
@@ -203,7 +204,7 @@ public class Model {
         List<String> cates = dir.getCategorias();
         if (cates != null){
             for(String c : cates) {
-                Element el = new Element("Categoría");
+                Element el = new Element("Categoria");
                 el.setText(c);
                 per.addContent(el);
             }
@@ -218,14 +219,14 @@ public class Model {
 
         str = dir.getDirec();
         if (str != null && !str.equals("")){
-            Element el = new Element("Dirección");
+            Element el = new Element("Direccion");
             el.setText(str);
             per.addContent(el);
         }
 
         str = dir.getMovil();
         if (str != null && !str.equals("")){
-            Element el = new Element("Móvil");
+            Element el = new Element("Movil");
             el.setText(str);
             per.addContent(el);
         }

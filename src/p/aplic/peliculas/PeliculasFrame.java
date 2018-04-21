@@ -166,7 +166,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
             grabarYActualizar();
         } catch (Exception e) {
             String x = Util.pelicula2XML(pelicula);
-            p.util.Util.pergarEnElPortapapeles(x);
+            p.util.Util.pegarEnElPortapapeles(x);
             String msg = "No se borra la peli. Msg: " + e.getMessage() + ". Se copió la peli al PP";
             JOptionPane.showMessageDialog(this, msg);
         }
@@ -448,7 +448,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
                 grabarYActualizar();
             } catch (Exception e) {
                 String x = Util.pelicula2XML(pelicula);
-                p.util.Util.pergarEnElPortapapeles(x);
+                p.util.Util.pegarEnElPortapapeles(x);
                 String msg = "No se modifica la peli. Msg: " + e.getMessage() + ". Se copió la peli al PP";
                 JOptionPane.showMessageDialog(this, msg);
             }
@@ -478,7 +478,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
                 grabarYActualizar();
             } catch (Exception e) {
                 String x = Util.pelicula2XML(pelicula);
-                p.util.Util.pergarEnElPortapapeles(x);
+                p.util.Util.pegarEnElPortapapeles(x);
                 String msg = "No se crea la peli. Msg: " + e.getMessage() + ". Se copió la peli al PP";
                 JOptionPane.showMessageDialog(this, msg);
             }

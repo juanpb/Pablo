@@ -220,7 +220,7 @@ public class TextManager {
     //todo NO ANDA
     private void copiar() {
         String x = txt.getSelectedText();
-        Util.pergarEnElPortapapeles(x);
+        Util.pegarEnElPortapapeles(x);
     }
 
     private void borrarSeleccionado() {
@@ -236,7 +236,7 @@ public class TextManager {
 
     private void cortar() {
         String x = txt.getSelectedText();
-        Util.pergarEnElPortapapeles(x);
+        Util.pegarEnElPortapapeles(x);
         borrarSeleccionado();
     }
 }

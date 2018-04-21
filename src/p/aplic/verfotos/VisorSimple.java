@@ -78,7 +78,7 @@ public class VisorSimple extends JFrame {
         basica.setOffset(offset);
 
         basica.setConfig(config);
-        cargarFotosDeTodosLosDirectorios();
+        cargarFotos();
         /*if (true){
             //prueba para segundo monitor
             GraphicsEnvironment localGraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -364,6 +364,22 @@ public class VisorSimple extends JFrame {
                 indiceFotos = 0;
                 mostrarFotoActual();
             }
+            else if (keyCode == KeyEvent.VK_DELETE){
+                System.out.println("Se borrará la foto nro: " + indiceFotos);
+                File file = fotosAMostrar.get(indiceFotos);
+                agregarAFotosABorrar(file);
+                fotosAMostrar.remove(indiceFotos);
+                mostrarFotoActual();
+            }
+        }
+    }
+
+    private void agregarAFotosABorrar(File file) {
+        try {
+            UtilFile.agregarAlFinal(file.getAbsolutePath(), config.getTxtConListaDeFotosABorrar());
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+            JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
 
@@ -406,16 +422,19 @@ public class VisorSimple extends JFrame {
         }
     }
 
-    private void cargarFotosDeTodosLosDirectorios()  {
+    //carga la lista de fotos a ver, según los directorios definidos y según el txt con la lista de jpg
+    private void cargarFotos()  {
         String[] ext = config.getExtensiones().toArray(new String[0]);
         log.info("Se cargarán fotos con las extensiones: " + config.getExtensiones());
         DirFileFilter filtro = new DirFileFilter(false, true, ext, false);
         try {
             fotosAMostrar = new ArrayList<File>();
             List<String> dirs = config.getDirectorios();
-            for (String dir : dirs) {
-                fotosAMostrar.addAll(
-                        filtrar(UtilFile.archivos(dir, filtro, config.isRecursivo())));
+            if (dirs != null) {
+                for (String dir : dirs) {
+                    fotosAMostrar.addAll(
+                            filtrar(UtilFile.archivos(dir, filtro, config.isRecursivo())));
+                }
             }
 
             List<String> dirsSF = config.getDirectoriosSinFiltrar();
@@ -425,6 +444,14 @@ public class VisorSimple extends JFrame {
                             (UtilFile.archivos(dir, filtro, config.isRecursivo())));
                 }
             }
+
+            if (config.getTxtConListaDeFotos() != null){
+                List<String> archivoPorLinea = UtilFile.getArchivoPorLinea(config.getTxtConListaDeFotos(), true);
+                for (int i = 0; i <archivoPorLinea.size(); i++) {
+                    fotosAMostrar.add(new File(archivoPorLinea.get(i)));
+                }
+            }
+
             if (config.isMostrarMezclado())
                 Collections.shuffle(fotosAMostrar);
 

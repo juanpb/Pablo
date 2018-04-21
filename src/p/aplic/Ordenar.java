@@ -143,7 +143,7 @@ public class Ordenar implements p.util.Constantes{
         String cons = hacerConstructor();
         txt = cons + _nuevaLinea + _salidaSG.toString();
         _textArea.setText(txt);
-        p.util.Util.pergarEnElPortapapeles(txt);
+        p.util.Util.pegarEnElPortapapeles(txt);
     }
 
     private String hacerConstructor(){
@@ -273,7 +273,7 @@ public class Ordenar implements p.util.Constantes{
             salida.append(s).append(Constantes.NUEVA_LINEA);
 
         }
-        p.util.Util.pergarEnElPortapapeles(salida.toString());
+        p.util.Util.pegarEnElPortapapeles(salida.toString());
         _textArea.setText(salida.toString());
     }
     private void parsearGastos(){
@@ -295,7 +295,7 @@ public class Ordenar implements p.util.Constantes{
         }
 
 
-        p.util.Util.pergarEnElPortapapeles(salida.toString());
+        p.util.Util.pegarEnElPortapapeles(salida.toString());
         _textArea.setText(salida.toString());
     }
 
@@ -316,7 +316,7 @@ public class Ordenar implements p.util.Constantes{
             }
         }
         
-        p.util.Util.pergarEnElPortapapeles(salida.toString());
+        p.util.Util.pegarEnElPortapapeles(salida.toString());
         _textArea.setText(salida.toString());
     }
 
@@ -345,7 +345,7 @@ public class Ordenar implements p.util.Constantes{
             }
         }
 
-        p.util.Util.pergarEnElPortapapeles(salida.toString());
+        p.util.Util.pegarEnElPortapapeles(salida.toString());
         _textArea.setText(salida.toString());
     }
 

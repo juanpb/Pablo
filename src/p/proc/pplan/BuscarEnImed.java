@@ -73,7 +73,7 @@ public class BuscarEnImed implements Aplicacion {
         if(b){
             res.append("Archivo encontrado: " + archBuscando.getAbsolutePath()).append(Constantes.NUEVA_LINEA);
             res.append("Línea: " + nroLinea).append(Constantes.NUEVA_LINEA);
-            Util.pergarEnElPortapapeles(archBuscando.getAbsolutePath());
+            Util.pegarEnElPortapapeles(archBuscando.getAbsolutePath());
         }
         res.append("Demoró " + ms + " ms");
 

@@ -298,7 +298,7 @@ public class SubtitulosGUI extends JFrame implements Constantes{
         try {
             List<Subtitulo> subs = Util.getSubtitulos(txtArchivo.getText());
             StringBuffer textoAsString = Util.getTextoAsString(subs);
-            p.util.Util.pergarEnElPortapapeles((textoAsString.toString()));
+            p.util.Util.pegarEnElPortapapeles((textoAsString.toString()));
             JOptionPane.showMessageDialog(this, "Texto pegado al PP");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
