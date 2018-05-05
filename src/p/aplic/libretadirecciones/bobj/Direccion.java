@@ -30,6 +30,9 @@ public class Direccion {
     private List<String> categorias = null;
     private Map otros = null;
 
+    public static final String ES_HISTORICO = "V";
+    public static final String NO_ES_HISTORICO = "F";
+
 
     public boolean isHistorico() {
         return historico;

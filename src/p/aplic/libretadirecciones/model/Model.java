@@ -126,7 +126,7 @@ public class Model {
         }
         el = per.getChild("Historico");
         if (el != null){
-            dir.setHistorico(el.getText().toLowerCase().startsWith("s"));
+            dir.setHistorico(el.getText().equals(Direccion.ES_HISTORICO));
         }
         else
             dir.setHistorico(false);
@@ -260,11 +260,14 @@ public class Model {
         }
 
 
-        if (dir.isHistorico()){
-            Element el = new Element("Historico");
-            el.setText("Sí");
-            per.addContent(el);
-        }
+        Element el = new Element("Historico");
+        if (dir.isHistorico())
+            el.setText(Direccion.ES_HISTORICO);
+        else
+            el.setText(Direccion.NO_ES_HISTORICO);
+
+        per.addContent(el);
+
         return per;
     }
 
