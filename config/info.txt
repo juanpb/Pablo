@@ -3,7 +3,7 @@ arch prog: 3gb
 arch prog (x86): 10gb
 usuarios 26 gb
 windows: 73GB
-
+http://www.divxtotal2.net/series/los-simpsons/
 
 C:\Windows\Logs\CBS
 C:\Windows\Temp
@@ -11,22 +11,23 @@ C:\Windows\Temp
 dns arnet:200.45.191.35
 dns arnet:200.45.48.233
 8.8.4.4
+
+
 ___________________________________________
 ___________________________________________
-                                                                    
-
-David Gilmour - Live At Pompeii Show (2017) extra 1: 0.5.0
-parques nacionales 9: 0..0
-
+         
+life 1: 0.10.35					
+The World at War, 5: 0.0.0
+parques nacionales 12: 0..0
+vietnam 3, ..0
+especias
 
 Blue Planet II (
-bates motel 4 - b
-Wormwood 1 b
-the deuce 1 - b
+Happy! 1 - b
 mr robot 4 - e
 The Big Bang T 11 b
-Silicon Valley 5 - e
-homeland 7 - e
+Silicon Valley 5 - b
+homeland 8 - e
 Mozart In The Jungle 4 - e 
 Fargo 4 - e 
 el chapó 2 - e
@@ -37,7 +38,6 @@ orange 6 - e
 narcos 4 - e
 
 
-cromo - falta bajar caps
 Person of Interest - bajar
 Stranger Things - bajar
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Raíz>
     <ContadorDVD>70</ContadorDVD>
-    <UniqueID>113</UniqueID>
-    <ContadorVistos>79</ContadorVistos>
-    <ContadorSinVer>83</ContadorSinVer>
-    <Timestamp>1509033690252</Timestamp>
+    <UniqueID>116</UniqueID>
+    <ContadorVistos>83</ContadorVistos>
+    <ContadorSinVer>87</ContadorSinVer>
+    <Timestamp>1528725106914</Timestamp>
     <Pelicula uniqueId="1" contador="1">
         <Nombre>Miles Davis - Miles Electric: A Different Kind of Blue</Nombre>
         <Id>DVD 64</Id>
@@ -3299,183 +3299,6 @@ sUBS..................................none</DatosTecnicos>
         <Duracion>0.38</Duracion>
         <Poster>índice.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="110" contador="0">
-        <Nombre>Pink Floyd - The Early Years 1965-1972</Nombre>
-        <Annus>2016</Annus>
-        <Estado>Bajando</Estado>
-        <Critica>Title: Pink Floyd: The Early Years
-Year: 1965-1972
-Genre: Rock, Blues, Pop
-Artist: Bass, Vocals - Roger Waters; Drums, Percussion - Nick Mason; Guitar - Rado Klose (tracks: CD1-1 - CD1-6); Guitar, Vocals - David Gilmour (tracks: CD3 Onwards, DVD2 Onwards, BR2 Onwards), Syd Barrett (tracks: CD1, CD2, CD10-1 - CD10-10, DVD1, BR1, DVD8-1, BR7-7); Keyboards, Vocals - Richard Wright; Mastered By - Andy Jackson; Vocals - Juliette Gale (tracks: CD1-4)
-Description:
-The Early Years 1965-1972 (eng Early Years 1965-1972.) - A box set of the British rock band Pink Floyd, published November 11, 2016. Officially, his release was announced July 28, 2016. The box set includes seven collections of packages in the style of the book, with the disks in a CD, DVD formats, Blu-ray and LP. Each collection includes previously unreleased studio and live audio and video recordings. The first six collections in 2017 will be sold as separate from the box set, seventh (Continu / ation) - only in the box set. Some of the tracks from The Early Years 1965-1972 released on two discs in the collection entitled The Early Years - Cre / ation.
-1965-67 Cambridge St/ation BR
-BR1-1 Chapter 24: Cambridgeshire, UK 1966 3:40
-BR1-2 Nick&#x2019;s Boogie: Sound Techniques Studio 6:36
-BR1-3 Interstellar Overdrive: 'Scene &#x2013; Underground' 4:15
-BR1-4 Arnold Layne: (Promo Video) 2:54
-BR1-5 Pow R. Toc H. / Astronomy Domine Plus Syd Barrett And Roger Waters Interview: 'The Look Of The Week' 9:22
-BR1-6 The Scarecrow: 'Pathé Pictorial' 2:05
-BR1-7 Jugband Blues: 'London Line' 2:58
-BR1-8 Apples And Oranges Plus Dick Clark Interview: 'American Bandstand' 4:51
-BR1-9 Instrumental Improvisation: BBC &#x2018;Tomorrow&#x2019;s World&#x2019; 2:11
-BR1-10 Instrumental Improvisation: 'Die Jungen Nachtwandler' 4:32
-BR1-11 See Emily Play: 'Top Of The Pops' - Partially Restored BBC Studio 2:55
-BR1-12 The Scarecrow (Outtakes): 'Pathé Pictorial' 2:07
-BR1-13 Interstellar Overdrive: 'Science Fiction - Das Universum Des Ichs' 9:33
-1968 Germin/ation BR
-'Tienerklanken&#x2019;, Brussels, Belgium, 18-19 February 1968 (22:2
-BR2- 1 Astronomy Domine
-BR2- 2 The Scarecrow
-BR2- 3 Corporal Clegg
-BR2- 4 Paintbox
-BR2- 5 Set The Controls For The Heart Of The Sun
-BR2- 6 See Emiliy Play
-BR2- 7 Bike
-Brussels, Belgium, February 1968
-BR2- 8 Apples And Oranges: &#x2018;Vibrato'
-'Bouton Rouge&#x2019;, Paris, France, 20 February 1968 (13:35)
-BR2- 9 Astronomy Domine
-BR2- 10 Flaming
-BR2- 11 Set The Controls For The Heart Of The Sun
-BR2- 12 Let There Be More Light
-1968 TV Appearances
-BR2- 13 Paintbox: &#x2018;Discorama&#x2019;
-BR2- 14 Instrumental Improvisation: &#x2018;The Sound Of Change'
-BR2- 15 Set The Controls For The Heart Of The Sun: &#x2018;All My Loving&#x2019;
-BR2- 16 It Would Be So Nice (Excerpt): &#x2018;Release - Rome Goes Pop&#x2019;
-BR2- 17 Interstellar Overdrive: &#x2018;Pop 68&#x2019;
-&#x2018;Tienerklanken &#x2013; Kastival&#x2019;, Kasterlee, Belgiu, 31 August 1968 (3:4
-BR2- 18 Astronomy Domine
-BR2- 19 Roger Waters Interview
-&#x2018;Samedi et Compagnie&#x2019;, Paris, France, 06 September 1968 (5:31)
-BR2- 20 Let There Be More Light
-BR2- 21 Remember A Day
-'A L&#x2019;Affiche du Monde&#x2019;, London, UK, 1968
-BR2- 22 Let There Be More Light 1:53
-'Tous En Scene&#x2019;, Paris, France, 21 October 1968 (6:39)
-BR2- 23 Let There Be More Light
-BR2- 24 Flaming
-1968 TV Appearances
-BR2- 25 Let There Be More Light: &#x2018;Surprise Partie&#x2019; 6:35
-BR2- 26 Point Me At The Sky: Restored Promo Video 3:19
-1969 Dramatis/Ation BR
-&#x2018;Forum Musiques&#x2019;, Paris, France, 22 January 1969 (19:27)
-BR3-1 Set The Controls For The Heart Of The Sun
-BR3-1a Interview With David Gilmour
-BR3-2 Saucerful Of Secrets
-&#x2018;The Man&#x2019; And &#x2018;The Journey&#x2019;: Royal Festival Hall, London, Rehearsal, April 14, 1969 (14:05)
-BR3-3 Afternoon (Biding My Time)
-BR3-4 The Beginning (Green Is The Colour)
-BR3-5 Cymbaline
-BR3-6 Beset By Creatures Of The Deep
-BR3-7 The End Of The Beginning (A Saucerful Of Secrets)
-Essener Pop And Blues Festival, Essen, Germany, October 11 1969 (19:14)
-BR3-8 Careful With That Axe, Eugene
-BR3-9 A Saucerful Of Secrets
-Music Power And European Music Revolution, Festival Actuel, Amougies Mont de L&#x2019;Enclus, Belgium, 25 October 1969 (27:53)
-BR3-10 Green Is The Colour
-BR3-11 Careful With That Axe, Eugene
-BR3-12 Set The Controls For The Heart Of The Sun
-BR3-13 Interstellar Overdrive (Featuring &#x2013; Frank Zappa) 11:26
-1970 Devi/Ation BR
-An Hour With Pink Floyd: KQED, San Francisco, Usa, 30 April 1970:
-BR4-1 Atom Heart Mother 16:37
-BR4-2 Cymbaline 8:38
-BR4-3 Grantchester Meadows 7:37
-BR4-4 Green Is The Colour 3:31
-BR4-5 Careful With That Axe, Eugene 9:09
-BR4-6 Set The Controls For The Heart Of The Sun 12:37
-Atom Heart Mother Album Original 4.0 Quad Mix 1970:
-BR4-7 Atom Heart Mother 23:42
-BR4-8 If 4:31
-BR4-9 Summer &#x2019;68 5:29
-BR4-10 Fat Old Sun 5:24
-BR4-11 Alan&#x2019;s Psychedelic Breakfast 13:01
-&#x2018;Pop Deux &#x2013; Festival de St. Tropez&#x2019;, France, 8 August 1970: Part 1:
-BR4-12 Cymbaline (Soundcheck) 3:54
-BR4-13 Atom Heart Mother 13:46
-BR4-14 Embryo 11:23
-&#x2018;Pop Deux &#x2013; Festival de St. Tropez&#x2019;, France, 8 August 1970: Part 2:
-BR4-15 Green Is The Colour /
-BR4-16 Careful With That Axe, Eugene 12:21
-BR4-17 Set The Controls For The Heart Of The Sun 12:07
-Show Roland Petit, Paris, France, 5 December 1970:
-BR4-18 Instrumental Improvisations 1,2,3 Live In The Studio 3:28
-BR4-19 Embryo 2:39
-Blackhill&#x2019;s Garden Party, Hyde Park, London, UK, 18 July 1970:
-BR4-20 Atom Heart Mother With The Philip Jones Brass Ensemble / John Alldis Choir 21:15
-1971 Reverber/Ation BR
-&#x2018;Aspekte&#x2019; Feature Germany 1971 (9:51)
-BR5-1 Interview + Atom Heart Mother (Extracts)
-BR5-2 A Saucerful Of Secrets (Extract)
-&#x2018;Cinq Grands Sur La Deux' Abbaye de Royaumont, Asnierès-sur-Oise, France, 15 June 1971 (17:55)
-BR5-3 Set The Control For The Heart Of The Sun
-BR5-4 Cymbaline
-'Musikforum Ossiachersee&#x2019;, Ossiach, Austria, 1 July 1971
-BR5-5 Atom Heart Mother (Extract) 3:12
-'Get To Know', Randwick Race Course, Sydney, Australia, 15 August 1971 (6:23)
-BR5-6 Careful With That Axe, Eugene
-BR5-7 Band Interview
-&#x2019;24 Hours &#x2013; Bootleg Records&#x2019;, London, UK, 1971
-BR5-8 Documentary Including Pink Floyd 2:27
-&#x2018;Review&#x2019;, London, UK, 1971
-BR5-9 Storm Thorgerson And Aubrey &#x2018;Po&#x2019; Powell 3:37
-BR5-10 One Of These Days (&#x2018;French Windows&#x2019;) 4:17
-&#x2018;Musikforum Ossiachersee&#x2019;, Ossiach, Austria, 1 July 1971
-BR5-11 Atom Heart Mother (Extract, In Colour) 5:10
-71 Hakone Aphrodite 15.11 Open Air Festival, Hakone, Japan,
-BR5-12 Atom Heart Mother 15:11
-Audio Only
-BR5-13 Echoes Original 4.0 Quad Mix 1971 12:35
-1972 Obfusc/Ation BR
-Recording Obscured By Clouds, Château D&#x2019;Hérouville, France, 23-29 February 1972
-BR6-1 Wot&#x2019;s&#x2026;Uh The Deal: With Recording Session Photos 5:04
-BR6-2 Pop Deux: Documentary Recording Obscured By Clouds 7:14
-Brighton Dome, UK, 29 June 1972 (16:44)
-BR6-3 Set The Controls For The Heart Of The Sun
-BR6-4 Careful With That Axe, Eugene
-Roland Petit Pink Floyd Ballet, France, News Reports 1972-73
-BR6-5 Actualités Méditerranée, Marseille, 22 November 1972 3:29
-BR6-6 Jt Nuit &#x2013; Les Pink Floyd, Marseille, 26 November 1972 3:04
-BR6-7 Jt 20h - Pink Floyd, Paris, 12 January 1973 3:01
-BR6-8 Journal de Paris &#x2013; Les Pink Floyd, Paris, 12 January 1973 5:03
-Poitiers &#x2013; Autour Du Passage Des Pink Floyd
-BR6-9 Concert Set Up News Report &#x2013; France, 29 November 1972 4:27
-Live At Pompeii ( With 2016 5.1 Audio Remix)
-BR6-10 Careful With That Axe, Eugene 6:40
-BR6-11 A Saucerful Of Secrets 10:09
-BR6-12 One Of These Days 5:58
-BR6-13 Set The Controls For The Heart Of The Sun 10:24
-BR6-14 Echoes 26:10
-Bonus Continu/Ation BR
-Hampstead Heath And St. Michael&#x2019;s Church, Highgate, London, UK, March 1967
-BR7-1 Arnold Layne (Alternative Version) 2:56
-&#x2018;P1 &#x2013; P Wie Petersilie&#x2019; Stuggart, Germany, 22 July 1969 (16:52)
-BR7-2 Corporal Clegg
-BR7-3 Band Interview
-BR7-4 A Saucerful Of Secrets
-Bath Festival Of Blues &amp;amp; Progressive Music&#x2019;, Shepton Mallet, UK, 27 June 1970
-BR7-5 Atom Heart Mother 3:46
-'Kralingen Music Festival&#x2019; Rotterdam, The Netherlands, 28 June 1970 (10:16)
-BR7-6 Set The Controls For The Heart Of The Sun
-BR7-7 A Saucerful Of Secrets
-&#x2018;The Amsterdam Rock Circus&#x2019; Amsterdam, The Netherlands, 22 May 1972 (35:41)
-BR7-8 Atom Heart Mother
-BR7-9 Careful With That Axe, Eugene
-BR7-10 A Saucerful Of Secrets
-Feature Film
-BR7-11 The Committee 55:18
-BR8-1 More 1:56:00
-BR8-2 &#x2018;La Vallée&#x2019; (Obscured By Clouds) 1:45:00</Critica>
-        <DatosTecnicos>CONTENEDOR: MKV 
-FUENTE DE VIDEO: Pink Floyd: The Early Years (1965-1972) 9-Disc Edition Blu-ray 1080p AVC DTS-HD 5.1 
-CODEC DE VIDEO: x264 
-FRAMES DE VIDEO: 23,976 
-SUBTÍTULOS: Español, Inglés 
-TAMAÑO: 28,7 GB</DatosTecnicos>
-        <Poster>oDDdVrsZ.jpeg</Poster>
-    </Pelicula>
     <Pelicula uniqueId="111" contador="77">
         <Nombre>The Rolling Stones - Ole Ole Ole A Trip Across Latin America</Nombre>
         <Id>HD</Id>
@@ -3497,10 +3320,10 @@ audio......DTS 5.1 @ 1509 kbps</DatosTecnicos>
         <Poster>71YqyUA+jdL._SL1500_.jpg</Poster>
         <Poster>71uIblJ7LhL._SL1024_.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="112" contador="0">
+    <Pelicula uniqueId="112" contador="79">
         <Nombre>David Gilmour - Live At Pompeii Show</Nombre>
         <Annus>2017</Annus>
-        <Estado>Bajando</Estado>
+        <Estado>Visto</Estado>
         <Critica>David Gilmour returns to historic Pompeii Amphitheater, performing two spectacular shows shot in dazzling 4K. He's the only performer to play to an audience in the arena since the gladiators. These shows are not only historic, they are an audio-visual experience. Featuring lasers, pyrotechnics, and of course, rock and roll, this once-in-a-millennia opportunity also features a documentary entitled Pompeii: Then and Now. The documentary includes footage from both of David Gilmour s appearances at the Pompeii Amphitheater, from the audience-less show in 1971 to the electrifying performance in 2016
 David Gilmour - Live At Pompeii Show 1
 The full deluxe 2DiSC Bluray release includes:
@@ -3555,9 +3378,87 @@ Region: NTSC Resolution: 1920 x 1080
 Disco 3 (extras)
 Audio: DTS 6ch @ 1509kbps Subtitles: None
 Region: NTSC Resolution: 1280 x 720</DatosTecnicos>
-        <Duracion>1.08 +</Duracion>
+        <Duracion>1.08 + 1.24 + 0.35 + 0.29</Duracion>
         <Poster>David-Gilmour-Pompeii-Movie-Poster.jpg</Poster>
         <Poster>91qb3S7WysL._SL1500_.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="113" contador="80">
+        <Nombre>Monterey Pop</Nombre>
+        <Id>HD</Id>
+        <Annus>1968</Annus>
+        <Estado>Visto</Estado>
+        <Critica>A film about the greatest pre-Woodstock rock music festival.</Critica>
+        <DatosTecnicos>Monterey.Pop.1968.REMASTERED.720p.BluRay.x264-DEV0
+picture &gt;&gt; 960x720 6361kb/s
+speed &gt;&gt; 23.976fps
+audio &gt;&gt; English 1509kb/s 6ch DTS
+text &gt;&gt; none
+runtime &gt;&gt; 1h 19mn
+size &gt;&gt; 4476.21mb (4693646794bytes)
+Monterey.Pop.The.Outtake.Performances.1968.720p.MBLURAY.x264-DEV0
+picture &gt;&gt; 976x720 7046kb/s
+speed &gt;&gt; 23.976fps
+audio &gt;&gt; English 192kb/s 2ch AC-3
+text &gt;&gt; none
+runtime &gt;&gt; 2h 9mn
+size &gt;&gt; 6716.44mb (7042701063bytes)</DatosTecnicos>
+        <Duracion>1.19+2.09</Duracion>
+        <Poster>189159_front</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="114" contador="81">
+        <Nombre>Bob Marley - A Caribbean Icon</Nombre>
+        <Id>dvd no hd</Id>
+        <Annus>2010</Annus>
+        <Estado>Visto</Estado>
+        <Critica>TRACK LiST: 01. Trenchtown Rock
+02. Them Belly Full (But We Hungry)
+03. I Shot The Sheriff
+04. Rebel Music
+05. Lively Up Yourself
+06. Crazy Baid Heads
+07. Medley: War / No More Trouble
+08. The Heathen
+09. No Woman, No Cry
+10. Jamming
+11. Get Up, Stand Up
+12. Exodus
+13. Curley David - Reggae Adventure</Critica>
+        <DatosTecnicos>:AURORA PROUDLY PRESENTS: Bob.Marley.A.Caribbean.Icon.2010.PAL.MDVDR-AURORA: RELEASE INFO: Label: T2 Entertainment Cat.No: 220269
+Date: 2018/03/23 Source: PAL DVD5
+Genre: Reggae Aspect: 4:3
+Runtime: 01:26:13 Files: 82x50MB
+Link: www.amazon.com/Bob-Marley-Caribbean-Audio-2010-07-12/dp/B014I3GAVM
+:(VIDEO):. .:(MENU):. .:(EXTRAS):
+Untouched, Untouched, Untouched
+Re-encoded
+Passes
+Bitrate
+:(AUDIO):. .:(SUBS):
+English, DD 2.0 Mono
+French
+German, German
+Spanish
+Dutch</DatosTecnicos>
+        <Duracion>1.26</Duracion>
+        <Poster>41qFeUV5uFL.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="115" contador="82">
+        <Nombre>The Beatles - Sgt Pepper's Lonely Hearts Club Band Super Deluxe Anniversary Edition</Nombre>
+        <Id>HD</Id>
+        <Annus>2017</Annus>
+        <Estado>Visto</Estado>
+        <Critica>The Sgt. Pepper's Lonely Hearts Club Band has been remixed and presented with additional session recordings, and it is the first Beatles album to be remixed and expanded since the 2003 release of Let It Be&#x2026; Naked. To create the new stereo and 5.1 surround audio mixes for 'Sgt. Pepper,' producer Giles Martin and mix engineer Sam Okell worked with an expert team of engineers and audio restoration specialists at Abbey Road Studios in London.
+The Anniversary Edition releases include Martin's new stereo mix of the album, which was sourced directly from the original four-track session tapes and guided by the original, Beatles-preferred mono mix produced by his father, George Martin. The set also includes the 1992 The Making Of Sgt. Pepper documentary.
+The Making of Sgt. Pepper [restored 1992 documentary film, previously unreleased]
+- Promotional Films: "A Day In The Life;" "Strawberry Fields Forever;" "Penny Lane" [4K restored]</Critica>
+        <DatosTecnicos>Video
+Codec: MPEG-4 AVC
+Resolution: 1080p
+The Making Of Sgt. Pepper
+LPCM 2.0, 2304Kbps, 48kHz, 24 Bit
+Subtitles
+English, French, Spanish, German, Dutch, Italian and Portuguese</DatosTecnicos>
+        <Poster>61QEH5tSzbL._SS500.jpg</Poster>
     </Pelicula>
 </Raíz>
 
