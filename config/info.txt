@@ -11,22 +11,21 @@ C:\Windows\Temp
 dns arnet:200.45.191.35
 dns arnet:200.45.48.233
 8.8.4.4
+Cloudflare: 1.1.1.1 y 1.0.0.1.
+telecentro100.72.3.117 100.72.3.109 
+
 
 
 ___________________________________________
 ___________________________________________
          
 life 1: 0.10.35					
-The World at War, 5: 0.0.0
-parques nacionales 12: 0..0
-vietnam 3, ..0
+The World at War, 8: 0.6.20
 especias
 
-Blue Planet II (
-Happy! 1 - b
 mr robot 4 - e
 The Big Bang T 11 b
-Silicon Valley 5 - b
+Silicon Valley 6 - e
 homeland 8 - e
 Mozart In The Jungle 4 - e 
 Fargo 4 - e 
