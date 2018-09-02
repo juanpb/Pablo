@@ -429,34 +429,40 @@ public class VisorSimple extends JFrame {
         DirFileFilter filtro = new DirFileFilter(false, true, ext, false);
         try {
             fotosAMostrar = new ArrayList<File>();
-            List<String> dirs = config.getDirectorios();
-            if (dirs != null) {
-                for (String dir : dirs) {
-                    fotosAMostrar.addAll(
-                            filtrar(UtilFile.archivos(dir, filtro, config.isRecursivo())));
-                }
-            }
-
-            List<String> dirsSF = config.getDirectoriosSinFiltrar();
-            if (dirsSF != null){
-                for (String dir : dirsSF) {
-                    fotosAMostrar.addAll(
-                            (UtilFile.archivos(dir, filtro, config.isRecursivo())));
-                }
-            }
 
             if (config.getTxtConListaDeFotos() != null){
+
                 List<String> archivoPorLinea = UtilFile.getArchivoPorLinea(config.getTxtConListaDeFotos(), true);
                 for (int i = 0; i <archivoPorLinea.size(); i++) {
                     fotosAMostrar.add(new File(archivoPorLinea.get(i)));
                 }
+                log.info("Se mostrarán las fotos listadas en el archivo: " + config.getTxtConListaDeFotos() +
+                        ", que tiene " + fotosAMostrar.size() + " fotos.");
+            }
+            else{
+                List<String> dirs = config.getDirectorios();
+                if (dirs != null) {
+                    for (String dir : dirs) {
+                        fotosAMostrar.addAll(
+                                filtrar(UtilFile.archivos(dir, filtro, config.isRecursivo())));
+                    }
+                }
+
+                List<String> dirsSF = config.getDirectoriosSinFiltrar();
+                if (dirsSF != null){
+                    for (String dir : dirsSF) {
+                        fotosAMostrar.addAll(
+                                (UtilFile.archivos(dir, filtro, config.isRecursivo())));
+                    }
+                }
+                log.info("Se mostrarán las fotos de los directorios: " + dirs + ", " + dirsSF +
+                        ", que tienen " + fotosAMostrar.size() + " fotos.");
             }
 
             if (config.isMostrarMezclado())
                 Collections.shuffle(fotosAMostrar);
 
-            log.info("Se mostrarán las fotos de los directorios: " + dirs + ", " + dirsSF +
-                    ", que tienen " + fotosAMostrar.size() + " fotos.");
+
             if (config.isPosicionDeInicioAleatoria()){
                 indiceFotos = (int)(Math.random() * fotosAMostrar.size());
             }

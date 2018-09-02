@@ -1148,26 +1148,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VisorSimple.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VisorSimple.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5967" max-vertical-offset="9299">
-              <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#4062#4063#0" expanded="false" />
-                <element signature="e#4101#4102#0" expanded="false" />
-                <element signature="e#4197#4198#0" expanded="false" />
-                <element signature="e#4245#4246#0" expanded="false" />
-                <element signature="e#5116#5117#0" expanded="false" />
-                <element signature="e#5173#5174#0" expanded="false" />
-                <element signature="e#5572#5573#0" expanded="false" />
-                <element signature="e#5619#5620#0" expanded="false" />
-                <element signature="e#7680#7681#0" expanded="false" />
-                <element signature="e#7710#7711#0" expanded="false" />
-                <element signature="e#13260#13261#0" expanded="false" />
-                <element signature="e#13302#13303#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.31831396" vertical-offset="6496" max-vertical-offset="9112">
+              <caret line="439" column="36" selection-start-line="439" selection-start-column="36" selection-end-line="439" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1185,97 +1171,31 @@
       <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="4488">
-              <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
+            <state vertical-scroll-proportion="-7.551724" vertical-offset="2195" max-vertical-offset="4454">
+              <caret line="148" column="28" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4970" max-vertical-offset="5695">
+              <caret line="320" column="35" selection-start-line="320" selection-start-column="35" selection-end-line="320" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#6139#6140#0" expanded="false" />
-                <element signature="e#6180#6181#0" expanded="false" />
-                <element signature="e#6233#6234#0" expanded="false" />
-                <element signature="e#6281#6282#0" expanded="false" />
-                <element signature="e#6970#6971#0" expanded="false" />
-                <element signature="e#7010#7011#0" expanded="false" />
-                <element signature="e#7054#7055#0" expanded="false" />
-                <element signature="e#7088#7089#0" expanded="false" />
-                <element signature="e#7142#7143#0" expanded="false" />
-                <element signature="e#7186#7187#0" expanded="false" />
-                <element signature="e#7224#7225#0" expanded="false" />
-                <element signature="e#7260#7261#0" expanded="false" />
-                <element signature="e#7301#7302#0" expanded="false" />
-                <element signature="e#7340#7341#0" expanded="false" />
-                <element signature="e#7374#7375#0" expanded="false" />
-                <element signature="e#7404#7405#0" expanded="false" />
-                <element signature="e#7448#7449#0" expanded="false" />
-                <element signature="e#7482#7483#0" expanded="false" />
-                <element signature="e#7519#7520#0" expanded="false" />
-                <element signature="e#7552#7553#0" expanded="false" />
-                <element signature="e#7605#7606#0" expanded="false" />
-                <element signature="e#7649#7650#0" expanded="false" />
-                <element signature="e#7685#7686#0" expanded="false" />
-                <element signature="e#7717#7718#0" expanded="false" />
-                <element signature="e#7761#7762#0" expanded="false" />
-                <element signature="e#7795#7796#0" expanded="false" />
-                <element signature="e#7848#7849#0" expanded="false" />
-                <element signature="e#7897#7898#0" expanded="false" />
-                <element signature="e#7951#7952#0" expanded="false" />
-                <element signature="e#8014#8015#0" expanded="false" />
-                <element signature="e#8068#8069#0" expanded="false" />
-                <element signature="e#8131#8132#0" expanded="false" />
-                <element signature="e#8187#8188#0" expanded="false" />
-                <element signature="e#8252#8253#0" expanded="false" />
-                <element signature="e#8306#8307#0" expanded="false" />
-                <element signature="e#8369#8370#0" expanded="false" />
-                <element signature="e#8429#8430#0" expanded="false" />
-                <element signature="e#8475#8476#0" expanded="false" />
-                <element signature="e#8537#8538#0" expanded="false" />
-                <element signature="e#8585#8586#0" expanded="false" />
-                <element signature="e#8645#8646#0" expanded="false" />
-                <element signature="e#8691#8692#0" expanded="false" />
-                <element signature="e#8751#8752#0" expanded="false" />
-                <element signature="e#8797#8798#0" expanded="false" />
-                <element signature="e#8843#8844#0" expanded="false" />
-                <element signature="e#8897#8898#0" expanded="false" />
-                <element signature="e#8943#8944#0" expanded="false" />
-                <element signature="e#8981#8982#0" expanded="false" />
-                <element signature="e#9032#9033#0" expanded="false" />
-                <element signature="e#9074#9075#0" expanded="false" />
-                <element signature="e#9126#9127#0" expanded="false" />
-                <element signature="e#9174#9175#0" expanded="false" />
-                <element signature="e#9373#9374#0" expanded="false" />
-                <element signature="e#9411#9412#0" expanded="false" />
-                <element signature="e#9474#9475#0" expanded="false" />
-                <element signature="e#9528#9529#0" expanded="false" />
-                <element signature="e#9570#9571#0" expanded="false" />
-                <element signature="e#9608#9609#0" expanded="false" />
-                <element signature="e#9671#9672#0" expanded="false" />
-                <element signature="e#9725#9726#0" expanded="false" />
-                <element signature="e#9769#9770#0" expanded="false" />
-                <element signature="e#9809#9810#0" expanded="false" />
-                <element signature="e#9876#9877#0" expanded="false" />
-                <element signature="e#9934#9935#0" expanded="false" />
-                <element signature="e#9983#9984#0" expanded="false" />
-                <element signature="e#10028#10029#0" expanded="false" />
-                <element signature="e#10212#10213#0" expanded="false" />
-                <element signature="e#10250#10251#0" expanded="false" />
-                <element signature="e#10289#10290#0" expanded="false" />
-                <element signature="e#10324#10325#0" expanded="false" />
-                <element signature="e#10381#10382#0" expanded="false" />
-                <element signature="e#10429#10430#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Model.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5878378" vertical-offset="4936" max-vertical-offset="5678">
-              <caret line="318" column="49" selection-start-line="318" selection-start-column="35" selection-end-line="318" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9316#9317#0" expanded="true" />
-                <element signature="e#9345#9346#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="16728" max-vertical-offset="18020">
+              <caret line="1005" column="93" selection-start-line="1005" selection-start-column="93" selection-end-line="1005" selection-end-column="93" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1293,8 +1213,8 @@
       <file leaf-file-name="Direccion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/bobj/Direccion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2474" max-vertical-offset="3162">
-              <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2525" max-vertical-offset="3213">
+              <caret line="205" column="25" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -1343,7 +1263,7 @@
       <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/gui/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="4760">
+            <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="4760">
               <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding />
             </state>
@@ -1353,21 +1273,9 @@
       <file leaf-file-name="VisorSimpleEditarListaDeFotos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimpleEditarListaDeFotos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5440" max-vertical-offset="8228">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5151" max-vertical-offset="7905">
               <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3137#3138#0" expanded="false" />
-                <element signature="e#3176#3177#0" expanded="false" />
-                <element signature="e#3272#3273#0" expanded="false" />
-                <element signature="e#3320#3321#0" expanded="false" />
-                <element signature="e#4191#4192#0" expanded="false" />
-                <element signature="e#4248#4249#0" expanded="false" />
-                <element signature="e#4647#4648#0" expanded="false" />
-                <element signature="e#4694#4695#0" expanded="false" />
-                <element signature="e#12047#12048#0" expanded="false" />
-                <element signature="e#12089#12090#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1389,15 +1297,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/p/aplic/peliculas/Main.java" />
-        <option value="$PROJECT_DIR$/src/p/aplic/exportar/GUI.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/peliculas/PeliculaPanel.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/verfotos/estrVisul/Basica.java" />
-        <option value="$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimpleEditarListaDeFotos.java" />
         <option value="$PROJECT_DIR$/src/p/util/UtilFile.java" />
-        <option value="$PROJECT_DIR$/src/p/aplic/verfotos/Config.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/DirsTableModel.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/p/aplic/exportar/GUI.java" />
+        <option value="$PROJECT_DIR$/src/p/aplic/verfotos/Config.java" />
+        <option value="$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java" />
       </list>
     </option>
   </component>
@@ -1596,6 +1504,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1658,80 +1586,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libretadirecciones" />
+              <option name="myItemId" value="verfotos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aplic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libretadirecciones" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aplic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libretadirecciones" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2762,7 +2618,11 @@
       <workItem from="1516068923491" duration="17793000" />
       <workItem from="1516744039486" duration="1093000" />
       <workItem from="1524244483138" duration="719000" />
-      <workItem from="1524256776862" duration="2990000" />
+      <workItem from="1524256776862" duration="3207000" />
+      <workItem from="1524348349970" duration="596000" />
+      <workItem from="1532190072398" duration="749000" />
+      <workItem from="1534788448377" duration="124000" />
+      <workItem from="1535897676120" duration="1427000" />
     </task>
     <task id="LOCAL-00001">
       <created>1382195006374</created>
@@ -2792,7 +2652,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31155000" />
+    <option name="totallyTimeSpent" value="34268000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -2829,11 +2689,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287858" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4888268" sideWeight="0.494852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22608125" sideWeight="0.5961801" order="0" side_tool="false" content_ui="combo" x="23" y="88" width="210" height="398" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967235" sideWeight="0.66030014" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5796089" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2841,19 +2699,21 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20182292" sideWeight="0.52387446" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.6684857" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42039105" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967235" sideWeight="0.66030014" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Deployment View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955715" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42039105" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.727707" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27388534" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4888268" sideWeight="0.494852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5675307" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.66030014" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3291,13 +3151,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/p/aplic/renombrarFotos/RenombrarGUI.java</url>
-          <line>695</line>
+          <line>697</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/p/aplic/renombrarFotos/RenombrarGUI.java</url>
-          <line>655</line>
+          <line>657</line>
           <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
@@ -3369,7 +3229,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java</url>
-          <line>206</line>
+          <line>208</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
@@ -3628,33 +3488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15742" max-vertical-offset="18921">
-          <caret line="981" column="22" selection-start-line="981" selection-start-column="22" selection-end-line="981" selection-end-column="22" />
-          <folding>
-            <element signature="e#4571#4572#0" expanded="true" />
-            <element signature="e#4623#4624#0" expanded="true" />
-            <element signature="e#4643#4644#0" expanded="true" />
-            <element signature="e#4669#4670#0" expanded="true" />
-            <element signature="e#4712#4713#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
-            <element signature="e#19411#19412#0" expanded="true" />
-            <element signature="e#19479#19480#0" expanded="true" />
-            <element signature="e#30533#30534#0" expanded="true" />
-            <element signature="e#30572#30573#0" expanded="true" />
-            <element signature="e#30782#30783#0" expanded="true" />
-            <element signature="e#30839#30840#0" expanded="true" />
-            <element signature="e#30889#30890#0" expanded="true" />
-            <element signature="e#30922#30923#0" expanded="true" />
-            <element signature="e#43548#43549#0" expanded="true" />
-            <element signature="e#43577#43578#0" expanded="true" />
-            <element signature="e#43629#43630#0" expanded="true" />
-            <element signature="e#43656#43657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/p/aplic/peliculas/PeliculaPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.34" vertical-offset="2771" max-vertical-offset="7548">
@@ -3718,19 +3551,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4779" max-vertical-offset="7939">
           <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3137#3138#0" expanded="false" />
-            <element signature="e#3176#3177#0" expanded="false" />
-            <element signature="e#3272#3273#0" expanded="false" />
-            <element signature="e#3320#3321#0" expanded="false" />
-            <element signature="e#4191#4192#0" expanded="false" />
-            <element signature="e#4248#4249#0" expanded="false" />
-            <element signature="e#4647#4648#0" expanded="false" />
-            <element signature="e#4694#4695#0" expanded="false" />
-            <element signature="e#12047#12048#0" expanded="false" />
-            <element signature="e#12089#12090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3739,110 +3560,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="9565" max-vertical-offset="21896">
           <caret line="586" column="35" selection-start-line="586" selection-start-column="35" selection-end-line="586" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5600" max-vertical-offset="9010">
-          <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4062#4063#0" expanded="false" />
-            <element signature="e#4101#4102#0" expanded="false" />
-            <element signature="e#4197#4198#0" expanded="false" />
-            <element signature="e#4245#4246#0" expanded="false" />
-            <element signature="e#5116#5117#0" expanded="false" />
-            <element signature="e#5173#5174#0" expanded="false" />
-            <element signature="e#5572#5573#0" expanded="false" />
-            <element signature="e#5619#5620#0" expanded="false" />
-            <element signature="e#7680#7681#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#13260#13261#0" expanded="false" />
-            <element signature="e#13302#13303#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="4488">
-          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6139#6140#0" expanded="false" />
-            <element signature="e#6180#6181#0" expanded="false" />
-            <element signature="e#6233#6234#0" expanded="false" />
-            <element signature="e#6281#6282#0" expanded="false" />
-            <element signature="e#6970#6971#0" expanded="false" />
-            <element signature="e#7010#7011#0" expanded="false" />
-            <element signature="e#7054#7055#0" expanded="false" />
-            <element signature="e#7088#7089#0" expanded="false" />
-            <element signature="e#7142#7143#0" expanded="false" />
-            <element signature="e#7186#7187#0" expanded="false" />
-            <element signature="e#7224#7225#0" expanded="false" />
-            <element signature="e#7260#7261#0" expanded="false" />
-            <element signature="e#7301#7302#0" expanded="false" />
-            <element signature="e#7340#7341#0" expanded="false" />
-            <element signature="e#7374#7375#0" expanded="false" />
-            <element signature="e#7404#7405#0" expanded="false" />
-            <element signature="e#7448#7449#0" expanded="false" />
-            <element signature="e#7482#7483#0" expanded="false" />
-            <element signature="e#7519#7520#0" expanded="false" />
-            <element signature="e#7552#7553#0" expanded="false" />
-            <element signature="e#7605#7606#0" expanded="false" />
-            <element signature="e#7649#7650#0" expanded="false" />
-            <element signature="e#7685#7686#0" expanded="false" />
-            <element signature="e#7717#7718#0" expanded="false" />
-            <element signature="e#7761#7762#0" expanded="false" />
-            <element signature="e#7795#7796#0" expanded="false" />
-            <element signature="e#7848#7849#0" expanded="false" />
-            <element signature="e#7897#7898#0" expanded="false" />
-            <element signature="e#7951#7952#0" expanded="false" />
-            <element signature="e#8014#8015#0" expanded="false" />
-            <element signature="e#8068#8069#0" expanded="false" />
-            <element signature="e#8131#8132#0" expanded="false" />
-            <element signature="e#8187#8188#0" expanded="false" />
-            <element signature="e#8252#8253#0" expanded="false" />
-            <element signature="e#8306#8307#0" expanded="false" />
-            <element signature="e#8369#8370#0" expanded="false" />
-            <element signature="e#8429#8430#0" expanded="false" />
-            <element signature="e#8475#8476#0" expanded="false" />
-            <element signature="e#8537#8538#0" expanded="false" />
-            <element signature="e#8585#8586#0" expanded="false" />
-            <element signature="e#8645#8646#0" expanded="false" />
-            <element signature="e#8691#8692#0" expanded="false" />
-            <element signature="e#8751#8752#0" expanded="false" />
-            <element signature="e#8797#8798#0" expanded="false" />
-            <element signature="e#8843#8844#0" expanded="false" />
-            <element signature="e#8897#8898#0" expanded="false" />
-            <element signature="e#8943#8944#0" expanded="false" />
-            <element signature="e#8981#8982#0" expanded="false" />
-            <element signature="e#9032#9033#0" expanded="false" />
-            <element signature="e#9074#9075#0" expanded="false" />
-            <element signature="e#9126#9127#0" expanded="false" />
-            <element signature="e#9174#9175#0" expanded="false" />
-            <element signature="e#9373#9374#0" expanded="false" />
-            <element signature="e#9411#9412#0" expanded="false" />
-            <element signature="e#9474#9475#0" expanded="false" />
-            <element signature="e#9528#9529#0" expanded="false" />
-            <element signature="e#9570#9571#0" expanded="false" />
-            <element signature="e#9608#9609#0" expanded="false" />
-            <element signature="e#9671#9672#0" expanded="false" />
-            <element signature="e#9725#9726#0" expanded="false" />
-            <element signature="e#9769#9770#0" expanded="false" />
-            <element signature="e#9809#9810#0" expanded="false" />
-            <element signature="e#9876#9877#0" expanded="false" />
-            <element signature="e#9934#9935#0" expanded="false" />
-            <element signature="e#9983#9984#0" expanded="false" />
-            <element signature="e#10028#10029#0" expanded="false" />
-            <element signature="e#10212#10213#0" expanded="false" />
-            <element signature="e#10250#10251#0" expanded="false" />
-            <element signature="e#10289#10290#0" expanded="false" />
-            <element signature="e#10324#10325#0" expanded="false" />
-            <element signature="e#10381#10382#0" expanded="false" />
-            <element signature="e#10429#10430#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3888,8 +3605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/bobj/Direccion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2474" max-vertical-offset="3162">
-          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2525" max-vertical-offset="3213">
+          <caret line="205" column="25" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -3904,13 +3621,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5878378" vertical-offset="4936" max-vertical-offset="5678">
-          <caret line="318" column="49" selection-start-line="318" selection-start-column="35" selection-end-line="318" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4970" max-vertical-offset="5695">
+          <caret line="320" column="35" selection-start-line="320" selection-start-column="35" selection-end-line="320" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9316#9317#0" expanded="true" />
-            <element signature="e#9345#9346#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16728" max-vertical-offset="18020">
+          <caret line="1005" column="93" selection-start-line="1005" selection-start-column="93" selection-end-line="1005" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.551724" vertical-offset="2195" max-vertical-offset="4454">
+          <caret line="148" column="28" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31831396" vertical-offset="6496" max-vertical-offset="9112">
+          <caret line="439" column="36" selection-start-line="439" selection-start-column="36" selection-end-line="439" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 package p.pruebas.crypto;
 
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +12,22 @@ import java.util.Map;
  */
 public class Sha {
 
-    public static void main(String [] args)
+    public static String toSha1(String xxx) throws NoSuchAlgorithmException {
+
+        MessageDigest sha = MessageDigest.getInstance("SHA"); // Inicializa SHA-1
+        byte[] digest = sha.digest(xxx.getBytes());
+        return new String(digest);
+    }
+
+    public static void main(String [] args) throws NoSuchAlgorithmException {
+        if (args.length != !)
+            System.out.println("Pasar el string para calcular el sha");
+        else{
+            System.out.println("SHA1: " + toSha1(args[0]));
+        }
+    }
+
+    public static void main2(String [] args)
     {
         long ini = System.currentTimeMillis();
         //declarar funciones resumen

@@ -44,7 +44,7 @@ public class Antibloqueo {
                 }
             }
         };
-        long tiempoEnSeg = (14 * 60) + 10; //14.50
+        long tiempoEnSeg = (4 * 60) + 30; //14.50
 
         long tiempoEnMs = tiempoEnSeg * 1000;
         timer.schedule(timerTask, 0, tiempoEnMs);

@@ -50,6 +50,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
 
 
     private JButton btnInvertir = new JButton("Invertir");
+    private JButton btnInvertirLinea = new JButton("Invertir línea");
     private JButton btnReemplazarNLPorTab = new JButton("Reemplazar NL x Tab");
     private JButton btnOrdenar = new JButton("Ordenar");
     private JButton btnTrim = new JButton("Trim");
@@ -311,7 +312,10 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         //panel edición
         JPanel panelAuxDer = new JPanel(new GridBagLayout());
         int y = 0;
-        panelAuxDer.add(btnInvertir, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
+        panelAuxDer.add(btnInvertir, new GridBagConstraints(0, y, 1, 1, 0.0, 0.0,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+        panelAuxDer.add(btnInvertirLinea, new GridBagConstraints(1, y++, 1, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(0, 0, 0, 0), 0, 0));
         panelAuxDer.add(btnSacarRepetipos, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
@@ -478,6 +482,11 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         /*******************************************************/
         //Edición
         /*******************************************************/
+        btnInvertirLinea.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                invertirLinea();
+            }
+        });
         btnInvertir.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 invertir();
@@ -789,6 +798,17 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         mostrar(sb);
     }
 
+    private void invertirLinea(){
+        List<String> list = getTextAsList();
+        StringBuffer sb = new StringBuffer();
+        for (String s : list) {
+            StringBuilder x = new StringBuilder(s);
+            sb.append(x.reverse()).append(Constantes.NUEVA_LINEA);
+
+        }
+        mostrar(sb);
+    }
+
     private void sacarRepetidos(){
         List<String> list = getTextAsList();
         list = UtilString.sacarRpepetidos(list);
@@ -956,6 +976,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         StringBuilder sb = new StringBuilder();
         //agrego cabecera
         sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Enviado").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
                 */
@@ -983,6 +1004,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
             acumSinIva +=precioTotalSinIva;
 
             sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER).
+                    append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER). //enviado
                     append(df.format(precioPorUnidad))./*.append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
                     append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
                     */

@@ -1,6 +1,10 @@
 package p.pruebas;
 
+import p.util.UtilFile;
+
 import java.awt.*;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * User: JPB
@@ -124,7 +128,12 @@ public class Util {
         return res;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String x = "D:\\P\\herramientas seguridad\\pwned-passwords-ordered-2.0.txt";
+        java.util.List<String> archivoPorLinea = UtilFile.getArchivoPorLinea(x);
+        System.out.println("archivoPorLinea.size() = " + archivoPorLinea.size());
+    }
+    public static void main2(String[] args) {
 
 //        Point[] c = Util.getCircunferencia(100,100, 10 ,100);
 //        for (int i = 0; i < c.length; i++) {

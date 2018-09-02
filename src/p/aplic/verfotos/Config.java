@@ -90,8 +90,6 @@ public class Config {
            else if (s.startsWith("txt_con_lista_de_fotos_a_borrar"))
                txtConListaDeFotosABorrar = getValue(s);
             else if (s.startsWith("txt_con_lista_de_fotos"))
-                txtConListaDeFotos = getValue(s);
-            else if (s.startsWith("txt_con_lista_de_fotos"))
                txtConListaDeFotos = getValue(s);
             else if (s.startsWith("filtroFotos"))
                 filtroFotos = getList(s, SEPARADOR);
