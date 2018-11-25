@@ -968,7 +968,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
     /*
     genera una linea x cada 3, separando por tab
      */
-    private void jumbo(){
+    private void jumboPreOctubre18(){
 
         List<String> list = getTextAsList();
         int pos = 0;
@@ -1009,12 +1009,85 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                     append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
                     */
                     append(Constantes.NUEVA_LINEA) ;
+
         }
         /*
         sb.append("Total").append(Constantes.TAB_CHARACTER).append(Constantes.TAB_CHARACTER).
                 append(Constantes.TAB_CHARACTER).append(df.format(acumConIva)).append(Constantes.TAB_CHARACTER).
                 append(Constantes.TAB_CHARACTER).append(df.format(acumSinIva)).append(Constantes.TAB_CHARACTER).
                 append(Constantes.NUEVA_LINEA) ;      */
+        list.clear();
+        list.add(sb.toString());
+        mostrar(list);
+    }
+
+    private void jumbo(){
+
+        List<String> list = getTextAsList();
+        int pos = 0;
+
+        StringBuilder sb = new StringBuilder();
+        //agrego cabecera
+        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Enviado").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
+                */
+                append(Constantes.NUEVA_LINEA) ;
+
+        double acumSinIva = 0;
+        double acumConIva = 0;
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        for(int i = 0; i< list.size()-2; ) {
+            try {
+                String prod = list.get(i++);
+                list.get(i++);//producto repetido
+                prod += ", " + list.get(i++);//marca
+                String precTotal = list.get(i++); //$592,20
+                String cantOXKg = list.get(i++); //ej:6.00 ; si el prod es x kilo, acá pone "$179,00 x kg"
+                if (cantOXKg.startsWith("$")) {
+                    cantOXKg = list.get(i++);//ahora sí es la cantidad, ej: 1.5kg
+                    cantOXKg = cantOXKg.replace("kg", "");
+                }
+                list.get(i++);//precTotal de nuevo
+                list.get(i++);//comentario
+                list.get(i++);//no sustituir
+
+                precTotal = precTotal.replace(".", ""); //saco separador de miles
+                precTotal = precTotal.replace(",", "."); //cambio separador de decimales
+                precTotal = precTotal.replace("$", ""); //saco pesos
+
+                double cantDouble = Double.parseDouble(cantOXKg);
+                double precioTDouble = Double.parseDouble(precTotal);
+                double precioPorUnidad = precioTDouble / cantDouble;
+                //double precioPorUnidadSinIva = precioPorUnidad / 1.21; //asume iva 21%
+                //double precioTotalSinIva = precioPorUnidadSinIva * cantDouble; //asume iva 21%
+
+                //acumConIva +=precioDouble;
+                //acumSinIva +=precioTotalSinIva;
+
+                sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER). //enviado
+                        append(df.format(precioPorUnidad))./*.append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
+                        */
+                        append(Constantes.NUEVA_LINEA) ;
+            } catch (Exception e) {
+                sb.append(("list.get(i) = " + list.get(i))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+1) = " + list.get(i + 1))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+2) = " + list.get(i + 2))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+3) = " + list.get(i + 3))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+4) = " + list.get(i + 4))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+5) = " + list.get(i + 5))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+6) = " + list.get(i + 6))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+7) = " + list.get(i + 7))).append(Constantes.NUEVA_LINEA);
+                sb.append(e.getLocalizedMessage());
+                e.printStackTrace();
+                break;
+            }
+        }
+
         list.clear();
         list.add(sb.toString());
         mostrar(list);
