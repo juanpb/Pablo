@@ -1148,134 +1148,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VisorSimple.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.75443786" vertical-offset="6970" max-vertical-offset="9112">
-              <caret line="439" column="36" selection-start-line="439" selection-start-column="36" selection-end-line="439" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UtilFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/util/UtilFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9565" max-vertical-offset="21896">
-              <caret line="586" column="35" selection-start-line="586" selection-start-column="35" selection-end-line="586" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2195" max-vertical-offset="4454">
-              <caret line="148" column="28" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4970" max-vertical-offset="5695">
-              <caret line="320" column="35" selection-start-line="320" selection-start-column="35" selection-end-line="320" selection-end-column="35" />
+            <state vertical-scroll-proportion="-2.4442725" vertical-offset="20211" max-vertical-offset="22406">
+              <caret line="1221" column="54" selection-start-line="1221" selection-start-column="54" selection-end-line="1221" selection-end-column="54" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#23934#24060#0" expanded="true" />
+                <element signature="e#24059#24060#0" expanded="true" />
+                <element signature="e#24096#24220#0" expanded="true" />
+                <element signature="e#24219#24220#0" expanded="true" />
+                <element signature="e#24257#24382#0" expanded="true" />
+                <element signature="e#24381#24382#0" expanded="true" />
+                <element signature="e#54407#54416#0" expanded="true" />
+                <element signature="e#56307#56308#0" expanded="true" />
+                <element signature="e#56336#56337#0" expanded="true" />
+                <element signature="e#56388#56389#0" expanded="true" />
+                <element signature="e#56415#56416#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
+      <file leaf-file-name="Constantes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p/util/Constantes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17102" max-vertical-offset="20247">
-              <caret line="1077" column="93" selection-start-line="1077" selection-start-column="93" selection-end-line="1077" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CambiosDeTag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/proc/CambiosDeTag.java">
+      <file leaf-file-name="UtilString.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p/util/UtilString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="929" max-vertical-offset="1836">
-              <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Direccion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/bobj/Direccion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2525" max-vertical-offset="3213">
-              <caret line="205" column="25" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirsTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/DirsTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="3434">
-              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrincipalPanelDetalleDireccion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/gui/PrincipalPanelDetalleDireccion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1473" max-vertical-offset="2040">
-              <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TabABMGral.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/gui/abm/TabABMGral.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="2346">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TabGral.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/gui/abm/TabGral.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="2346">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/libretadirecciones/gui/Principal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="4760">
-              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VisorSimpleEditarListaDeFotos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimpleEditarListaDeFotos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5151" max-vertical-offset="7905">
-              <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="7293">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#559#567#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1303,9 +1215,9 @@
         <option value="$PROJECT_DIR$/src/p/util/UtilFile.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/DirsTableModel.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/libretadirecciones/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/p/aplic/exportar/GUI.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/verfotos/Config.java" />
         <option value="$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java" />
+        <option value="$PROJECT_DIR$/src/p/aplic/exportar/GUI.java" />
       </list>
     </option>
   </component>
@@ -1437,7 +1349,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="y" value="2" />
-    <option name="width" value="1542" />
+    <option name="width" value="1543" />
     <option name="height" value="828" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1504,16 +1416,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1600,6 +1502,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="exportar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1755,7 +1671,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="p.aplic.exportar.GUI" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-Dlog4j_path=c:\tmp -Dlogfile.name=javas.log " />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -2646,6 +2562,8 @@
       <workItem from="1534788448377" duration="124000" />
       <workItem from="1535897676120" duration="1872000" />
       <workItem from="1543155253451" duration="385000" />
+      <workItem from="1546701970337" duration="1792000" />
+      <workItem from="1551791369565" duration="6898000" />
     </task>
     <task id="LOCAL-00001">
       <created>1382195006374</created>
@@ -2675,7 +2593,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35098000" />
+    <option name="totallyTimeSpent" value="43788000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -2698,8 +2616,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="2" width="1542" height="828" extended-state="0" />
-    <editor active="false" />
+    <frame x="-6" y="2" width="1543" height="828" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287858" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2715,7 +2633,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4888268" sideWeight="0.494852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22608125" sideWeight="0.5961801" order="0" side_tool="false" content_ui="combo" x="23" y="88" width="210" height="398" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22593321" sideWeight="0.5961801" order="0" side_tool="false" content_ui="combo" x="23" y="88" width="210" height="398" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24563953" sideWeight="0.47476125" order="1" side_tool="false" content_ui="tabs" x="22" y="467" width="212" height="253" />
@@ -3095,12 +3013,6 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/p/util/UtilString.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/p/aplic/peliculas/PeliculasFrame.java</url>
           <line>383</line>
           <properties />
@@ -3269,7 +3181,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="82" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3297,28 +3209,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/p/util/Hora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2703">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/util/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="3043">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/aplic/PortapapelesAArchivoP12.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3723">
-          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/p/pruebas/Teclado.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="833">
@@ -3652,14 +3542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17102" max-vertical-offset="20247">
-          <caret line="1077" column="93" selection-start-line="1077" selection-start-column="93" selection-end-line="1077" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2195" max-vertical-offset="4454">
@@ -3670,9 +3552,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p/aplic/verfotos/VisorSimple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75443786" vertical-offset="6970" max-vertical-offset="9112">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6970" max-vertical-offset="9112">
           <caret line="439" column="36" selection-start-line="439" selection-start-column="36" selection-end-line="439" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/util/UtilString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="7293">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#559#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/util/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/gui/superGui/Aplicacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="36" max-vertical-offset="442">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p/aplic/exportar/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4442725" vertical-offset="20211" max-vertical-offset="22406">
+          <caret line="1221" column="54" selection-start-line="1221" selection-start-column="54" selection-end-line="1221" selection-end-column="54" />
+          <folding>
+            <element signature="e#23934#24060#0" expanded="true" />
+            <element signature="e#24059#24060#0" expanded="true" />
+            <element signature="e#24096#24220#0" expanded="true" />
+            <element signature="e#24219#24220#0" expanded="true" />
+            <element signature="e#24257#24382#0" expanded="true" />
+            <element signature="e#24381#24382#0" expanded="true" />
+            <element signature="e#54407#54416#0" expanded="true" />
+            <element signature="e#56307#56308#0" expanded="true" />
+            <element signature="e#56336#56337#0" expanded="true" />
+            <element signature="e#56388#56389#0" expanded="true" />
+            <element signature="e#56415#56416#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

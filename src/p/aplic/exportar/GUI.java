@@ -85,6 +85,8 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
 
     private LabelTextField txtAgregarTabs = new LabelTextField("Agregar TAB");
     private JButton btnJumbo= new JButton("Jumbo");
+    private JButton btnVea= new JButton("Vea");
+    private JButton btnCoto= new JButton("Coto");
     private JButton btnMayMin= new JButton("MayMin");
 
 
@@ -268,7 +270,8 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
     private void setPropiedades() {
         txtPath.setToolTipText("Path");
         txtAgregarTabs.setToolTipText("Agrega TAB en las posiciones indicadas. Ej:1,4,7");
-        btnJumbo.setToolTipText("arma una fila cada 3 y tabula");
+        btnJumbo.setToolTipText("arma una fila cada 4 y tabula");
+        btnVea.setToolTipText("arma una fila cada 3 y tabula");
         chkSi.setToolTipText("Si está seleccionado, solo se aplican los cambios en las líneas que cumplan la condición");
     }
 
@@ -412,6 +415,12 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         panelAuxDer.add(btnJumbo, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(20, 0, 0, 0), 0, 0));
+        panelAuxDer.add(btnVea, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
+        panelAuxDer.add(btnCoto, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(0, 0, 0, 0), 0, 0));
 
         panelAuxDer.add(btnMayMin, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
@@ -541,6 +550,16 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
         btnJumbo.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 jumbo();
+            }
+        });
+        btnVea.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                vea();
+            }
+        });
+        btnCoto.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                coto();
             }
         });
         btnMayMin.addActionListener(new ActionListener(){
@@ -785,7 +804,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
     //Edición texto
     /*********************************************************************************************/
     private List<String> getTextAsList(){
-        String s = textArea.getText();
+        String s = textArea.getText().trim();
         return UtilString.getTextAsList(s);
     }
 
@@ -1033,12 +1052,13 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                 append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
                 */
-                append(Constantes.NUEVA_LINEA) ;
+                append(Constantes.NUEVA_LINEA).append(Constantes.NUEVA_LINEA) ;
 
         double acumSinIva = 0;
         double acumConIva = 0;
         DecimalFormat df = new DecimalFormat("#.##");
 
+        int cantProds = 0;
         for(int i = 0; i< list.size()-2; ) {
             try {
                 String prod = list.get(i++);
@@ -1073,6 +1093,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                         append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
                         */
                         append(Constantes.NUEVA_LINEA) ;
+                cantProds++;
             } catch (Exception e) {
                 sb.append(("list.get(i) = " + list.get(i))).append(Constantes.NUEVA_LINEA);
                 sb.append(("list.get(i+1) = " + list.get(i + 1))).append(Constantes.NUEVA_LINEA);
@@ -1087,10 +1108,166 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                 break;
             }
         }
+        agregarPie(sb, cantProds);
 
         list.clear();
         list.add(sb.toString());
         mostrar(list);
+    }
+    private void vea(){
+
+        List<String> list = getTextAsList();
+        int pos = 0;
+
+        StringBuilder sb = new StringBuilder();
+        //agrego cabecera
+        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Enviado").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
+                */
+                append(Constantes.NUEVA_LINEA).append(Constantes.NUEVA_LINEA) ;
+
+        double acumSinIva = 0;
+        double acumConIva = 0;
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        int cantProds = 0;
+        for(int i = 0; i< list.size()-2; ) {
+            try {
+                String prod = list.get(i++);
+                String cantOXKg = list.get(i++); //ej:6.00 ; si el prod es x kilo, acá pone "$179,00 x kg"
+                if (cantOXKg.startsWith("$")) {
+                    cantOXKg = list.get(i++);//ahora sí es la cantidad, ej: 1.5kg
+                    cantOXKg = cantOXKg.replace("kg", "");
+                }
+                String precTotal = list.get(i++); //$592,20
+
+                precTotal = precTotal.replace("$", ""); //saco pesos
+
+                double cantDouble = Double.parseDouble(cantOXKg);
+                double precioTDouble = Double.parseDouble(precTotal);
+                double precioPorUnidad = precioTDouble / cantDouble;
+                //double precioPorUnidadSinIva = precioPorUnidad / 1.21; //asume iva 21%
+                //double precioTotalSinIva = precioPorUnidadSinIva * cantDouble; //asume iva 21%
+
+                //acumConIva +=precioDouble;
+                //acumSinIva +=precioTotalSinIva;
+
+                sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(cantDouble)).append(Constantes.TAB_CHARACTER). //enviado
+                        append(df.format(precioPorUnidad))./*.append(Constantes.TAB_CHARACTER).append(df.format(precioDouble)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(precioPorUnidadSinIva)).append(Constantes.TAB_CHARACTER).append(df.format(precioTotalSinIva)).append(Constantes.TAB_CHARACTER).
+                        */
+                        append(Constantes.NUEVA_LINEA) ;
+                cantProds++;
+            } catch (Exception e) {
+                sb.append(("list.get(i) = " + list.get(i))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+1) = " + list.get(i + 1))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+2) = " + list.get(i + 2))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+3) = " + list.get(i + 3))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+4) = " + list.get(i + 4))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+5) = " + list.get(i + 5))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+6) = " + list.get(i + 6))).append(Constantes.NUEVA_LINEA);
+                sb.append(("list.get(i+7) = " + list.get(i + 7))).append(Constantes.NUEVA_LINEA);
+                sb.append(e.getLocalizedMessage());
+                e.printStackTrace();
+                break;
+            }
+        }
+        agregarPie(sb, cantProds);
+
+        list.clear();
+        list.add(sb.toString());
+        mostrar(list);
+    }
+
+
+    private void coto(){
+
+        List<String> list = getTextAsList();
+        int pos = 0;
+
+        StringBuilder sb = new StringBuilder();
+        //agrego cabecera
+        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Enviado").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER).
+                append(Constantes.NUEVA_LINEA).append(Constantes.NUEVA_LINEA) ;
+
+        double acumSinIva = 0;
+        double acumConIva = 0;
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        int cantProds = 0;
+
+        for(int i = 0; i< list.size(); i++) {
+            try {
+                //ej: Pure De Tomate Campagnola 520 Gr		$32.09		4.0		$128.36		Llevando 2:	80% 2da
+
+                String linea = list.get(i);
+                String[] split = linea.split(Constantes.TAB_CHARACTER+"");
+                String prod = split[0];
+                String precXUnidadTmp = split[2].replace("$", ""); //saco pesos;
+                double precioPorUnidad = Double.parseDouble(precXUnidadTmp);
+
+                String cantTmp = split[4];
+                double cant = Double.parseDouble(cantTmp);
+                String promoTmp = "";
+                if (split.length > 8){
+                    promoTmp = split[8];
+                    if (split.length == 10)
+                        promoTmp += split[9];
+                }
+                double promo = getPromoCoto(promoTmp);
+
+                sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cant)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(cant)).append(Constantes.TAB_CHARACTER). //enviado
+                        append(df.format(precioPorUnidad)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(promo)).
+                        append(Constantes.NUEVA_LINEA) ;
+
+                cantProds++;
+
+            } catch (Exception e) {
+                sb.append(("list.get(i) = " + list.get(i))).append(Constantes.NUEVA_LINEA);
+                sb.append(e.getLocalizedMessage());
+                e.printStackTrace();
+                break;
+            }
+        }
+        agregarPie(sb, cantProds);
+
+        list.clear();
+        list.add(sb.toString());
+        mostrar(list);
+    }
+
+    private double getPromoCoto(String promoTmp) {
+        if ("".equals(promoTmp))
+            return 1;
+        if ("Llevando 2:80% 2da".equals(promoTmp))
+            return 0.6;
+        if ("Llevando 2:70% 2da".equals(promoTmp))
+            return 0.65;
+        if (promoTmp.startsWith("20%Dto"))
+            return 0.8;
+        if (promoTmp.startsWith("25%Dto"))
+            return 0.75;
+        if ("Llevando 2:30%Dto".equals(promoTmp))
+            return 0.7;
+        if ("-".equals(promoTmp))
+            return 1;
+
+        JOptionPane.showMessageDialog(null, "Revisar promo desconocida: '" + promoTmp + "'");
+
+        return 1;
+    }
+
+    private void agregarPie(StringBuilder sb, int cantProds) {
+        sb.append(Constantes.NUEVA_LINEA) ;
+        sb.append("Cantidad de productos: " + cantProds);
+        sb.append(Constantes.NUEVA_LINEA) ;
     }
 
     private void reemplazarNLPor(String nuevo){
