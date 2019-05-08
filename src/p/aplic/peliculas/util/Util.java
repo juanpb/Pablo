@@ -350,7 +350,7 @@ public class Util {
             new Thread(new Runnable(){
                 public void run() {
                     try {
-                        generarHTML(pelis);
+                        generarHTML(pelis, true);
                     } catch (IOException e) {
                         Log.error(e);
                     } catch (JDOMException e) {
@@ -362,6 +362,120 @@ public class Util {
         }catch(Exception e){
             Log.error(e);
         }
+    }
+
+    private static void generarHTML(Peliculas pls, boolean soloSinVer) throws JDOMException, IOException {
+        List<Pelicula.Estado> estados = Pelicula.getEstados();
+        String htmlRoot = System.getProperty("htmlRoot");
+        if (htmlRoot == null){
+            System.out.println("No se definió el htmlRoot");
+            return ;
+        }
+        else if (!htmlRoot.endsWith("\\"))
+            htmlRoot += "\\";
+
+
+        String nombre = System.getProperty("nombre");
+        int cantMaxPelisPorHTML = Integer.MAX_VALUE;
+        try{
+            cantMaxPelisPorHTML = Integer.parseInt(System.getProperty("cantMaxPelisPorHTML"));
+        }catch(Exception e){}
+
+        if (nombre == null)
+            nombre = "";
+        else
+            nombre += "_";
+
+        //Si no existe htmlRoot no genero los html de salida
+
+        File f = new File(htmlRoot);
+        if (f.exists()){
+            for (Pelicula.Estado estado : estados) {
+                if (soloSinVer && estado.equals(Pelicula.Estado.SIN_VER)){
+                    List<Pelicula> peliculas = pls.getPeliculas(estado);
+                    ordenarPorContador(peliculas);
+                    if (estado.equals(Pelicula.Estado.SIN_VER)){
+                        //no incluyo las que están solo en divx
+                        peliculas = excluirSoloDIVX(peliculas);
+                    }
+
+                    if (peliculas.size() == 0){
+                        //genero html vacío
+                        String archSalida = htmlRoot + nombre + estado + ".html";
+                        HTML.generarHTML(peliculas, archSalida);
+                    }
+                    else{
+                        //por cada estado, genero html que no superen la cantidad de pelis especificada
+                        for (int i=0; i * cantMaxPelisPorHTML < peliculas.size(); i++){
+                            String cont = "";
+                            if (i > 0)
+                                cont = "_" + i;
+                            String archSalida = htmlRoot + nombre + estado + cont + ".html";
+                            List<Pelicula> peliculasParte;
+                            if (cantMaxPelisPorHTML >= peliculas.size())
+                                peliculasParte = peliculas;
+                            else{
+                                peliculasParte = new ArrayList<Pelicula>(cantMaxPelisPorHTML);
+                                for(int j = i * cantMaxPelisPorHTML;
+                                    j <i * cantMaxPelisPorHTML + cantMaxPelisPorHTML && peliculas.size() > j
+                                        ; j++) {
+                                    peliculasParte.add(peliculas.get(j));
+                                }
+                            }
+                            HTML.generarHTML(peliculasParte, archSalida);
+                        }
+                    }
+                }
+            }
+            //genera HD
+            String archSalidaHD = htmlRoot + nombre + "HD.html";//todo
+            List<Pelicula> peliculasHD = new ArrayList<Pelicula>();
+
+            //genera HD
+            archSalidaHD = htmlRoot + nombre + "HD_ordenado.html";//todo
+            List<Pelicula> pelis = pls.getPeliculas();
+            List<Pelicula> pelisOrd = new ArrayList();
+            pelisOrd.addAll(pelis);
+            peliculasHD.clear();
+            ordenarAñoNombre(pelisOrd);
+            for (Pelicula p : pelisOrd) {
+                if (p.isHD())
+                    peliculasHD.add(p);
+            }
+            HTML.generarHTML(peliculasHD, archSalidaHD);
+
+            //genera varios html con CANT pelis HD desordenadas
+            int CANT = 60;
+            int cantPelisTotal = peliculasHD.size();
+            boolean seguir = true;
+            int cont = 0;
+            Collections.shuffle(peliculasHD);
+            while( seguir)        {
+                archSalidaHD = htmlRoot + nombre + "HD_mezcla_" + ++cont + ".html";//todo
+
+                int hasta = CANT * cont;
+
+                if (hasta >= cantPelisTotal){
+                    seguir = false;
+                    hasta = cantPelisTotal -1;
+                }
+                List<Pelicula> pelisMezcla = peliculasHD.subList(CANT * (cont-1), hasta);
+
+                HTML.generarHTML(pelisMezcla, archSalidaHD);
+            }
+        }else{
+            System.out.println("No existe el directorio de salida para los html: '" + htmlRoot +"'");
+        }
+
+        //creo un html con los estados VISTO y SIN_VER (que estén en DVD),
+        //ordenado por año (> a <) y nombre
+//        List<Pelicula> peliculas = pls.getPeliculas(Pelicula.Estado.SIN_VER);
+//        List<Pelicula> peliculasV = pls.getPeliculas(Pelicula.Estado.VISTO);
+//        peliculas.addAll(peliculasV);
+//        peliculas = excluirSoloDIVX(peliculasV);
+//        ordenarAñoNombre(peliculas);
+//        String archSalida = htmlRoot + "//dvd.html";
+//        HTML.generarHTML(peliculas, archSalida);
     }
 
     public static String pelicula2XML(Pelicula p){
@@ -565,122 +679,7 @@ public class Util {
      * 'cantMaxPelisPorHTML'), en el directorio %htmlRoot%.
      */
     public static void  generarHTML(Peliculas pls ) throws IOException, JDOMException {
-        List<Pelicula.Estado> estados = Pelicula.getEstados();
-        String htmlRoot = System.getProperty("htmlRoot");
-        if (htmlRoot == null){
-            System.out.println("No se definió el htmlRoot");
-            return ;
-        }
-        else if (!htmlRoot.endsWith("\\"))
-            htmlRoot += "\\";
-
-
-        String nombre = System.getProperty("nombre");
-        int cantMaxPelisPorHTML = Integer.MAX_VALUE;
-        try{
-            cantMaxPelisPorHTML = Integer.parseInt(System.getProperty("cantMaxPelisPorHTML"));
-        }catch(Exception e){}
-
-        if (nombre == null)
-            nombre = "";
-        else
-            nombre += "_";
-
-        //Si no existe htmlRoot no genero los html de salida
-
-        File f = new File(htmlRoot);
-        if (f.exists()){
-            for (Pelicula.Estado estado : estados) {
-                List<Pelicula> peliculas = pls.getPeliculas(estado);
-                ordenarPorContador(peliculas);
-                if (estado.equals(Pelicula.Estado.SIN_VER)){
-                    //no incluyo las que están solo en divx
-                    peliculas = excluirSoloDIVX(peliculas);
-                }
-
-                if (peliculas.size() == 0){
-                    //genero html vacío
-                    String archSalida = htmlRoot + nombre + estado + ".html";
-                    HTML.generarHTML(peliculas, archSalida);
-                }
-                else{
-                    //por cada estado, genero html que no superen la cantidad de pelis especificada
-                    for (int i=0; i * cantMaxPelisPorHTML < peliculas.size(); i++){
-                        String cont = "";
-                        if (i > 0)
-                            cont = "_" + i;
-                        String archSalida = htmlRoot + nombre + estado + cont + ".html";
-                        List<Pelicula> peliculasParte;
-                        if (cantMaxPelisPorHTML >= peliculas.size())
-                            peliculasParte = peliculas;
-                        else{
-                            peliculasParte = new ArrayList<Pelicula>(cantMaxPelisPorHTML);
-                            for(int j = i * cantMaxPelisPorHTML;
-                                j <i * cantMaxPelisPorHTML + cantMaxPelisPorHTML && peliculas.size() > j
-                                    ; j++) {
-                                peliculasParte.add(peliculas.get(j));
-                            }
-                        }
-                        HTML.generarHTML(peliculasParte, archSalida);
-                    }
-                    //genera HD
-                    String archSalidaHD = htmlRoot + nombre + "HD.html";//todo
-                    List<Pelicula> peliculasHD = new ArrayList<Pelicula>();
-//                    for (Pelicula p : pls.getPeliculas()) {
-//                        if (p.isHD())
-//                            peliculasHD.add(p);
-//                    }
-//                    HTML.generarHTML(peliculasHD, archSalidaHD);
-
-                    //genera HD
-                    archSalidaHD = htmlRoot + nombre + "HD_ordenado.html";//todo
-                    List<Pelicula> pelis = pls.getPeliculas();
-                    List<Pelicula> pelisOrd = new ArrayList();
-                    pelisOrd.addAll(pelis);
-                    peliculasHD.clear();
-                    ordenarAñoNombre(pelisOrd);
-                    for (Pelicula p : pelisOrd) {
-                        if (p.isHD())
-                            peliculasHD.add(p);
-                    }
-                    HTML.generarHTML(peliculasHD, archSalidaHD);
-
-                    //genera varios html con CANT pelis HD desordenadas
-                    int CANT = 60;
-                    int cantPelisTotal = peliculasHD.size();
-                    boolean seguir = true;
-                    int cont = 0;
-                    Collections.shuffle(peliculasHD);
-                    while( seguir)        {
-                        archSalidaHD = htmlRoot + nombre + "HD_mezcla_" + ++cont + ".html";//todo
-
-                        int hasta = CANT * cont;
-
-                        if (hasta >= cantPelisTotal){
-                            seguir = false;
-                            hasta = cantPelisTotal -1;
-                        }
-                        List<Pelicula> pelisMezcla = peliculasHD.subList(CANT * (cont-1), hasta);
-
-                        HTML.generarHTML(pelisMezcla, archSalidaHD);
-                    }
-
-                }
-
-            }
-        }else{
-            System.out.println("No existe el directorio de salida para los html: '" + htmlRoot +"'");
-        }
-
-        //creo un html con los estados VISTO y SIN_VER (que estén en DVD),
-        //ordenado por año (> a <) y nombre
-//        List<Pelicula> peliculas = pls.getPeliculas(Pelicula.Estado.SIN_VER);
-//        List<Pelicula> peliculasV = pls.getPeliculas(Pelicula.Estado.VISTO);
-//        peliculas.addAll(peliculasV);
-//        peliculas = excluirSoloDIVX(peliculasV);
-//        ordenarAñoNombre(peliculas);
-//        String archSalida = htmlRoot + "//dvd.html";
-//        HTML.generarHTML(peliculas, archSalida);
+        generarHTML(pls, false);
     }
 
     private static void ordenarPorContador(List<Pelicula> peliculas) {

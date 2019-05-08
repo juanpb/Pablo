@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Raíz>
     <ContadorDVD>70</ContadorDVD>
-    <UniqueID>116</UniqueID>
-    <ContadorVistos>83</ContadorVistos>
-    <ContadorSinVer>87</ContadorSinVer>
-    <Timestamp>1528725106914</Timestamp>
+    <UniqueID>119</UniqueID>
+    <ContadorVistos>85</ContadorVistos>
+    <ContadorSinVer>90</ContadorSinVer>
+    <Timestamp>1544989073920</Timestamp>
     <Pelicula uniqueId="1" contador="1">
         <Nombre>Miles Davis - Miles Electric: A Different Kind of Blue</Nombre>
         <Id>DVD 64</Id>
@@ -498,7 +498,7 @@ DVD Release Date: 17 Nov 2003</DatosTecnicos>
         <Poster>x6la4i.jpg</Poster>
     </Pelicula>
     <Pelicula uniqueId="16" contador="16">
-        <Nombre>Classic Albums: John Lennon - Plastic Ono Band</Nombre>
+        <Nombre>John Lennon - Classic Albums: John Lennon - Plastic Ono Band</Nombre>
         <Id>DVD 62</Id>
         <Annus>2008</Annus>
         <Estado>Visto</Estado>
@@ -711,13 +711,6 @@ English 5.1ch DTS @ 1 510 Kbps</DatosTecnicos>
         <Critica>A concert by rock singer/guitarist Eric Clapton, with colleagues Phil Collins, Nathan East and others.</Critica>
         <Poster>image023.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="23" contador="5">
-        <Nombre>John Lennon - Imagine</Nombre>
-        <Id>DVD 17</Id>
-        <Annus>1988</Annus>
-        <Estado>Archivado</Estado>
-        <Poster>image024.jpg</Poster>
-    </Pelicula>
     <Pelicula uniqueId="24" contador="6">
         <Nombre>The History of Rock and Roll</Nombre>
         <Id>DVD 19 - DVD 24</Id>
@@ -727,7 +720,7 @@ DVD 24 - Disco 2</Critica>
         <Poster>image025.jpg</Poster>
     </Pelicula>
     <Pelicula uniqueId="25" contador="7">
-        <Nombre>Lennon Legend: The Very Best Of John Lennon</Nombre>
+        <Nombre>John Lennon - Legend: The Very Best Of John Lennon</Nombre>
         <Id>DVD 22</Id>
         <Estado>Archivado</Estado>
         <Critica>Tracks:
@@ -3459,6 +3452,114 @@ LPCM 2.0, 2304Kbps, 48kHz, 24 Bit
 Subtitles
 English, French, Spanish, German, Dutch, Italian and Portuguese</DatosTecnicos>
         <Poster>61QEH5tSzbL._SS500.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="116" contador="83">
+        <Nombre>John Lennon - Gimme Some Truth</Nombre>
+        <Id>HD</Id>
+        <Annus>2000</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Eagle Rock are delighted to announce the
+release of two films by John and Yoko
+Imagine and Gimme Some Truth
+Both films, which focus on the Imagine era
+have been hand restored frame-by-frame
+from the original film reels into HD
+and their soundtracks have been remixed
+in glorious 5.1 surround sound, and remastered
+01 Imagine
+02 Crippled Inside
+03 Good Morning
+04 Jealous Guy
+05 Don't Count The Waves
+06 It's So Hard
+07 Mrs. Lennon
+08 In Bag
+09 I Don't Wanna Be A Soldier Mama
+10 Mind Train
+11 Whisper Piece
+12 What's That In The Sky?
+13 Power To The People
+14 Gimme Some Truth
+15 Midsummer New York
+16 Oh My Love
+17 How Do You Sleep?
+18 How?
+19 Oh Yoko!
+20 Beach / End Credits
+21 Gimme Some Truth:Imagine
+22 Crippled Inside
+23 Oh Yoko!
+24 Jealous Guy
+25 It's So Hard
+26 I Don't Wanna Be A Soldier Mama
+27 Gimme Some Truth
+28 My Love
+29 How Do You Sleep?
+30 How?
+31 Imagine: This is the first time both films have been
+commercially available at the same time</Critica>
+        <DatosTecnicos>1504 x 1080
+29.970
+8574
+FLAC 2.0
+FLAC 5.1
+01:03:00
+BLURAY
+7.65 GB: |</DatosTecnicos>
+        <Duracion>1.03</Duracion>
+        <Poster>41NDM0XEPTL.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="117" contador="84">
+        <Nombre>John Lennon - Imagine</Nombre>
+        <Annus>1972</Annus>
+        <Estado>Visto</Estado>
+        <Critica>The Imagine music films by John &amp; Yoko
+Directors: John Lennon, Yoko Ono
+Starring: John Lennon, Yoko Ono, George Harrison
+Universal Music Group is celebrating what would have been John Lennon's 78th birthday on October 9 with the release of Imagine and tangentially related items in a number of formats. That includes a new "two fer" released in collaboration with Eagle Rock Entertainment that gathers together two fascinating films featuring John and Yoko tied directly to Imagine. Those wanting more information on this title and its sibling are encouraged to read our Imagine &amp; Gimme Some Truth Blu-ray review, which contains full coverage and more screenshots from each film included on the Blu-ray disc.
+Imagine and Gimme Some Truth are presented on Blu-ray courtesy of Eagle Vision, an imprint of Eagle Rock Entertainment, and Universal Music Group, with AVC encoded 1080i transfers in 1.39:1. Both of the films feature rather involved restoration credits at the end which document a seemingly ungainly time period spanning from 2010 to 2018 to complete the process. Why that's the case is unknown to me (and the documentation provided with this release doesn't offer any clues), but considering some of the variances on display, especially in Imagine, I'm wondering if completed versions might have needed to be cobbled together from different sources. The interesting interviews included in the insert booklet suggest that at least Gimme Some Truth was sourced largely from 16mm, but both films on this release have an at times grainy and fuzzy appearance that suggest smaller formats. That said, footage like the interstitial scenes featuring Jack Palance look decidedly rougher than the at times already pretty soft bulk of footage, and I wonder if perhaps a few 8mm home movies might have been included (see screenshot 29 for an example of what the Palance footage can look like when compared to most of the rest of Imagine). The palette is a bit more suffused on Imagine than Gimme Some Truth (and it looks like some duplicate elements of Imagine footage may have been used for Gimme Some Truth), though both features retain a generally accurate accounting of the colors. Fine detail tends to vary based on lighting sources and proximity to the camera. While it evidently took eight years to restore these features, whatever corrective gauntlet the elements were put through missed a number of things like hairs in the gate, some of which stick around for quite long periods of time. Screenshots 23 - 26 show some of these hairs (look both at the tops and bottoms of the frames), while screenshots 27 - 29 document some of the rougher looking moments.
+01 Imagine
+02 Crippled Inside
+03 Good Morning
+04 Jealous Guy
+05 Don't Count The Waves
+06 It's So Hard
+07 Mrs. Lennon
+08 In Bag
+09 I Don't Wanna Be A Soldier Mama
+10 Mind Train
+11 Whisper Piece
+12 What's That In The Sky?
+13 Power To The People
+14 Gimme Some Truth
+15 Midsummer New York
+16 Oh My Love
+17 How Do You Sleep?
+18 How?
+19 Oh Yoko!
+20 Beach / End Credits
+21 Gimme Some Truth:Imagine
+22 Crippled Inside
+23 Oh Yoko!
+24 Jealous Guy
+25 It's So Hard
+26 I Don't Wanna Be A Soldier Mama
+27 Gimme Some Truth
+28 My Love
+29 How Do You Sleep?
+30 How?
+31 Imagine: This is the first time both films have been
+commercially available at the same time</Critica>
+        <DatosTecnicos>John Lennon Imagine 1971 REMASTERED 1080p MBluRay x264-LiQUiD
+1504 x 1080
+29.970
+8840
+FLAC 2.0
+FLAC 5.1
+01:07:00
+BLURAY
+8.75 GB: |</DatosTecnicos>
+        <Poster>213454_front.jpg</Poster>
     </Pelicula>
 </Raíz>
 

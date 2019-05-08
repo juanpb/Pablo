@@ -14,27 +14,23 @@ dns arnet:200.45.48.233
 Cloudflare: 1.1.1.1 y 1.0.0.1.
 telecentro100.72.3.117 100.72.3.109 
 
-
-
 ___________________________________________
 ___________________________________________
-         
-life 1: 0.10.35					
-The World at War, 8: 0.6.20
-orange 6 - b
-Mozart In The Jungle 4 - b 
-the americans 6 - b
-the wire 5 -b bajar subs
+las 2: 0.10.0 
+corteo ..0
+
+True Detective 4 - e
+the deuce 3 - e
+Mozart In The Jungle 5 - e 
 mr robot 4 - e
-Line of Duty 2: b
-The Big Bang T 11 b
+orange 7 - e
+el marginal 3: e
+The Big Bang T 12 e
 Silicon Valley 6 - e
 homeland 8 - e
 Fargo 4 - e 
-el chapó 2 - v
 Better call saul 4 - e
-House of c 6 - e
-narcos 4 - e
+narcos 5 - e
 
 
 Person of Interest - bajar
