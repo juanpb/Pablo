@@ -1187,6 +1187,79 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
 
         List<String> list = getTextAsList();
         int pos = 0;
+        double promoDefault = 0.7;
+
+        StringBuilder sb = new StringBuilder();
+        //agrego cabecera
+        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+                append("Enviado").append(Constantes.TAB_CHARACTER).
+                append("Precio unidad").append(Constantes.TAB_CHARACTER).
+                append("Promo Semanal").append(Constantes.TAB_CHARACTER).
+                append("Promo Acum").append(Constantes.TAB_CHARACTER).
+                append(Constantes.NUEVA_LINEA).append(Constantes.NUEVA_LINEA) ;
+
+        double acumSinIva = 0;
+        double acumConIva = 0;
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        int cantProds = 0;
+
+        for(int i = 0; i< list.size(); i++) {
+            try {
+                //ej: Pure De Tomate Campagnola 520 Gr		$32.09		4.0		$128.36		Llevando 2:	80% 2da
+
+                String linea2 = list.get(i);
+                //si hay doble tab dejo uno solo
+                String linea = linea2.replaceAll("\t\t", Constantes.TAB_CHARACTER+"");
+
+                String[] split = linea.split(Constantes.TAB_CHARACTER+"");
+                String prod = split[0];
+                String precXUnidadTmp = split[1].replace("$", ""); //saco pesos;
+                double precioPorUnidad = Double.parseDouble(precXUnidadTmp);
+
+                //todo: validar paridad de ofertas tipo "Llevando 2 "
+
+                String cantTmp = split[2];
+                double cant = Double.parseDouble(cantTmp);
+                String promoTmp = "";
+                if (split.length > 4){
+                    promoTmp = split[4];
+                    if (split.length > 5)
+                        promoTmp += split[5];
+                }
+                double promo = getPromoCoto(promoTmp);
+                double promoFinal = promo;
+                if (promo > promoDefault)   {
+                    promoFinal = promoDefault;
+                }
+
+                sb.append(prod).append(Constantes.TAB_CHARACTER).append(df.format(cant)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(cant)).append(Constantes.TAB_CHARACTER). //enviado
+                        append(df.format(precioPorUnidad)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(promo)).append(Constantes.TAB_CHARACTER).
+                        append(df.format(promoFinal)).
+                        append(Constantes.NUEVA_LINEA) ;
+
+                cantProds++;
+
+            } catch (Exception e) {
+                sb.append(("list.get(i) = " + list.get(i))).append(Constantes.NUEVA_LINEA);
+                sb.append(e.getLocalizedMessage());
+                e.printStackTrace();
+                break;
+            }
+        }
+        agregarPie(sb, cantProds);
+
+        list.clear();
+        list.add(sb.toString());
+        mostrar(list);
+    }
+
+    private void cotoPromosAcumuladas(){ //viejo, no usado a partir de 2019
+
+        List<String> list = getTextAsList();
+        int pos = 0;
 
         StringBuilder sb = new StringBuilder();
         //agrego cabecera
@@ -1205,19 +1278,24 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
             try {
                 //ej: Pure De Tomate Campagnola 520 Gr		$32.09		4.0		$128.36		Llevando 2:	80% 2da
 
-                String linea = list.get(i);
+                String linea2 = list.get(i);
+                //si hay doble tab dejo uno solo
+                String linea = linea2.replaceAll("\t\t", Constantes.TAB_CHARACTER+"");
+
                 String[] split = linea.split(Constantes.TAB_CHARACTER+"");
                 String prod = split[0];
-                String precXUnidadTmp = split[2].replace("$", ""); //saco pesos;
+                String precXUnidadTmp = split[1].replace("$", ""); //saco pesos;
                 double precioPorUnidad = Double.parseDouble(precXUnidadTmp);
 
-                String cantTmp = split[4];
+                //todo: validar paridad de ofertas tipo "Llevando 2 "
+
+                String cantTmp = split[2];
                 double cant = Double.parseDouble(cantTmp);
                 String promoTmp = "";
-                if (split.length > 8){
-                    promoTmp = split[8];
-                    if (split.length == 10)
-                        promoTmp += split[9];
+                if (split.length > 4){
+                    promoTmp = split[4];
+                    if (split.length > 5)
+                        promoTmp += split[5];
                 }
                 double promo = getPromoCoto(promoTmp);
 
@@ -1244,18 +1322,30 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
     }
 
     private double getPromoCoto(String promoTmp) {
+        promoTmp = promoTmp.trim();
+        promoTmp = promoTmp.replace(":", " ");   //xq a veces viene "Llevando 2:80% 2da" y otras "Llevando 2 80% 2da"
         if ("".equals(promoTmp))
             return 1;
-        if ("Llevando 2:80% 2da".equals(promoTmp))
+        if ("Llevando 2 2x1".equals(promoTmp))
+            return 0.5;
+        if ("50%Dto".equals(promoTmp))
+            return 0.5;
+        if ("Llevando 2 80% 2da".equals(promoTmp))
             return 0.6;
-        if ("Llevando 2:70% 2da".equals(promoTmp))
+        if ("Llevando 2 70% 2da".equals(promoTmp))
             return 0.65;
-        if (promoTmp.startsWith("20%Dto"))
-            return 0.8;
+        if ("Llevando 3 3x2".equals(promoTmp))
+            return 0.666;
+        if (promoTmp.startsWith("30%Dto"))
+            return 0.7;
+        if ("Llevando 2 30%Dto".equals(promoTmp))
+            return 0.7;
         if (promoTmp.startsWith("25%Dto"))
             return 0.75;
-        if ("Llevando 2:30%Dto".equals(promoTmp))
-            return 0.7;
+        if (promoTmp.startsWith("20%Dto"))
+            return 0.8;
+        if ("Llevando 3 5%Dto".equals(promoTmp))
+            return 0.95;
         if ("-".equals(promoTmp))
             return 1;
 
