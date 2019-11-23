@@ -427,41 +427,43 @@ public class Util {
                     }
                 }
             }
-            //genera HD
-            String archSalidaHD = htmlRoot + nombre + "HD.html";//todo
-            List<Pelicula> peliculasHD = new ArrayList<Pelicula>();
+            if (!soloSinVer){
+                //genera HD
+                String archSalidaHD = htmlRoot + nombre + "HD.html";//todo
+                List<Pelicula> peliculasHD = new ArrayList<Pelicula>();
 
-            //genera HD
-            archSalidaHD = htmlRoot + nombre + "HD_ordenado.html";//todo
-            List<Pelicula> pelis = pls.getPeliculas();
-            List<Pelicula> pelisOrd = new ArrayList();
-            pelisOrd.addAll(pelis);
-            peliculasHD.clear();
-            ordenarAñoNombre(pelisOrd);
-            for (Pelicula p : pelisOrd) {
-                if (p.isHD())
-                    peliculasHD.add(p);
-            }
-            HTML.generarHTML(peliculasHD, archSalidaHD);
-
-            //genera varios html con CANT pelis HD desordenadas
-            int CANT = 60;
-            int cantPelisTotal = peliculasHD.size();
-            boolean seguir = true;
-            int cont = 0;
-            Collections.shuffle(peliculasHD);
-            while( seguir)        {
-                archSalidaHD = htmlRoot + nombre + "HD_mezcla_" + ++cont + ".html";//todo
-
-                int hasta = CANT * cont;
-
-                if (hasta >= cantPelisTotal){
-                    seguir = false;
-                    hasta = cantPelisTotal -1;
+                //genera HD
+                archSalidaHD = htmlRoot + nombre + "HD_ordenado.html";//todo
+                List<Pelicula> pelis = pls.getPeliculas();
+                List<Pelicula> pelisOrd = new ArrayList();
+                pelisOrd.addAll(pelis);
+                peliculasHD.clear();
+                ordenarAñoNombre(pelisOrd);
+                for (Pelicula p : pelisOrd) {
+                    if (p.isHD())
+                        peliculasHD.add(p);
                 }
-                List<Pelicula> pelisMezcla = peliculasHD.subList(CANT * (cont-1), hasta);
+                HTML.generarHTML(peliculasHD, archSalidaHD);
 
-                HTML.generarHTML(pelisMezcla, archSalidaHD);
+                //genera varios html con CANT pelis HD desordenadas
+                int CANT = 200;
+                int cantPelisTotal = peliculasHD.size();
+                boolean seguir = true;
+                int cont = 0;
+                Collections.shuffle(peliculasHD);
+                while( seguir)        {
+                    archSalidaHD = htmlRoot + nombre + "HD_mezcla_" + ++cont + ".html";//todo
+
+                    int hasta = CANT * cont;
+
+                    if (hasta >= cantPelisTotal){
+                        seguir = false;
+                        hasta = cantPelisTotal -1;
+                    }
+                    List<Pelicula> pelisMezcla = peliculasHD.subList(CANT * (cont-1), hasta);
+
+                    HTML.generarHTML(pelisMezcla, archSalidaHD);
+                }
             }
         }else{
             System.out.println("No existe el directorio de salida para los html: '" + htmlRoot +"'");

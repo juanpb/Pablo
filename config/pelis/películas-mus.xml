@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Raíz>
     <ContadorDVD>70</ContadorDVD>
-    <UniqueID>119</UniqueID>
-    <ContadorVistos>85</ContadorVistos>
-    <ContadorSinVer>90</ContadorSinVer>
-    <Timestamp>1544989073920</Timestamp>
+    <UniqueID>123</UniqueID>
+    <ContadorVistos>87</ContadorVistos>
+    <ContadorSinVer>92</ContadorSinVer>
+    <Timestamp>1573484233807</Timestamp>
     <Pelicula uniqueId="1" contador="1">
         <Nombre>Miles Davis - Miles Electric: A Different Kind of Blue</Nombre>
         <Id>DVD 64</Id>
@@ -3560,6 +3560,100 @@ FLAC 5.1
 BLURAY
 8.75 GB: |</DatosTecnicos>
         <Poster>213454_front.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="119" contador="85">
+        <Nombre>The Rolling Stones - Rock and Roll Circus</Nombre>
+        <Id>HD</Id>
+        <Annus>1966</Annus>
+        <Imdb-puntaje>7,7 (1.650)</Imdb-puntaje>
+        <Estado>Visto</Estado>
+        <Critica>Edición: 2018
+The Rolling Stones Rock and Roll Circus was shot over two days in December
+1968 and featured guests such as The Who, Jethro Tull, Taj Mahal, Marianne
+Faithfull and the impromptu supergroup The Dirty Mac (which featured John
+Lennon, Keith Richards, Mitch Mitchell, Eric Clapton and, on bag, Yoko Ono)
+in addition to the original lineup of The Rolling Stones
+Shot in a north London television studio by director Michael Lindsay-Hogg
+(he would shoot Let It Be shortly after) The Rolling Stones Rock and Roll
+Circus was a concert filmed with the band themselves as on-screen hosts in
+addition to performing. The audience were made up of fan club members and it
+was ostensibly meant to be a BBC TV special for the Beggars Banquet long player
+But Brian Jones left and then died, and so the film wasn t properly released
+for 28 years
+01. Song For Jeffrey Jethro Tull
+02. A Quick One While He s Away The Who
+03. Ain t That A Lot Of Love Taj Mahal
+04. Something Better Marianne Faithfull
+05. Yer Blues The Dirty Mac
+06. Whole Lotta Yoko Yoko Ono &amp; Ivry Gitlis, and The Dirty Mac
+07. Jumpin Jack Flash The Rolling Stones
+08. Parachute Woman The Rolling Stones
+09. No Expectations The Rolling Stones
+10. You Can t Always Get What You Want The Rolling Stones
+11. Sympathy for the Devil The Rolling Stones
+12. Salt Of The Earth The Rolling Stones</Critica>
+        <DatosTecnicos>The.Rolling.Stones.Rock.And.Roll.Circus.1996.1080p.MBluRay.x264-TREBLE
+DATE: 2019/07/09
+AUDIO: [AC3 | 5.1] [ 640Kbps] [FLAC | 2.0] [ 1522Kbps]
+VIDEO: [1440 | 1080] [ 9740Kbps]
+SUBS: [n/a]</DatosTecnicos>
+        <Duracion>1.05</Duracion>
+        <Poster>Rolling-Stones-RRC-Poster.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="121" contador="86">
+        <Nombre>Luis Alberto Spinetta - National Geographic Bios</Nombre>
+        <Id>HD</Id>
+        <Annus>2019</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Un viaje por la vida y obra de Luis Alberto Spinetta con acceso a grabaciones y material de archivos inéditos, la participación de su familia y entrevistas a los amigos y artistas que lo acompañaron y admiraron.</Critica>
+        <DatosTecnicos>[MP4] National Geographic Bios: Luis Alberto Spinetta (2019) WEB-DL
+Resolución: 844x470
+Formato: WEB-DL
+Codec Video: AVC
+Codec Audio: AAC
+Bitrate Video: 10.6 Mbps
+Bitrate Audio: 256 Kbps</DatosTecnicos>
+        <Duracion>1.38</Duracion>
+        <Poster>1PQTtK3.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="122" contador="91">
+        <Nombre>The Rolling Stones - Bridges to Buenos Aires 1998</Nombre>
+        <Id>HD</Id>
+        <Annus>2019</Annus>
+        <Estado>Sin ver</Estado>
+        <Critica>Die Fans in Argentinien gelten als besonders leidenschaftlich. Auch die Rolling Stones können das bezeugen, denn im Jahr 1998 gaben sie 5 ausverkaufte Konzerte hintereinander im River Plate Stadion. Das letzte Konzert der Reihe am 05.04.1998 entwickelte sich zu einem regelrechten Hexenkessel und dem würdigen Finale, das die Fans und die Stones verdienten. Als besonderer Gast kam sogar Bob Dylan für eine spezielle Version von 'Like a Rolling Stone' auf die Bühne um die Stones zu begleiten.
+Setlist:
+01. (I Can&#x2019;t Get No) Satisfaction
+02. Let&#x2019;s Spend The Night Together
+03. Flip The Switch
+04. Gimme Shelter
+05. Sister Morphine
+06. Its Only Rock &#x2018;n&#x2019; Roll (But I Like It)
+07. Saint Of Me
+08. Out Of Control
+09. Miss You
+10. Like A Rolling Stone (featuring Bob Dylan)
+11. Thief In The Night
+12. Wanna Hold You
+13. Little Queenie
+14. When The Whip Comes Down
+15. You Got Me Rocking
+16. Sympathy For The Devil
+17. Tumbling Dice
+18. Honky Tonk Women
+19. Start Me Up
+20. Jumpin&#x2019; Jack Flash
+21. You Can&#x2019;t Always Get What You Want
+22. Brown Sugar</Critica>
+        <DatosTecnicos>The.Rolling.Stones.Bridges.to.Buenos.Aires.1998.2019.720p.MBLURAY.x264-MBLURAYFANS
+Title ...... = The Rolling Stones - Bridges To Buenos Aires (2019)
+Genre ...... = 08.11.2019
+Runtime .... = 140 Minuten
+Video ..... = 960 x 720 , x264 2PASS @ 4050 kbps
+Audio ...... = English DTS 5.1 @ 1.509 kbps
+Size ....... = 5596 MB</DatosTecnicos>
+        <Duracion>2.20</Duracion>
+        <Poster>SharedImage-94832.jpg</Poster>
     </Pelicula>
 </Raíz>
 
