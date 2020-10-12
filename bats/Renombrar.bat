@@ -8,7 +8,7 @@ rem %1 es el directorio, cuando se ejecuta sobre una carpeta de Windows. Generar
 rem en Regedit = HKEY_CLASSES_ROOT\Directory\shell\Renombrar\command
 
 rem con '-dXXX' si XXX tiene algún directorio existente, arranca en ese directorio
-start javaw -classpath %CP% p.aplic.renombrar.Renombrar -d%1 %INI% 
+start javaw  -Dlog4j_path=c:\tmp -Dlogfile.name=javas.log -classpath %CP% p.aplic.renombrar.Renombrar -d%1 %INI% 
 
-rem java -classpath %CP% p.aplic.renombrar.Renombrar  -d%1 %INI% 
+rem java  -Dlog4j_path=c:\tmp -Dlogfile.name=javas.log -classpath %CP% p.aplic.renombrar.Renombrar  -d%1 %INI% 
 rem pause

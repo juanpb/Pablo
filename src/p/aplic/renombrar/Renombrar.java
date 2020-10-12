@@ -152,37 +152,39 @@ public class Renombrar{
                     path = file.getParent();
 
                     String nuevoNombre = path + "\\" + fila.getFileName();
-
-                    File newFile = new File(nuevoNombre);
-                    boolean anduvoBien = file.renameTo(newFile);
-                    int cont = 1;
-                    while (!anduvoBien){
-                        if (newFile.exists()){
-                            anduvoBien = file.renameTo(new File(nuevoNombre + " " + cont));
-                            if (anduvoBien)
-                                nuevoNombre += " " + cont;
-                            else
-                                cont++;
+                    if (!nuevoNombre.equals(file.getAbsolutePath())) {
+                        File newFile = new File(nuevoNombre);
+                        boolean anduvoBien = file.renameTo(newFile);
+                        int cont = 1;
+                        while (!anduvoBien) {
+                            if (newFile.exists()) {
+                                anduvoBien = file.renameTo(new File(nuevoNombre + " " + cont));
+                                if (anduvoBien)
+                                    nuevoNombre += " " + cont;
+                                else
+                                    cont++;
+                            } else
+                                break;
                         }
-                    }
 
-                    //deshacer
-                    if (loguear){
-                        String viejo = "viejo: " + file.getAbsolutePath();
-                        String nuevo = "nuevo: " + nuevoNombre;
-                        if (!anduvoBien)
-                            nuevo += "\n" + "^^^^^FALLÓ^^^^^^^";
-                        sb.append(viejo + "\n" + nuevo + "\n" + "\n") ;
+                        //deshacer
+                        if (loguear) {
+                            String viejo = "viejo: " + file.getAbsolutePath();
+                            String nuevo = "nuevo: " + nuevoNombre;
+                            if (!anduvoBien)
+                                nuevo += "\n" + "^^^^^FALLÓ^^^^^^^";
+                            sb.append(viejo + "\n" + nuevo + "\n" + "\n");
+                        }
                     }
                 }
             }
-            UtilFile.logEnUserDir("desRen.txt", sb);
         }
         catch (Exception ex) {
             ex.printStackTrace();
             throw ex;
         }
         finally{
+            UtilFile.logEnUserDir("desRen.txt", sb);
             gui.setTitle("");
         }
     }
@@ -255,7 +257,8 @@ public class Renombrar{
                 continue;
             String str = fila.getFileName();
             String nStr = UtilString.reemplazarTodo(str, viejo, nuevo);
-            fila.setFileName(nStr);
+            if (!str.equals(nStr))
+                fila.setFileName(nStr);
         }
         tm.fireTableDataChanged();
     }

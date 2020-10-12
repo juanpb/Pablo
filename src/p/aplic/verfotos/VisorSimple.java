@@ -58,6 +58,7 @@ public class VisorSimple extends JFrame {
 
 //        Toolkit tk = Toolkit.getDefaultToolkit(); //todo
 //        Dimension ss = tk.getScreenSize();
+
         Dimension ss = device.getFullScreenWindow().getSize();//todo 666
 
         setSize((int)ss.getWidth(), (int)ss.getHeight());

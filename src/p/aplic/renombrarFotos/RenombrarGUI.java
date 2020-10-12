@@ -531,12 +531,12 @@ public class RenombrarGUI extends JFrame implements FileTransfer{
     private void setBounds(){
         chkSoloSeleccionado.setMargin(new Insets(0,0,0,0));
 //        int anchoTabla = 500;// monitor de 15"
-//        int anchoPnlThumb = 1400; //monitor de 19" - Default
-        int anchoPnlThumb = 1200; //monitor de 14" - Default
+        int anchoPnlThumb = 1780; //monitor de 19" - Default
+//        int anchoPnlThumb = 1200; //monitor de 14" - Default
 
 
         int anchoCombo = 470;
-        int altTabla = 660;
+        int altTabla = 960;//660;
         int alt2 = 18;
         int alt3 = 40;
         int sep = 1;
@@ -638,7 +638,7 @@ public class RenombrarGUI extends JFrame implements FileTransfer{
         Dimension dim = new Dimension(x2 + anc2 + sep ,
                                       sep * 4 + altTabla + 45);
 //        setBounds(1, 1, (int) dim.getWidth()+20, (int) dim.getHeight()+20);
-        setBounds(0, 0, (int) dim.getWidth()+30, (int) dim.getHeight()+15);
+        setBounds(0, 0, (int) dim.getWidth()+30, (int) dim.getHeight()+30);
     }
 
     public boolean renombrarOnClick(){
@@ -698,7 +698,7 @@ public class RenombrarGUI extends JFrame implements FileTransfer{
                 }
             }
 
-            int CANT_COL = 4;
+            int CANT_COL = 5;
             int c = 0;
             int f = 0;
             int in = 0;

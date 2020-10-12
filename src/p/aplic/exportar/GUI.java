@@ -412,13 +412,13 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(20, 0, 0, 0), 0, 0));
 
-        panelAuxDer.add(btnJumbo, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
+        panelAuxDer.add(btnCoto, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(20, 0, 0, 0), 0, 0));
         panelAuxDer.add(btnVea, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(0, 0, 0, 0), 0, 0));
-        panelAuxDer.add(btnCoto, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
+        panelAuxDer.add(btnJumbo, new GridBagConstraints(0, y++, 2, 1, 0.0, 0.0,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(0, 0, 0, 0), 0, 0));
 
@@ -994,13 +994,12 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
 
         StringBuilder sb = new StringBuilder();
         //agrego cabecera
-        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+        /*sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
                 append("Enviado").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad").append(Constantes.TAB_CHARACTER)./*.append("Precio total").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad sin iva").append(Constantes.TAB_CHARACTER).append("Precio total sin iva").append(Constantes.TAB_CHARACTER).
-                */
                 append(Constantes.NUEVA_LINEA) ;
-
+        */
         double acumSinIva = 0;
         double acumConIva = 0;
         DecimalFormat df = new DecimalFormat("#.##");
@@ -1191,13 +1190,13 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
 
         StringBuilder sb = new StringBuilder();
         //agrego cabecera
-        sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
+        /*sb.append("Producto").append(Constantes.TAB_CHARACTER).append("Cant").append(Constantes.TAB_CHARACTER).
                 append("Enviado").append(Constantes.TAB_CHARACTER).
                 append("Precio unidad").append(Constantes.TAB_CHARACTER).
                 append("Promo Semanal").append(Constantes.TAB_CHARACTER).
                 append("Promo Acum").append(Constantes.TAB_CHARACTER).
                 append(Constantes.NUEVA_LINEA).append(Constantes.NUEVA_LINEA) ;
-
+        */
         double acumSinIva = 0;
         double acumConIva = 0;
         DecimalFormat df = new DecimalFormat("#.##");
@@ -1249,11 +1248,14 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
                 break;
             }
         }
-        agregarPie(sb, cantProds);
+        //agregarPie(sb, cantProds);
+        frame.setTitle(titulo + ". Cantidad de productos: " + cantProds);
+
 
         list.clear();
         list.add(sb.toString());
         mostrar(list);
+        ordernar();
     }
 
     private void cotoPromosAcumuladas(){ //viejo, no usado a partir de 2019
@@ -1328,18 +1330,32 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
             return 1;
         if ("Llevando 2 2x1".equals(promoTmp))
             return 0.5;
+        if ("Llevando 4 4x2".equals(promoTmp))
+            return 0.5;
         if ("50%Dto".equals(promoTmp))
             return 0.5;
+        if ("Llevando 3 40%Dto".equals(promoTmp))
+            return 0.6;
         if ("Llevando 2 80% 2da".equals(promoTmp))
             return 0.6;
         if ("Llevando 2 70% 2da".equals(promoTmp))
             return 0.65;
+        if ("40%Dto".equals(promoTmp))
+            return 0.6;
+        if ("35%Dto".equals(promoTmp))
+            return 0.65;
+        if ("20%Dto".equals(promoTmp))
+            return 0.8;
+        if ("Llevando 2 50% 2da".equals(promoTmp))
+            return 0.75;
         if ("Llevando 3 3x2".equals(promoTmp))
             return 0.666;
         if (promoTmp.startsWith("30%Dto"))
             return 0.7;
         if ("Llevando 2 30%Dto".equals(promoTmp))
             return 0.7;
+        if ("Llevando 2 15%Dto".equals(promoTmp))
+            return 0.85;
         if (promoTmp.startsWith("25%Dto"))
             return 0.75;
         if (promoTmp.startsWith("20%Dto"))
@@ -1350,8 +1366,7 @@ public class GUI implements ActionListener, FileTransfer, Aplicacion {
             return 1;
 
         JOptionPane.showMessageDialog(null, "Revisar promo desconocida: '" + promoTmp + "'");
-
-        return 1;
+        throw new RuntimeException("Revisar promo desconocida: '" + promoTmp + "'");
     }
 
     private void agregarPie(StringBuilder sb, int cantProds) {
