@@ -9,7 +9,9 @@ import org.xml.sax.InputSource;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
 import p.aplic.peliculas.PeliculasFrame;
+import p.aplic.peliculas.Tag;
 import p.util.SVN;
+import p.util.UtilFile;
 import p.util.xml.XMLWriter;
 
 import javax.swing.*;
@@ -143,6 +145,16 @@ public class Util {
         }
     }
 
+    static public void cargarTags(Peliculas peliculas, String tagFile) throws IOException, JDOMException {
+        List<String> apl = UtilFile.getArchivoPorLinea(tagFile);
+        List<Tag> tags = new ArrayList<Tag>();
+        peliculas.setTags(tags);
+        for (String s : apl) {
+            StringTokenizer st = new StringTokenizer(s, "=");
+            Tag tag = new Tag(Integer.parseInt(st.nextElement().toString()), st.nextToken());
+            tags.add(tag);
+        }
+    }
     static private Peliculas leerXML(File f) throws IOException, JDOMException {
         if (f.exists()){
             SAXBuilder builder = new SAXBuilder();
