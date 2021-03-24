@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Raíz>
     <ContadorDVD>70</ContadorDVD>
-    <UniqueID>124</UniqueID>
-    <ContadorVistos>87</ContadorVistos>
-    <ContadorSinVer>92</ContadorSinVer>
-    <Timestamp>1580065991359</Timestamp>
+    <UniqueID>135</UniqueID>
+    <ContadorVistos>99</ContadorVistos>
+    <ContadorSinVer>104</ContadorSinVer>
+    <Timestamp>1616458485483</Timestamp>
     <Pelicula uniqueId="1" contador="1">
         <Nombre>Miles Davis - Miles Electric: A Different Kind of Blue</Nombre>
         <Id>DVD 64</Id>
@@ -194,25 +194,12 @@ Woodstock. Untold Stories. The Direcor's Cut Bonus
         <Poster>ZIRniSRb.jpeg</Poster>
         <Poster>image045.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="10" contador="10">
+    <Pelicula uniqueId="10" contador="93">
         <Nombre>The Beatles: Anthology</Nombre>
-        <Id>DVD 32  - DVD 33  - DVD 34  - DVD 35  - DVD 36</Id>
-        <Estado>Visto</Estado>
-        <Critica>image049.jpg
-image050.jpg
-image051.jpg
-image052.jpg
-image053.jpg
-image054.jpg
-image055.jpg
-image056.gif
-image057.jpg
-image058.jpg
-image059.gif
-image060.jpg
-image061.jpg
-image062.gif
-DESCRIPTION:
+        <Id>DVD 32  - DVD 33  - DVD 34  - DVD 35  - DVD 36 - HD</Id>
+        <Annus>1995</Annus>
+        <Estado>Sin ver</Estado>
+        <Critica>DESCRIPTION:
 If you could roll the respective significance of "Citizen Kane", "Gone With the Wind" and "Lawrence of Arabia" into one film, you might have somewhat of an idea what the Beatles mean to contemporary music. Indeed, while Elvis Presley, Chuck Berry and Buddy Holly laid the groundwork, the Beatles forever defined the musical and artistic boundaries by which all future pop players would be judged. Indeed, the DVD format has provided modern day audiences with a chance to see why the Fab Four's legacy is something much more significant than a mere history lesson. "The Beatles Anthology" (released April 1, 2003 on DVD) picks up where the 2002-issued collector's edition release of "A Hard Day's Night" left off, providing more insight into the minds and music of the band that put Liverpool on the map. In addition to the in-depth chronology taking viewers on a magical mystery trip through the 1960s, new and never-before-seen material features interviews with Paul McCartney, Ringo Starr and the late George Harrison at Abbey Road Studios in May 1995 as they listen to classic Beatles tracks with producer George Martin. The jewel of the release is additional footage of the three one-time mop tops jamming together in George Harrison's garden.
 DVD extras? You get them here. Indeed, the DVD release features a bonus disc featuring approximately 80 minutes of material more than the deluxe, eight-volume VHS release that expanded on the ABC special broadcast on Nov. 19, 22 and 23, 1995. Needless to say, all fans of rock music and 20th century pop culture should own this collection.
 Disc One:
@@ -235,7 +222,7 @@ Disc Five: Special Features
 * Production Team
 * Making the "Free As A Bird" Video
 * "Real Love" Video</Critica>
-        <DatosTecnicos>DVD1: [X] Re-encoded                        
+        <Comentario>DVD1: [X] Re-encoded                        
 HIGH/LOW/TYPICAL: 2,436/1,771/2,022 Kbs
 Overall Bitrate: 2,528/2,022Kbs  
 Compression Ratio: 62.2%
@@ -270,7 +257,17 @@ EXTRAS:
 Rippers Notes:
 * Ripped to HD using DVDShrink 3.2 uncompressed, removing the English LPCM audio.
 * FBI Screen &amp; LPCM Audio buttons removed with DVD ReMake Pro 3.1.4.
-* DVD5 reduction done with DVD ReBuilder Pro 1.09.2 using the CinemaCraft Encoder SP [2.70.02.09].</DatosTecnicos>
+* DVD5 reduction done with DVD ReBuilder Pro 1.09.2 using the CinemaCraft Encoder SP [2.70.02.09].</Comentario>
+        <DatosTecnicos>Video
+Codec: MPEG-4 AVC
+Resolution: 480p
+Aspect ratio: 4:3
+Audio
+English: DTS-HD Master Audio 5.1
+English: LPCM 2.0
+English: Dolby Digital 5.1
+Subtitles
+English, French, German, Italian, Portuguese, Spanish, Dutch</DatosTecnicos>
         <Poster>image046.jpg</Poster>
         <Poster>image047.jpg</Poster>
         <Poster>image048.jpg</Poster>
@@ -1061,11 +1058,11 @@ Disc : 4
         <Estado>Visto</Estado>
         <Poster>image085.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="42" contador="24">
-        <Nombre>Bob Dylan - Dont Look Back: 65 Tour Deluxe Edition</Nombre>
-        <Id>DVD 56</Id>
+    <Pelicula uniqueId="42" contador="97">
+        <Nombre>Bob Dylan - Dont Look Back</Nombre>
+        <Id>DVD 56 - HD</Id>
         <Annus>1967</Annus>
-        <Estado>Archivado</Estado>
+        <Estado>Sin ver</Estado>
         <Critica>Dont Look Back is a 1967 documentary film by D.A. Pennebaker that principally covers Bob Dylan's 1965 concert tour of the United Kingdom. In 1998, the film was selected for preservation in the United States National Film Registry by the Library of Congress as being "culturally, historically, or aesthetically significant".
 The film features Joan Baez, Donovan and Alan Price (who had just left The Animals), Dylan's manager Albert Grossman and his road manager Bob Neuwirth; Marianne Faithfull, John Mayall, Ginger Baker, and Allen Ginsberg may also be glimpsed in the background. The film shows a young Dylan: confident if not arrogant, confrontational and contrary, but also charismatic and charming. Notable scenes include:
 - Dylan's extended taunting of Time Magazine's London arts and science correspondent Horace Freeland Judson who was subjected to what he believes to be a contrived tirade of abuse from Dylan.
@@ -1088,6 +1085,16 @@ Disc 1:
 Disc 2:
 - 65 Revisited [Additional Footage from the Tour] (65min)
 - Commentary by D.A. Pennebaker and Bob Neuwirth</Critica>
+        <DatosTecnicos>CONTENEDOR: MKV
+FUENTE DE VIDEO: BLU-RAY
+CODEC DE VIDEO: x264
+FRAMES DE VIDEO: 23,976
+RESOLUCIÓN DE VIDEO: 960x720
+BITRATE DE VIDEO: 5 018 Kbps
+AUDIO 1: DTS 1536 Kbps 2.0 Inglés
+SUBTÍTULOS: Español
+TAMAÑO: 4,37 GB</DatosTecnicos>
+        <Duracion>1.35</Duracion>
         <Poster>image089.jpg</Poster>
     </Pelicula>
     <Pelicula uniqueId="43" contador="25">
@@ -1992,69 +1999,9 @@ audio......DTS 5.1 @ 1510 Kbps</DatosTecnicos>
         <Duracion>1.20</Duracion>
         <Poster>bbking.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="68" contador="38">
-        <Nombre>Led Zeppelin - The Song Remains the Same+</Nombre>
-        <Id>HD</Id>
-        <Annus>1976</Annus>
-        <Estado>Visto</Estado>
-        <Critica>Genre: Rock
-Duration: 2:17:42
-Year: 1976/2007
-Directed by: Peter Clifon, Joe Massot
-Starring: John Bonham, John Paul Jones, Jimmy Page, Robert Plant
-Description: The film has many scenes that include recording concerts at Madison Square Garden, and behind the scenes footage in the Baltimore Civic Centre carried out in the same round, which are interspersed with staged scenes. In the cinematic scenes are displayed episodes of mob attacks and episodes in the style of fantasy.
-For Led Zeppelin fanatics, this 1976 feature The Song Remains the Same is a treasure of searing live performances, particularly welcome in light of the sad scarcity of such visual material from the band's great decade. Despite the group's road weariness after a long tour, their final, three-night stand at Madison Square Garden in 1973 was full of the old power. Performances of "No Quarter," "Whole Lotta Love," "Black Dog," "Dazed and Confused," and "Stairway to Heaven" underscore Zep's charisma. Trouble is, you don't get an unbroken performance here. Viewers have to wade through a mishmash of documentary insight into the lives of Robert Plant, Jimmy Page, John Bonham, and John Paul Jones, as well as fantasy sequences supposedly inspired by the thoughts and fantasies of the band's individual members. It's mostly garish and silly, but there are some nice elements, especially insights into the late Bonham's life.
-Tracklist
-01. Mob Rubout
-02. Mob Town Credits
-03. Country Life (Autumn Lake)
-04. Bron-Yr-Aur
-05. Rock and Roll
-06. Black Dog
-07. Since I've Been Loving You
-08. No Quarter
-09. Who's Responsible?
-10. The Song Remains the Same
-11. The Rain Song
-12. Fire And Sword
-13. Capturing The Castle
-14. Not Quite Backstage Pass
-15. Dazed And Confused
-16. Strung Out
-17. Magic In The Night
-18. Gate Crasher
-19. No Comment
-20. Stairway To Heaven
-21. Moby Dick
-22. Country Squire Bonham
-23. Heartbreaker
-24. Grand Theft
-25. Whole Lotta Love
-26. End Credits (w / Stairway to Heaven)
-Bonuses
-01. Tampa News Report (News Footage Of The Band's Arrival And Concert In Tampa, Florida)
-02. Over The Hills And Far Away (Never-before-released Song)
-03. Boating Down The Thames (BBC Vintage Interview With Robert Plant And Peter Grant)
-04. Celebration Day (Cutting Copy) (Never-before-released Song)
-05. The Robbery (Vintage Footage Of The Infamous Drake Hotel Robbery - Interview With Peter Grant)
-06. Misty Mountain Hop (Song)
-07. The Ocean (Song)
-08. Original Film Trailer</Critica>
-        <DatosTecnicos>Quality: BDRip
-Container: MKV
-Video codec: H.264
-Audio Codec: DTS
-Video: x264, 1920x1080p, 23.976fps, ~ 9498kbps
-Bonus Video: x264, 1920-1392x1088-1080 / 23.976, ~ 8878-3727kbps
-Audio: English DTS 5.1 / 48kHz / 1510kbps
-Bonus Audio: English AC3 5.1/2.0 / 48kHz / 448/192kbps
-Subtitles: English, SRT subtitle format
-Head: present</DatosTecnicos>
-        <Duracion>2.17 + bonus</Duracion>
-        <Poster>image014.jpg</Poster>
-    </Pelicula>
     <Pelicula uniqueId="69" contador="31">
         <Nombre>Nirvana - Live at the Paramount</Nombre>
+        <Id>HD</Id>
         <Annus>1991</Annus>
         <Estado>Visto</Estado>
         <Critica>Featuring the following performances: 1 Jesus Doesn't Want Me For A Sunbeam 2 Aneurysm 3 Drain You 4 School 5 Floyd The Barber 6 Smells Like Teen Spirit 7 About A Girl 8 Polly 9 Breed 10 Sliver 11 Love Buzz 12 Lithium 13 Been A Son 14 Negative Creep 15 On A Plain 16 Blew 17 Rape Me 18 Territorial Pissings 19 Endless, Nameless</Critica>
@@ -2648,7 +2595,7 @@ TAMAÑO 6.56 GiB</DatosTecnicos>
         <Duracion>1.40</Duracion>
         <Poster>OXn3PwD.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="87" contador="51">
+    <Pelicula uniqueId="87" contador="93">
         <Nombre>Divididos - Audio y agua</Nombre>
         <Id>HD</Id>
         <Annus>2011</Annus>
@@ -2667,7 +2614,10 @@ Bitrate Audio: 640 kbps
 [DATOS:
 Idioma: Español
 Fecha de Rippeo: 2013
-Ripper: QEN</DatosTecnicos>
+Ripper: QEN
+_____________________________
+
+Codec Audio: FLAC /5.1</DatosTecnicos>
         <Duracion>1.31 + 1.14</Duracion>
         <Poster>6e1aj468.png</Poster>
     </Pelicula>
@@ -2789,11 +2739,11 @@ Forced : No</DatosTecnicos>
         <Duracion>1.20</Duracion>
         <Poster>30bc4821e322c2958478dfadae3d374c.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="92" contador="56">
+    <Pelicula uniqueId="92" contador="99">
         <Nombre>Miles Davis - Live at Montreux</Nombre>
         <Id>HD</Id>
         <Annus>1991</Annus>
-        <Estado>Visto</Estado>
+        <Estado>Sin ver</Estado>
         <Critica>Miles Davis y Quincy Jones con la orquesta de Gil Evans-Live at Montreux 
 This concert from 8 July 1991 was the last of Miles Davis many appearances at the Montreux Jazz Festival and took place only a few months before his death. Despite a defiant never look back philosophy, Miles was persuaded by Quincy Jones and Claude Nobs to take part in this tribute to his great friend Gil Evans, who had passed away in 1988. This truly unique concert was an historical event and a musical triumph, thankfully captured here for posterity. Miles Davis was a giant of 20th century music and this concert is as much a tribute to him as it is to the late Gil Evans.
 El blu ray de este concierto, ha sido editado en 2013.
@@ -2810,15 +2760,13 @@ El blu ray de este concierto, ha sido editado en 2013.
 10. Here Come De Honey Man
 11. The Pan Piper
 12. Solea</Critica>
-        <DatosTecnicos>CONTENEDOR: MKV 
-FUENTE DE VIDEO: BLU-RAY 
-CODEC DE VIDEO: x264 
-FRAMES DE VIDEO: 29,97 
-RESOLUCIÓN DE VIDEO: 1280x720 
-BITRATE DE VIDEO: 9.999 kbps 
-AUDIO 1: FLAC 2.0
-AUDIO 2: AC3 5.1 640 Kbps
-TAMAÑO: 4,12 GB</DatosTecnicos>
+        <DatosTecnicos>Format : Matroska
+Format version : Version 2
+File size : 13.9 GiB
+Overall bit rate mode : Variable
+Overall bit rate : 32.9 Mbps 
+1080p
+DTS</DatosTecnicos>
         <Duracion>1</Duracion>
         <Poster>Mile_Davis_y_Quincy_Jones.jpg</Poster>
     </Pelicula>
@@ -3616,11 +3564,11 @@ Bitrate Audio: 256 Kbps</DatosTecnicos>
         <Duracion>1.38</Duracion>
         <Poster>1PQTtK3.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="122" contador="91">
+    <Pelicula uniqueId="122" contador="87">
         <Nombre>The Rolling Stones - Bridges to Buenos Aires 1998</Nombre>
         <Id>HD</Id>
         <Annus>2019</Annus>
-        <Estado>Sin ver</Estado>
+        <Estado>Visto</Estado>
         <Critica>Die Fans in Argentinien gelten als besonders leidenschaftlich. Auch die Rolling Stones können das bezeugen, denn im Jahr 1998 gaben sie 5 ausverkaufte Konzerte hintereinander im River Plate Stadion. Das letzte Konzert der Reihe am 05.04.1998 entwickelte sich zu einem regelrechten Hexenkessel und dem würdigen Finale, das die Fans und die Stones verdienten. Als besonderer Gast kam sogar Bob Dylan für eine spezielle Version von 'Like a Rolling Stone' auf die Bühne um die Stones zu begleiten.
 Setlist:
 01. (I Can&#x2019;t Get No) Satisfaction
@@ -3655,10 +3603,11 @@ Size ....... = 5596 MB</DatosTecnicos>
         <Duracion>2.20</Duracion>
         <Poster>SharedImage-94832.jpg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="123" contador="0">
+    <Pelicula uniqueId="123" contador="91">
         <Nombre>Jimi Hendrix</Nombre>
+        <Id>HD</Id>
         <Annus>1973</Annus>
-        <Estado>Bajando</Estado>
+        <Estado>Visto</Estado>
         <Critica>This documentary was made three years after Jimi Hendrix's untimely death. At the time it was an example of how a visual biography should be done, but some of the information in it needs revising in the light of new information uncovered..</Critica>
         <DatosTecnicos>Jimi Hendrix 1973 1080p AMZN WEBRip DDP2 0 x264-ABM
 Format : Matroska
@@ -3675,7 +3624,403 @@ Bit rate mode : Constant
 Bit rate : 224 kb/s
 Channel(s) : 2 channels
 Subs: eng</DatosTecnicos>
+        <Duracion>1.42</Duracion>
         <Poster>jimi_hendrix.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="124" contador="88">
+        <Nombre>Patricio Rey y sus Redonditos de Ricota - Estadio de Huracán - Diciembre de 1994</Nombre>
+        <Id>HD</Id>
+        <Annus>1994</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Lista De Temas:
+(16 De Diciembre)
+1- Mi Perro Dinamita 00:00
+2- Roto Y Mal Parado 02:58
+3- El Pibe De Los Astilleros 07:41
+4- Fusilado Por La Cruz Roja 11:52
+5- Un Ángel Para Tu Soledad 16:22
+6- Nadie Es Perfecto 20:29
+7- Canción Para Naufragios 23:25
+8- Shopping Disco-Zen 28:52
+9- El Arte Del Buen Comer 31:47
+10- Lobo Caído 36:33
+(17 De Diciembre)
+11- Espejismo 40:04
+12- Lavi Rap 46:22
+13- Yo Caníbal 50:38
+14- Salando Las Heridas 53:41
+15- Criminal Mambo 59:43
+16- Tarea Fina 1:05:10
+17- La Hija Del Fletero 1:09:20
+18- Botija Rapado 1:13:20
+19- El Pibe De Los Astilleros 1:16:37
+20- Queso Ruso 1:20:33
+21- Maldición Va A Ser Un Día Hermoso- Vamos Las Bandas 1:25:35
+22- Jijiji 1:31:50</Critica>
+        <DatosTecnicos>Resolución: 1440x1080
+Formato: MP4 (WEB-Rip)
+Codec Video: AVC
+Codec Audio: AAC
+Bitrate Video: 3210 kb/s
+Bitrate Audio: 128 Kbps</DatosTecnicos>
+        <Duracion>1.38</Duracion>
+    </Pelicula>
+    <Pelicula uniqueId="125" contador="97">
+        <Nombre>The Doors - Live At The Isle Of Wight Festival</Nombre>
+        <Id>HD</Id>
+        <Annus>1970</Annus>
+        <Estado>Visto</Estado>
+        <Critica>August, 1970: With Jim Morrison's ongoing Miami obscenity trial casting an ominous shadow over the band, The Doors flew to England to play the Isle of Wight Festival. Waiting for them at quot;The Last Great Festivalquot; were over 600,000 fans who had already torn down the barriers, crashed the gates, and enjoyed performances by the world's top acts such as Jimi Hendrix, The Who, Miles Davis and Joni Mitchell. The Doors took the stage at 2 am, playing with the weight of the trial on their backs, and showed fans they still had the magic that had propelled them to the top during the Summer of Love. quot;We played with a controlled fury and Jim was in fine vocal form,quot; said Doors organist Ray Manzarek. quot;He sang for all he was worth, but moved nary a muscle. Dionysus had been shackled.quot; Less than a year later, The Doors were no more. Here, for the very first time, is the last Doors concert ever filmed. The Doors: Live at the Isle of Wight.</Critica>
+        <DatosTecnicos>The.Doors.Live.At.The.Isle.Of.Wight.Festival.1970.1080p.MBluRay.x264-TREBLE
+SOURCE: Music Bluray
+DATE: 2018/02/24
+GENRE: Rock
+RUNTIME: 66min
+AUDIO: [DTS] @ 1509kbps
+VIDEO: [x264] @ 10252kbps
+RESOLUTION: [1920x1080]</DatosTecnicos>
+        <Duracion>1.06</Duracion>
+        <Poster>doors.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="126" contador="92">
+        <Nombre>Deep Purple -California Jam</Nombre>
+        <Id>HD</Id>
+        <Annus>1974</Annus>
+        <Estado>Visto</Estado>
+        <Critica>. The phenomenon now known as arena rock was born at the California Jam - and Deep Purple were at it's epicenter. In many ways, the California Jam was the equivalent of the Woodstock festival to a burgeoning generation of hard rock and heavy metal fans. The Jam took place at the Ontario Motor Speedway in Ontario, California on a hot and sunny spring day on April 6, '74. The event attracted an enormous crowd of a quarter-million people and represented a baptism of fire - in more ways than one - for Purple's 'new boys', frontman David Coverdale and bassist/vocalist Glenn Hughes, who in '73 had replaced Ian Gillan and Roger Glover, respectively, to usher in the band's so-called Mk III line-up.</Critica>
+        <DatosTecnicos>Deep.Purple.California.Jam.1974.2016.1080p.MBLURAY.x264-MBLURAYFANS
+Title ...... = Deep Purple California Jam 1974 (2016)
+Genre ...... = Live Music
+Rel.Date ... = 08.02.2018
+Runtime .... = 75 Minuten
+Video ..... = 1424 x 1080 (4:3) , x264 2PASS @ 8390 kbps
+Audio ...... = English DTS 2.0 @ 768 kbps</DatosTecnicos>
+        <Duracion>1.25</Duracion>
+        <Poster>717SSpRlQpL._SL1200_.jpg</Poster>
+        <Poster>7164lLrNjnL._SL1200_.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="127" contador="98">
+        <Nombre>Led Zeppelin - Celebration Day</Nombre>
+        <Id>HD</Id>
+        <Annus>2012</Annus>
+        <Estado>Sin ver</Estado>
+        <Critica>Led Zeppelin: Celebration Day is a movie starring Jimmy Page, Robert Plant, and John Paul Jones. A concert documentary of Led Zeppelins December 10, 2007 tribute performance for Atlantic Records founder Ahmet Ertegun.</Critica>
+        <DatosTecnicos>Led Zeppelin Celebration Day 2012 READNFO 1080p MBluRay x264 SEMTEX
+Format:..........Matroska
+Runtime:.........2hr 4min
+Size:............8.74 GiB
+Video Codec:.....X264 core129 rev2230
+Video Bitrate:...8561 Kbps
+Width:...........1920
+Height:..........1080
+Aspec Ratio:.....1.778
+Framerate:.......29.970
+Audio Codec:.....DTS
+Audio Bitrate:...1 509 Kbps
+Channel(s):......6
+Language(s):.....English
+Subtitle(s):.....None
+Thanks by</DatosTecnicos>
+        <Duracion>2.04</Duracion>
+        <Poster>ledZ.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="128" contador="94">
+        <Nombre>Bob Dylan 30th Anniversary Concert Celebration</Nombre>
+        <Id>HD</Id>
+        <Annus>1992</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Tracklist:
+1.Like a Rolling Stone - John Mellencamp
+2.Blowin' in the Wind - Stevie Wonder
+3.Foot of Pride - Lou Reed
+4.Masters of War - Eddie Vedder &amp; Mike McCready
+5.The Times They Are a-Changin' - Tracy Chapman
+6.It Ain't Me Babe - June Carter Cash &amp; Johnny Cash
+7.What Was It You Wanted - Willie Nelson
+8.I'll Be Your Baby Tonight - Kris Kristofferson
+9.Highway 61 Revisited - Johnny Winter
+10.Seven Days - Ron Wood
+11.Just Like a Woman - Richie Havens
+12.When the Ship Comes In - The Clancy Brothers and Robbie O Connell with special guest Tommy Makem
+13.War - Sinead O'Connor
+14.Just Like Tom Thumb s Blues - Neil Young
+15.All Along the Watchtower - Neil Young
+16.I Shall Be Released - Chrissie Hynde
+17.Love Minus Zero/No Limit - Eric Clapton
+18.Don't Think Twice, It s All Right - Eric Clapton
+19.Emotionally Yours - The O Jays
+20.When I Paint My Masterpiece - The Band
+21.You Ain't Goin Nowhere - Mary-Chapin Carpenter, Rosanne Cash &amp; Shawn Colvin
+22.Absolutely Sweet Marie - George Harrison
+23.License to Kill - Tom Petty &amp; the Heartbreakers
+24.Rainy Day Women #12 &amp; 35 - Tom Petty &amp; the Heartbreakers
+25.Mr. Tambourine Man - Roger McGuinn
+26.It's Alright, Ma (I m Only Bleeding) - Bob Dylan
+27.My Back Pages - Bob Dylan, Roger McGuinn, Tom Petty, Neil Young, Eric Clapton &amp; George Harrison
+28.Knockin' on Heaven's Door - Everyone
+29.Girl of the North Country - Bob Dylan</Critica>
+        <DatosTecnicos>Bob Dylan 30th Anniversary Concert Celebration 1992 1080p BluRay AAC 2.0 x264
+Format........ : Matroska
+Duration.......: 2h 52mn 47s 18ms
+Size...........: 6.76 GiB
+Video:
+Codec..........: Mpeg-4 Avc High@L4.0
+Type...........: Progressive
+Resolution.....: 1920x1080
+Aspect Ratio...: 16:9
+Bit rate.......: 5.5 Mbps  
+Frame rate.....: 29.970 Fps
+Audio:
+Format.........: AAC Audio
+Channels.......: 2 Channels
+Bit rate.......: 2304 Kbps
+Language.......: English</DatosTecnicos>
+        <Duracion>2.52</Duracion>
+        <Poster>R-2926351-1307640047.jpeg.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="129" contador="89">
+        <Nombre>Jaco</Nombre>
+        <Id>HD</Id>
+        <Annus>2015</Annus>
+        <Imdb-puntaje>7,7 (953)</Imdb-puntaje>
+        <Estado>Visto</Estado>
+        <Critica>'JACO' tells the story of Jaco Pastorius, a self-taught
+larger-than-life musician who changed the course of modern music
+Never-before-seen archive unveils the story of Jaco's life, his
+music, his demise, and the lasting victory of artistic genius</Critica>
+        <DatosTecnicos>RELEASE: Jaco.2015.DOCU.1080p.BluRay.x264-TREBLE
+SOURCE: Music Bluray
+DATE: 2015/12/02
+GENRE: Jazz Documentary; Biography
+RUNTIME: 116min
+AUDIO: [DTS] @ 1509kbps
+VIDEO: [x264] @ 11943kbps
+RESOLUTION: [1920x1080]
+SUBS: n/a</DatosTecnicos>
+        <Duracion>1.56</Duracion>
+        <Poster>Cover.jpg</Poster>
+        <Poster>Jaco.2015documentaryposter.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="130" contador="90">
+        <Nombre>The Rolling Stones - Shine a Light</Nombre>
+        <ImdbId>506</ImdbId>
+        <Id>DVD 408 - HD</Id>
+        <Annus>2008</Annus>
+        <Imdb-puntaje>7.6/10 (1,786 votes)</Imdb-puntaje>
+        <Estado>Visto</Estado>
+        <Critica>Shine a Light (Estados Unidos/2008). Dirección: Martin Scorsese. Con Mick Jagger, Keith Richards, Charlie Watts y Ron Wood. Fotografía: Robert Richardson. Edición: David Tedeschi. Documental musical presentado por Distribution Company. Duración: 122 minutos. Apta para todo público.
+Nuestra opinión: muy buena
+No es la primera vez que un concierto de los Rolling Stones llega a la pantalla grande -entre los registros más recordados figuran Gimme Shelter (1970), de los míticos Albert y David Maysles, y Let s Spend the Night Together (1983), de Hal Ashby-, pero más allá de los méritos artísticos o del valor histórico de esos y otros documentales, no hay dudas de que Shine a Light quedará para la posteridad como el gran legado cinematográfico-musical de la legendaria banda británica.
+Cinéfilo y melómano de infatigable labor en la recuperación, conservación, reivindicación y difusión de la historia del cine y de la música (en este rubro concibió joyas como El último vals , sobre la despedida de The Band; varios trabajos sobre el blues como productor y/o director, y No Direction Home , sobre Bob Dylan), Martin Scorsese ha conseguido un documento audiovisual de enorme calidad técnica y artística, que consigue captar y transmitir en toda su dimensión la energía, el placer y las múltiples facetas de una banda tan veterana e incansable como él.
+Rodada en fílmico, con 17 cámaras, durante dos jornadas, y con el histórico y hermoso teatro Beacon de Manhattan como ámbito inmejorable, Shine a Light ofrece durante sus poco más de dos horas una veintena de temas completos -divididos entre los clásicos de siempre y verdaderas rarezas, como "As Tears Go By", que casi nunca tocaron en vivo y que popularizó Marianne Faithfull- que van desde el rock furioso hasta la balada desgarradora, pasando por el rhythm &amp;amp; blues, el blues a lo Muddy Waters (la hermosa "Champagne &amp;amp; Reefer", con el gran Buddy Guy como invitado en voz y guitarra) y hasta el country ("Far Away Eyes").
+Scorsese, que aparece en pantalla al comienzo y al final de la película como un ser tan neurótico, perfeccionista y obsesivo hasta lo risible que nada tiene que envidiarle a otro neoyorquino como Woody Allen, se rodeó para esta proeza cinematográfica y musical de un seleccionado integrado por varios de los mejores directores de fotografía del mundo (cada uno supervisó el trabajo de una cámara), como Robert Richardson ( El aviador ), que concibió el proyecto en términos visuales; John Toll ( La delgada línea roja ); Andrew Lesnie ( El señor de los anillos ); Stuart Dryburgh ( La lección de piano ); Robert Elswit ( Petróleo sangriento ); Emmanuel Lubezki ( El Nuevo Mundo ), y Ellen Kuras ( Eterno resplandor de una mente sin recuerdos ).
+La película, que arranca con Scorsese y Mick Jagger discutiendo por teléfono desde distintos lugares del mundo la lista de temas a tocar y otros detalles de los conciertos y la película, muestra luego la trastienda del show (la potencia lumínica para la filmación fue tan grande que el director pide "no quemar vivo a Mick") y, aunque prioriza claramente el show y la figura tan histriónica como seductora de Jagger, ofrece varias perlas del archivo, especialmente apariciones televisivas de los primeros años de la banda, que sirven para resumir parte de la historia y para demostrar que el grupo no ha perdido nada de la mística, la frescura y las búsquedas de sus inicios.
+En una entrevista de 1964, a dos años del debut, le preguntan a un por entonces joven e inocente Jagger si se siente feliz de la trayectoria de la banda, y dice que su sueño es "poder mantenerla al menos un año más". En otra, ya de 1972, le consultan si va a poder seguir derrochando tanta energía y perder cinco kilos por show. Y el cantante, confiado, asegura que piensa "continuar más allá de los 60 años". La confirmación definitiva de que entonces decía la verdad es la intensidad con la que afronta las dos horas del concierto.
+Algunos podrán cuestionar la elección de ciertos invitados (aparecen desde Jack White hasta Cristina Aguilera) o la inclusión como maestro de ceremonias de un muy cholulo Bill Clinton junto con su familia, que quedan bastante ridiculizados, pero a la hora de poder apreciar como nunca antes, con un sonido impecable y con una capacidad única para registrar todo tipo de detalles, la majestuosidad de los Stones en vivo, Shine a Light resulta una obra llamada a perdurar.
+Diego Batlle
+Tracklist:
+1.Jumpin' Jack Flash
+2.Shattered
+3.She Was Hot
+4.All Down the Line
+5.Loving Cup (w/ Jack White)
+6.As Tears Go By
+7.Some Girls
+8.Just My Imagination
+9.Faraway Eyes
+10.Champagne and Reefer (w/ Buddy Guy)
+11.Tumbling Dice
+12.You Got the Silver
+13.Connection
+14.Sympathy for the Devil
+15.Live With Me (w/ Christina Aguilera)
+16.Start Me Up
+17.Brown Sugar
+18.Satisfaction</Critica>
+        <DatosTecnicos>Video Type: NTSC
+Aspect Ratio: 16:9
+Audio Format: Dolby Digital
+Languages: English/Spanish/French 5.1
+Subtitles: English/Spanish/French
+Extra Info: Features:
+- Behind-The-Scenes Featurette
+4 Bonus Performances by The Rolling Stones, not shown in theaters:
+- Undercover Of The Night
+- Paint It Black
+- Little T &amp; A
+- I'm Free
+Video:
+Widescreen 1.85:1 Color (Anamorphic)  
+Audio:
+ENGLISH: Dolby Digital 5.1 [CC]
+SPANISH: Dolby Digital 5.1
+FRENCH: Dolby Digital 5.1 [CC]
+Subtitles:
+English, Spanish, French</DatosTecnicos>
+        <Duracion>2.02</Duracion>
+        <Poster>shine_a_light.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="131" contador="95">
+        <Nombre>Frank Zappa &amp; The Mothers Roxy The Movie</Nombre>
+        <Id>HD</Id>
+        <Annus>1973</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Frank Zappaâ&#x20ac;&#x2122;s concerts at the Roxy Theatre in Holywood in December 1973 are legendary. Frank and the Mothers played three nights on December 8th, 9th &amp; 10th and these shows formed the basis of the â&#x20ac;&#x153;Roxy &amp; Elsewhereâ&#x20ac; album that was released in 1974. However the performances were also filmed in 16mm and this footage has been sitting in the Zappa vault ever since. Now fully restored by the Zappa Family Trust this live concert film is being made available for the first time. It captures Frank and the Mothers at the height of their powers and includes material that is unique to these performances. This is a highly anticipated release for Zappa fans who have waited many years for the concert footage to finally be released.
+
+01. Cosmik Debris
+02. Medley: Penguin In Bondage / T&#x2019;Mershi Duween / The Dog Breath Variations / Uncle Meat / RDNZL
+03. Inca Roads
+04. Medley: Echidna&#x2019;s Arf (Of You) / Don&#x2019;t You Ever Wash That Thing / Cheepnis - Percussion
+05. Cheepnis
+06. Medley: I&#x2019;m The Slime / Big Swifty
+07. Be-Bop Tango (Of The Old Jazzman&#x2019;s Church)
+08. Don&#x2019;t Eat The Yellow Snow
+09. Father O&#x2019;Blivion</Critica>
+        <DatosTecnicos>Format                         : Matroska
+Format version                 : Version 4 / Version 2
+File size                      : 3.25 GiB
+Duration                       : 1h 35mn
+Overall bit rate               : 4 870 Kbps
+AC-3, 448 Kbps,  6 channels</DatosTecnicos>
+        <Duracion>1.35</Duracion>
+        <Poster>81GCcSzwb9L._AC_SL1500_.jpg</Poster>
+        <Poster>frank zappa-roxy the movie.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="132" contador="96">
+        <Nombre>Roger Waters -  Us + Them</Nombre>
+        <Id>HD</Id>
+        <Annus>2019</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Mash-Up between a concert and a movie, picked bluray tag, since it got an
+imdb listing and shit. Enjoy!
+Waters played 156 shows to 2.3m people with a setlist that included
+Pink Floyd classics from The Dark Side of the Moon, The Wall, Animals
+Wish You Were Here and tracks from 2017 s Is This The Life We Really Want?
+Directed by Sean Evans and Roger Waters, the film attempts to provide
+a sense of what it was like to be there with Evans using state-of-the-art
+digital and audio technology available in the arenas and stadia around the world
+01. Intro
+02. Speak To Me
+03. Breathe
+04. One of These Days
+05. Time
+06. Breathe (Reprise)
+07. The Great Gig in the Sky
+08. Welcome to the Machine
+09. D j Vu
+10. The Last Refugee
+11. Picture That
+12. Wish You Were Here
+13. The Happiest Days of Our Lives
+14. Another Brick in the Wall Part 2
+15. Another Brick in the Wall Part 3
+16. Dogs
+17. Pigs (Three Different Ones)
+18. Money
+19. Us &amp; Them
+20. Brain Damage
+21. Eclipse
+22. The Last Refugee (Reprise)
+23. D j Vu (Reprise)</Critica>
+        <DatosTecnicos>Roger.Waters.Us.And.Them.2019.1080p.BluRay.x264-TREBLE
+DATE: 2020/10/07
+RUNTIME: 1h 59m
+AUDIO: [THD + AC3 | 7.1] [4840Kbps]
+VIDEO: [1920 | 804]
+SUBS: [en | de | fr | it | sp | nl | pt]
+CRF: 17
+BITRATE: 9.800 Kb/s
+SOURCE: 25.991 Kb/s</DatosTecnicos>
+        <Duracion>1.59</Duracion>
+        <Poster>1.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="133" contador="102">
+        <Nombre>Pink Floyd - Delicate Sound of Thunder</Nombre>
+        <Id>HD</Id>
+        <Annus>1989</Annus>
+        <Estado>Sin ver</Estado>
+        <Critica>The concert film was restored and re-edited from the original 35mm film and 
+                  enhanced with 5.1 surround sound.
+                  Pink Floydâ€˜s Delicate Sound of Thunder concert film were restored, remixed
+                  and re-edited for last yearâ€™s mammoth Later Years box set.
+                  The sound on this 1988 release has been completely remixed from the original
+                  multi-track tapes by longtime Pink Floyd engineer Andy Jackson with Pink Floydâ€™s
+                  David Gilmour, assisted by Damon Iddins. 
+                  Pink Floydâ€™s supporting musicians for this tour were as follows: Jon Carin 
+                  (Keyboards, Vocals), Tim Renwick (Guitars, Vocals), Guy Pratt (Bass, Vocals),
+                  Gary Wallis (Percussion), Scott Page (Saxophones, Guitar), Margret Taylor
+                  (Backing Vocals), Rachel Fury (Backing Vocals) and Durga McBroom (Backing Vocals).
+                   01. Shine On You Crazy Diamonds Parts 1-5
+                   02. Signs Of Life
+                   03. Learning To Fly
+                   04. Sorrow
+                   05. The Dogs Of War
+                   06. On The Turning Away
+                   07. One Of These Days
+                   08. Time
+                   09. On The Run
+                   10. The Great Gig In The Sky
+                   11. Wish You Were Here
+                   12. Us And Them
+                   13. Money
+                   14. Comfortably Numb
+                   15. One Slip
+                   16. Run Like Hell</Critica>
+        <DatosTecnicos>Pink.Floyd.Delicate.Sound.Of.Thunder.1988.1080p.MBluRay.x264-TREBLE
+DATE            : 2020/11/20
+RUNTIME         : 1h 55m
+AUDIO           : [DTS-HD MA | 5.1]    [6911Kbps] 
+VIDEO           : [1920   |   1080]  
+SUBS            : [n/a]
+CRF             : 20.5
+BITRATE         : 13.892 Kb/s
+SOURCE          : 24.871 Kb/s</DatosTecnicos>
+        <Duracion>1.55</Duracion>
+        <Poster>DSoT_VHS.jpg</Poster>
+    </Pelicula>
+    <Pelicula uniqueId="134" contador="98">
+        <Nombre>Jimi Hendrix - Live In Maui 1970</Nombre>
+        <Id>HD</Id>
+        <Annus>2020</Annus>
+        <Estado>Visto</Estado>
+        <Critica>Experience Hendrix L.L.C. en asociación con Legacy Recordings, división de Sony Music Entertainment, editarán el documental "Music, Money, Madness. . . Jimi Hendrix In Maui", así como el álbum que lo acompaña Live In Maui el 20 de noviembre. La película narra la visita histórica de Jimi Hendrix Experience a Maui y cómo se vieron atrapados con la desafortunada película Rainbow Bridge producida por su controvertido manager Michael Jeffery. El Blu-ray incluirá el documental completo, así como características adicionales con todas las tomas de película en color de 16 mm existentes de las dos actuaciones esa tarde mezcladas en estéreo y sonido envolvente 5.1. En el paquete se incluirá Live In Maui, los dos packs antes mencionados distribuidos en 2 CD o 3 LP de vinilo, recientemente restaurados y mezclados por el ingeniero de Jimi Hendrix, Eddie Kramer, y masterizados por Bernie Grundman. "Voodoo Child (Slight Return)" es el primer adelanto de este histórico concierto que está disponible en todas las plataformas; aquellos que pidan el material en pre-order recibirán una descarga digital de ese tema. Además, habrá varios diseños de merchandising de Maui y packs de música disponibles exclusivamente en la tienda Authentic Hendrix.
+hendrix-live-maui-box
+El documental prepara el escenario proverbial para Live In Maui: los dos sets completos de Jimi Hendrix Experience, que incluyen impresionantes interpretaciones de los favoritos del público como "Foxey Lady", "Purple Haze" y "Voodoo Child (Slight Return)", así como también &#x2026; canciones inéditas como "Dolly Dagger" y "Freedom" que mostraban la nueva dirección hacia la que se estaba moviendo Hendrix.
+"A Jimi le encantaba la aventura y ciertamente no le faltaron durante su estadía en Hawai, un lugar que también amaba", dice Janie Hendrix, hermana de Jimi. "¡La historia de fondo de Rainbow Bridge y estas grabaciones pintan una imagen de la asombrosa habilidad de Jimi para convertir lo extraño en algo asombroso! Estamos entusiasmados con este lanzamiento porque le da al mundo una mirada más cercana al genio de Jimi ".
+"Music, Money, Madness. . . Jimi Hendrix In Maui" se lanzará en Blu-ray, con las dos actuaciones mezcladas en estéreo y sonido envolvente 5.1. Live In Maui se lanzará como CD y cajas de vinilo. Los packs están disponibles para reservar ahora.
+Disc One (First show)
+Chuck Wein Introduction 
+Hey Baby (New Rising Sun)                                       
+In From The Storm               
+Foxey Lady                       
+Hear My Train A-Comin&#x2019;          
+Voodoo Child (Slight Return)    
+Fire  
+Purple Haze                     
+Spanish Castle Magic                      
+Lover Man                       
+Message to Love                 
+Disc Two (Second show)
+Dolly Dagger
+Villanova Junction
+Ezy Ryder
+Red House
+Freedom
+Jam Back at the House
+Straight Ahead
+Hey Baby (New Rising Sun)/Midnight Lightning
+Stone Free</Critica>
+        <DatosTecnicos>Jimi.Hendrix.Experience.Live.In.Maui.1970.2020.71080p.MBLURAY.x264-MBLURAYFANS
+TiTLE ........... = Jimi Hendrix Experience Live In Maui (1970)
+RUNTiME ......... = 90 Minutes
+RELEASE DATE .... = 23.11.2020
+SOURCE .......... = 29,3 MB/s
+ViDEO .......... = 1920 x 1080 - x264 - CRF17 @ 10,5 MB/s
+AUDiO ........... = English DTS XLL 5.1 @ 3.806 kbps (DTS-HD)
+SiZE ............ = 9369 MB
+Subs ............ = eng de dut es</DatosTecnicos>
+        <Duracion>1.31</Duracion>
+        <Poster>jimi-hendrix-in-maui-and-live-in-maui.jpeg</Poster>
     </Pelicula>
 </Raíz>
 
