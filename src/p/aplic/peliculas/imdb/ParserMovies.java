@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 import p.aplic.peliculas.util.Util;
 import p.util.UtilFile;
 
@@ -41,7 +42,8 @@ public class ParserMovies {
     }
 
     public static void crearLocalMovieList() throws JDOMException, IOException {
-        Peliculas misPelis = Util.getPeliculas(System.getProperty("xmlPath"));
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
+        Peliculas misPelis = Util.getPeliculas(System.getProperty("xmlPath"), tags);
         Set<Peli> pelis = getMovies();
         List<Peli> salida = new ArrayList<Peli>();
 

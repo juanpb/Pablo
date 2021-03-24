@@ -1,8 +1,12 @@
 package p.aplic.peliculas.util;
 
+import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 
+import javax.swing.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,14 +18,20 @@ import java.util.Set;
  * Time: 8:45 AM
  */
 public class BuscarUniqueIdRepetidosProc {
-    public BuscarUniqueIdRepetidosProc(String[] args) {
-                String configPath = args[0];
+    public BuscarUniqueIdRepetidosProc(String[] args) throws IOException, JDOMException {
+        if (args.length != 1){
+            String s = "Se debe pasar como parámetro el archivo de config.";
+            JOptionPane.showMessageDialog(null, s);
+            return ;
+        }
+        String configPath = args[0];
         p.util.Util.loadProperties(configPath);
-        String xmlPath = "D:\\P\\java\\codigo\\Pablo\\config\\pelis\\películas.xml";
+        String xmlPath = System.getProperty("xmlPath");
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
 
         Peliculas pelis;
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            pelis = Util.getPeliculas(xmlPath, tags);
         } catch (Exception e) {
             Log.error(e);
             return ;
@@ -50,7 +60,7 @@ public class BuscarUniqueIdRepetidosProc {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, JDOMException {
         args = new String[1];
         args[0] = "D:\\P\\java\\codigo\\Pablo\\config\\pelis\\config.ini";
         new BuscarUniqueIdRepetidosProc(args);

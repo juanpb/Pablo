@@ -15,6 +15,7 @@ public class Pelicula {
     private String annus;
     private String pais;
     private List<String> posters = new ArrayList<String>(1);
+    private List<Tag> tags = new ArrayList<Tag>(1);
     private String imdbPuntaje;
     private String imdbId;
     private Estado estado;
@@ -57,6 +58,7 @@ public class Pelicula {
         setNombre(pel.getNombre());
         setPais(pel.getPais());
         setPosters(pel.getPosters());
+        setTags(pel.getTags());
     }
 
     @Override
@@ -82,10 +84,24 @@ public class Pelicula {
         res &= sonIguales( getNombre(), pel.getNombre());
         res &= sonIguales( getPais(), pel.getPais());
         res &= sonIguales( getPosters(), pel.getPosters());
+        res &= sonIguales( getTags(), pel.getTags());
 
         return res;
     }
 
+    private boolean sonIguales(List a, List  b) {
+        if (a == null)
+            return b == null || b.size() == 0;   //si una es null y la otra vacía se consideran iguales
+        if (b == null)
+            return  a.size() == 0;               //si una es null y la otra vacía se consideran iguales
+        if (a.size() != b.size())
+            return false;
+        for (int i = 0; i < a.size(); i++) {
+            if (!sonIguales(a.get(i), b.get(i)))
+                return false;
+        }
+        return true;
+    }
     private boolean sonIguales(Object a, Object b) {
         if (a == null)
             return b == null;
@@ -121,7 +137,6 @@ public class Pelicula {
             else
                 return null;
         }
-
 
         public String toString(){
             switch(this) {
@@ -181,6 +196,17 @@ public class Pelicula {
 
     public void addPoster(String nombre){
         posters.add(nombre);
+    }
+    public void addTag(Tag tag){
+        tags.add(tag);
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
     public String getImdbPuntaje() {

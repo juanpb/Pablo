@@ -1,11 +1,14 @@
 package p.aplic.peliculas.util;
 
+import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 import p.util.Constantes;
 
 import javax.swing.*;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,13 +18,13 @@ import java.util.List;
  */
 public class AsignarFotosProc {
     String fotosPath = "F:\\_videos_\\_info_\\fotos\\";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, JDOMException {
         args = new String[1];
         args[0] = "F:\\Java\\ProyectosJava\\Pablo\\src\\p\\aplic\\peliculas\\config.ini";
         new AsignarFotosProc(args);
     }
 
-    private AsignarFotosProc(String[] args) {
+    private AsignarFotosProc(String[] args) throws IOException, JDOMException {
         if (args.length != 1){
             String s = "Se debe pasar como parámetro el archivo de config.";
             JOptionPane.showMessageDialog(null, s);
@@ -31,11 +34,12 @@ public class AsignarFotosProc {
         String configPath = args[0];
         p.util.Util.loadProperties(configPath);
         String xmlPath = System.getProperty("xmlPath");
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
 
 
         Peliculas pelis;
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            pelis = Util.getPeliculas(xmlPath, tags);
         } catch (Exception e) {
             Log.error(e);
             return ;

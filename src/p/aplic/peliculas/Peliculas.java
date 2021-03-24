@@ -13,6 +13,7 @@ import java.util.List;
 public class Peliculas {
 
     private List<Pelicula> peliculas = new ArrayList<Pelicula>();
+    private List<Tag> tags = new ArrayList<Tag>();
     private Integer contadorDVD;
     private Integer contadorUniqueID;
     private Integer contadorVistos;
@@ -134,5 +135,13 @@ public class Peliculas {
 
     public void setContadorVistos(Integer contadorVistos) {
         this.contadorVistos = contadorVistos;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
     }
 }

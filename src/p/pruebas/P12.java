@@ -12,7 +12,7 @@ import java.security.cert.X509Certificate;
 import java.util.Enumeration;
 
 /**
- * User: P_BENEDETTI
+ * User:
  * Date: 25/4/2019
  * Time: 10:45
  */

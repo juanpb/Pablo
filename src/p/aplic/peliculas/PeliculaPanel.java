@@ -2,6 +2,7 @@ package p.aplic.peliculas;
 
 import p.aplic.peliculas.util.Util;
 import p.gui.ComboBox;
+import p.gui.ComboCheckBox;
 import p.gui.LabelTextField;
 import p.gui.TextArea;
 import p.util.Constantes;
@@ -9,13 +10,13 @@ import p.util.Constantes;
 import javax.swing.*;
 import javax.swing.text.JTextComponent;
 import java.awt.*;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.util.*;
 
 
 /**
@@ -40,8 +41,10 @@ public class PeliculaPanel extends JPanel {
     private TextArea critica = new TextArea("Crítica", new Dimension(700, 160));
     private TextArea datosTecnicos = new TextArea("Datos Técnicos", new Dimension(200, 160));
     private TextArea comentario = new TextArea("Comentarios", new Dimension(250, 60));
+    private ComboCheckBox cmbFlags = null;
     private TextArea problemas = new TextArea("Problemas", new Dimension(250, 60));
     private ComboBox estado = new ComboBox("Estado", new Dimension(100, 40));
+    private ComboBox tags = new ComboBox("Tags", new Dimension(100, 40));
     private JButton btnSacarLineasVacias = new JButton("Sacar líneas vacías");
     private JButton btnCargarNuevoDVD = new JButton("Cargar nuevo DVD");
     private JButton btnCargarHD = new JButton("HD");
@@ -49,6 +52,7 @@ public class PeliculaPanel extends JPanel {
     private Pelicula pelicula;
     private boolean usóNuevoContadorDVD = false;
     private String raizFotos = System.getProperty("dirRaizFotosCompleto");
+    private TreeMap<String, Tag> mapTags;
 
     //imdb
 //    private JLabel lblIMDB = new JLabel("IMDB");
@@ -59,8 +63,10 @@ public class PeliculaPanel extends JPanel {
 //    private LabelTextField imdbDirector = new LabelTextField("Persona", new Dimension(100, 40));
 //    private LabelTextField imdbActores = new LabelTextField("Actores", new Dimension(100, 40));
 
-    public PeliculaPanel() {
+    public PeliculaPanel(java.util.List<Tag> tags) {
+        cmbFlags = new ComboCheckBox(getTagsAsChk(tags));
         hacerPantalla();
+
         btnSacarLineasVacias.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 critica.setText(sacarLineasVacias (critica.getText()));
@@ -113,6 +119,42 @@ public class PeliculaPanel extends JPanel {
                  agregarTT(poster3);
              }
         });
+    }
+
+    private JCheckBox[] getTagsAsChk(java.util.List<Tag> tags) {
+        int i = 0;
+        JCheckBox[] res = new JCheckBox[tags.size()];
+        mapTags = new TreeMap<String, Tag>();
+        for (Tag tag : tags) {
+            JCheckBox checkBox = new JCheckBox(tag.getNombre());
+            mapTags.put(tag.getNombre(), tag);
+            res[i++] = checkBox;
+        }
+        return res;
+    }
+
+    private java.util.List<Tag> getTags(java.util.List<String>  tagsS) {
+        java.util.List<Tag> res = new ArrayList<Tag>();
+        for (String t : tagsS) {
+            res.add(mapTags.get(t));
+        }
+        return res;
+    }
+
+    private java.util.List<Tag> getTags() {
+        java.util.List<String> selected = cmbFlags.getSelected();
+        return getTags(selected);
+    }
+
+    /*
+    Selecciona los chk del combo si viene su nombre en la lista de tags
+     */
+    private void setTags(java.util.List<Tag> tags) {
+        for (int i = 0; i < cmbFlags.getItemCount(); i++) {
+            JCheckBox chk = (JCheckBox)cmbFlags.getItemAt(i);
+            String t = chk.getText();
+            chk.setSelected(Tag.estaEnLista(t, tags));
+        }
     }
 
     private void agregarTT(LabelTextField tf){
@@ -309,10 +351,11 @@ public class PeliculaPanel extends JPanel {
 //        JPanel pnlIMDB = new JPanel(new GridBagLayout());
 //        pnlIMDB.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
-        pnlAux.add(critica, new GridBagConstraints(0, 0, 1, 3, 0.8, 0.8,
+        pnlAux.add(critica, new GridBagConstraints(0, 0, 1, 4, 0.8, 0.8,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 ins1, 0, 0));
-        pnlAux.add(datosTecnicos, new GridBagConstraints(1, 0, 1, 1, 0.2, 0.2,
+        int y = 0;
+        pnlAux.add(datosTecnicos, new GridBagConstraints(1, y++, 1, 1, 0.2, 0.2,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 ins1, 0, 0));
         //Fila 6
@@ -345,10 +388,13 @@ public class PeliculaPanel extends JPanel {
 //        pnlAux.add(pnlIMDB, new GridBagConstraints(0, 2, 1, 1, 0.8, 0.8,
 //                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 //                ins1, 0, 0));
-        pnlAux.add(comentario, new GridBagConstraints(1, 1, 1, 1, 0.2, 0.2,
+        pnlAux.add(cmbFlags, new GridBagConstraints(1, y++, 1, 1, 0.2, 0.2,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 ins1, 0, 0));
-        pnlAux.add(problemas, new GridBagConstraints(1, 2, 1, 1, 0.2, 0.2,
+        pnlAux.add(comentario, new GridBagConstraints(1, y++, 1, 1, 0.2, 0.2,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                ins1, 0, 0));
+        pnlAux.add(problemas, new GridBagConstraints(1, y++, 1, 1, 0.2, 0.2,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 ins1, 0, 0));
         add(pnlAux, new GridBagConstraints(0, yy, 4, 1, 1.0, 1.0,
@@ -375,6 +421,8 @@ public class PeliculaPanel extends JPanel {
         comentario.setText(p.getComentario());
         problemas.setText(p.getProblemas());
         datosTecnicos.setText(p.getDatosTecnicos());
+
+        setTags(p.getTags());
 
         java.util.List posters = p.getPosters();
         if (posters.size() > 0){
@@ -451,6 +499,7 @@ public class PeliculaPanel extends JPanel {
             pelicula.addPoster(poster3.getText());       
 
 
+        pelicula.setTags(getTags());
         //imdb
 //        pelicula.setImdbId(imdbId.getText());
         return pelicula;

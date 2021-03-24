@@ -4,6 +4,7 @@ import p.aplic.peliculas.util.Log;
 import p.aplic.peliculas.util.Util;
 
 import javax.swing.*;
+import java.util.List;
 
 /**
  * User: Administrador
@@ -23,16 +24,16 @@ public class Main {
             JOptionPane.showMessageDialog(null, s);
             return ;
         }
-
         String configPath = args[0];
-
         p.util.Util.loadProperties(configPath);
         String xmlPath = System.getProperty("xmlPath");
 
 
         Peliculas pelis;
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            List<Tag> tags = Util.getTags(System.getProperty("tags"));
+            pelis = Util.getPeliculas(xmlPath, tags);
+            pelis.setTags(tags);
         } catch (Exception e) {
             Log.error(e);
             return ;

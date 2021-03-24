@@ -8,7 +8,7 @@ import javax.naming.directory.*;
 import java.util.Hashtable;
 
 /**
- * User: P_BENEDETTI
+ * User:
  * Date: 9/3/2020
  * Time: 12:18
  */

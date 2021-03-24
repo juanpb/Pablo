@@ -204,6 +204,7 @@ public class HTML {
     //      |                       |                  |
     //      -------------------------------------------
 
+        //todo ¿agregar tags?
         String tabDet = "            ";
         StringBuffer tablaDetalles = armarTablaDetalles(p, tabInicial + tabDet, conf);
         StringBuffer tablaDatosTec = armarTablaDT(p, tabInicial + tabDet, conf);
@@ -275,7 +276,7 @@ public class HTML {
 
 
     @SuppressWarnings({"UnusedDeclaration"})
-    private void agregarPelicula2(Pelicula p, StringBuffer sb) {
+    /*private void agregarPelicula2(Pelicula p, StringBuffer sb) {
 
         sb.append("    <TABLE width='100%'>"+ Constantes.NUEVA_LINEA);
 
@@ -328,7 +329,7 @@ public class HTML {
         sb.append("    </TABLE>");
         sb.append("    <HR/>");
 
-    }
+    }  */
 
     /**
      * Se reemplazon los 'enter' por su equivalente en html: <BR/>

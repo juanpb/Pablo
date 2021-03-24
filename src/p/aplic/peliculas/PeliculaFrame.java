@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
  * Time: 00:37:05
  */
 public class PeliculaFrame extends JFrame {
-    private PeliculaPanel pelPanel = new PeliculaPanel();
+    private PeliculaPanel pelPanel = null;
     private JPanel botonera = new JPanel(new GridBagLayout());
     private JButton btnAceptar;
     private JButton btnCancelar;
@@ -23,7 +23,8 @@ public class PeliculaFrame extends JFrame {
     private Pelicula pelicula;
     private Pelicula peliOriginal;
 
-    public PeliculaFrame(java.util.List<Pelicula.Estado> estados, Integer contDVD){
+    public PeliculaFrame(java.util.List<Pelicula.Estado> estados, java.util.List<Tag> tags, Integer contDVD){
+        pelPanel = new PeliculaPanel(tags);
         init();
         pelPanel.setEstados(estados);
         pelPanel.setContadorDVD(contDVD);

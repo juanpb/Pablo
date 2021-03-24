@@ -44,8 +44,8 @@ public class Util {
 
         p.util.Util.loadProperties(configPath);
         String xmlPath = System.getProperty("xmlPath");
-
-        Peliculas peliculas = Util.getPeliculas(xmlPath);
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
+        Peliculas peliculas = Util.getPeliculas(xmlPath, tags);
         List<Pelicula> peliculasOrd = peliculas.getPeliculas();
         generarHTML(peliculas);
 
@@ -54,8 +54,8 @@ public class Util {
         System.out.println("Listo. Demoró " + seg + " segundos");        
     }
 
-    static public void trimTodo(String xmlPath) throws IOException, JDOMException {
-        Peliculas peliculas = getPeliculas(xmlPath);
+    static public void trimTodo(String xmlPath, List<Tag> tags) throws IOException, JDOMException {
+        Peliculas peliculas = getPeliculas(xmlPath, tags);
         for(Pelicula pel : peliculas.getPeliculas()) {
             pel.setAka(trim(pel.getAka()));
             pel.setAnnus(trim(pel.getAnnus()));
@@ -98,32 +98,35 @@ public class Util {
         return lista;
     }
 
-    public static Peliculas getPeliculas(String xmlPath)
+    public static Peliculas getPeliculas(String xmlPath, List<Tag> tags)
             throws IOException, JDOMException {
-        return leerXML(new File(xmlPath));
+        return leerXML(new File(xmlPath), tags);
     }
 
+    /*
     static public void asignarUniqueId(String xmlPath) throws IOException, JDOMException {
-        Peliculas peliculas = getPeliculas(xmlPath);
+        Peliculas peliculas = getPeliculas(xmlPath, tags);
         for (int i = 0; i < peliculas.getPeliculas().size(); i++) {
             Pelicula p = peliculas.getPeliculas().get(i);
             p.setUniqueId(i+1);
         }
         grabar(xmlPath, peliculas);
     }
-
+    */
+    /*
     static public void asignarContadorSinVer(String xmlPath) throws IOException, JDOMException {
-        Peliculas peliculas = getPeliculas(xmlPath);
+        Peliculas peliculas = getPeliculas(xmlPath, tags);
         List<Pelicula> peliculasSV = peliculas.getPeliculas(Pelicula.Estado.SIN_VER);
         for (int i = 0; i < peliculasSV.size(); i++) {
             Pelicula p = peliculasSV.get(i);
             p.setContador(i); 
         }
         grabar(xmlPath, peliculas);
-    }
+    } */
 
+    /*
     static public void asignarContadorVistos(String xmlPath) throws IOException, JDOMException {
-        Peliculas peliculas = getPeliculas(xmlPath);
+        Peliculas peliculas = getPeliculas(xmlPath, tags);
         int cont = 0;
         for (int i = 0; i < peliculas.getPeliculas().size(); i++) {
             Pelicula p = peliculas.getPeliculas().get(i);
@@ -135,16 +138,17 @@ public class Util {
                 p.setContador(0);
         }
         grabar(xmlPath, peliculas);
-    }
+    }  */
 
-    static public void printNombres(String xmlPath) throws IOException, JDOMException {
-        Peliculas peliculas = getPeliculas(xmlPath);
+    static public void printNombres(String xmlPath, List<Tag> tags) throws IOException, JDOMException {
+        Peliculas peliculas = getPeliculas(xmlPath, tags);
         for (int i = 0; i < peliculas.getPeliculas().size(); i++) {
             Pelicula p = peliculas.getPeliculas().get(i);
             System.out.println(p.getNombre());
         }
     }
 
+    /*
     static public void cargarTags(Peliculas peliculas, String tagFile) throws IOException, JDOMException {
         List<String> apl = UtilFile.getArchivoPorLinea(tagFile);
         List<Tag> tags = new ArrayList<Tag>();
@@ -154,19 +158,31 @@ public class Util {
             Tag tag = new Tag(Integer.parseInt(st.nextElement().toString()), st.nextToken());
             tags.add(tag);
         }
+    } */
+
+    static public List<Tag> getTags(String tagFile) throws IOException {
+        List<String> apl = UtilFile.getArchivoPorLinea(tagFile);
+        List<Tag> tags = new ArrayList<Tag>();
+        for (String s : apl) {
+            StringTokenizer st = new StringTokenizer(s, "=");
+            Tag tag = new Tag(st.nextElement().toString(), st.nextToken());
+            tags.add(tag);
+        }
+        return tags;
     }
-    static private Peliculas leerXML(File f) throws IOException, JDOMException {
+
+    static private Peliculas leerXML(File f, List<Tag> tags) throws IOException, JDOMException {
         if (f.exists()){
             SAXBuilder builder = new SAXBuilder();
             Document doc = builder.build(f);
-            return parsear(doc);
+            return parsear(doc, tags);
         }
         else{
             return new Peliculas();
         }
     }
 
-    static private Peliculas parsear(Document doc) {
+    static private Peliculas parsear(Document doc, List<Tag> tags) {
         Peliculas res = new Peliculas();
         Element r = doc.getRootElement();
 
@@ -192,7 +208,7 @@ public class Util {
 
         for (Object pl : pls) {
             Element pX = (Element) pl;
-            Pelicula p = crearPelicula(pX);
+            Pelicula p = crearPelicula(pX, tags);
             res.addPelicula(p);
         }
 
@@ -202,16 +218,16 @@ public class Util {
     /**
      * Parsea un documento y devuelve la primera (y debería ser la única) película.
      */
-    static public Pelicula parsearPelicula(String docum) throws JDOMException, IOException {
+    static public Pelicula parsearPelicula(String docum, List<Tag> tags) throws JDOMException, IOException {
         SAXBuilder builder = new SAXBuilder();
         if (docum != null)
             docum = docum.trim();
         Document doc = builder.build(new InputSource(new StringReader(docum)));
         Element r = doc.getRootElement();
-        return crearPelicula(r.getChild("Pelicula"));
+        return crearPelicula(r.getChild("Pelicula"), tags);
     }
 
-    private static Pelicula crearPelicula(Element pelX) {
+    private static Pelicula crearPelicula(Element pelX, List<Tag> tags) {
         Pelicula res = new Pelicula();
         String value = pelX.getAttributeValue("uniqueId");
         if (value != null && !value.equals("null") )
@@ -296,6 +312,14 @@ public class Util {
             for (Object aPostersX : postersX) {
                 Element posX = (Element) aPostersX;
                 res.addPoster(posX.getText());
+            }
+        }
+
+        List tagsId = pelX.getChildren("Tag");
+        if (tagsId != null){
+            for (Object elem : tagsId) {
+                Element tagX = (Element) elem;
+                res.addTag(Tag.crearTag(tagX.getText(), tags));
             }
         }
 
@@ -674,6 +698,12 @@ public class Util {
         for (String s : list) {
             el = new Element("Poster");
             el.setText(s);
+            pel.addContent(el);
+        }
+        List<Tag> tags = p.getTags();
+        for (Tag s : tags) {
+            el = new Element("Tag");
+            el.setText(s.getId()+"");
             pel.addContent(el);
         }
         return pel;

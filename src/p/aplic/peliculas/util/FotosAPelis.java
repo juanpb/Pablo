@@ -1,7 +1,9 @@
 package p.aplic.peliculas.util;
 
+import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,22 +17,23 @@ public class FotosAPelis {
     private  static String fotosPath = "D:\\P\\_env\\_\\_\\Pelis2";
     private Peliculas pelis;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, JDOMException {
         new FotosAPelis(fotosPath);
     }
 
-    private FotosAPelis(String dir) throws IOException {
+    private FotosAPelis(String dir) throws IOException, JDOMException {
 
         String configPath = "D:\\P\\_env\\config\\pelis\\config.ini";
         p.util.Util.loadProperties(configPath);
         String xmlPath = System.getProperty("xmlPath");
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
 
         List<String> noEncontrado = new ArrayList<String>();
         List<Pelicula> noHD = new ArrayList<Pelicula>();
         List<Pelicula> encontrado = new ArrayList<Pelicula>();
 
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            pelis = Util.getPeliculas(xmlPath, tags);
         } catch (Exception e) {
             Log.error(e);
             return ;

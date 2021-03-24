@@ -7,7 +7,7 @@ import p.util.UtilFile;
 import java.io.IOException;
 
 /**
- * User: p_benedetti
+ * User:
  * Date: 15/03/18
  * Time: 11:39
  */

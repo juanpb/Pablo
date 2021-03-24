@@ -1,8 +1,11 @@
 package p.aplic.peliculas.util;
 
+import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,14 +13,15 @@ import java.util.List;
 Busca pelis HD con 2 audios
  */
 public class BuscarDosAudios {
-    public BuscarDosAudios(String[] args) {
+    public BuscarDosAudios(String[] args) throws IOException, JDOMException {
                 String configPath = args[0];
         p.util.Util.loadProperties(configPath);
         String xmlPath = "D:\\P\\java\\codigo\\Pablo\\config\\pelis\\películas.xml";
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
 
         Peliculas pelis;
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            pelis = Util.getPeliculas(xmlPath, tags);//no funca, pasarle tags
         } catch (Exception e) {
             Log.error(e);
             return ;
@@ -63,7 +67,7 @@ public class BuscarDosAudios {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, JDOMException {
         args = new String[1];
         args[0] = "D:\\P\\java\\codigo\\Pablo\\config\\pelis\\config.ini";
         new BuscarDosAudios(args);

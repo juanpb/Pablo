@@ -4,7 +4,9 @@ import org.apache.log4j.Logger;
 import org.jdom.JDOMException;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,11 +22,17 @@ public class Exportar {
     private static final Logger logger = Logger.getLogger(Exportar.class);
 
     public static void main(String[] args) throws IOException, JDOMException {
-//        String configPath = "F:\\Java\\ProyectosJava\\Pablo\\src\\p\\aplic\\peliculas\\config.ini";
-//        p.util.Util.loadProperties(configPath);
-//        String xmlPath = System.getProperty("xmlPath");
-        String xmlPath = "D:\\P\\_env\\películas.xml";
-        Peliculas peliculas = Util.getPeliculas(xmlPath);
+        if (args.length != 1){
+            String s = "Se debe pasar como parámetro el archivo de config.";
+            JOptionPane.showMessageDialog(null, s);
+            return ;
+        }
+        String configPath = args[0];
+        p.util.Util.loadProperties(configPath);
+        String xmlPath = System.getProperty("xmlPath");
+        List<Tag> tags = Util.getTags(System.getProperty("tags"));
+
+        Peliculas peliculas = Util.getPeliculas(xmlPath, tags);
         List<String> noms = getNombrePeliculas("DVD", peliculas.getPeliculas());
         System.out.println("DVD");
         for (String nom : noms) {
@@ -85,6 +93,8 @@ public class Exportar {
                 vsc += ", " + p.getPais();
             if (conf.isMostrarPosters() && p.getPosters() != null)
                 vsc += ", " + p.getPosters();
+            if (conf.isMostrarTags() && p.getTags() != null)
+                vsc += ", " + p.getTags();
             if (conf.isMostrarProblemas() && p.getProblemas() != null)
                 vsc += ", " + p.getProblemas();
 
@@ -115,12 +125,12 @@ public class Exportar {
         return res;
     }
 
-    public static List<Pelicula> getPeliculas(String[] ordX, Pelicula.Estado... est){
+    public static List<Pelicula> getPeliculas(String[] ordX, List<Tag> tags, Pelicula.Estado... est){
         List<Pelicula> res = new ArrayList<Pelicula>();
         String xmlPath = System.getProperty("xmlPath");
         Peliculas pelis;
         try {
-            pelis = Util.getPeliculas(xmlPath);
+            pelis = Util.getPeliculas(xmlPath, tags);
 
             for (Pelicula p : pelis.getPeliculas()) {
                 Pelicula.Estado e = p.getEstado();

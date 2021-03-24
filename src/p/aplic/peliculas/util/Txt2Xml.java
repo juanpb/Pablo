@@ -3,11 +3,11 @@ package p.aplic.peliculas.util;
 import org.apache.log4j.Logger;
 import p.aplic.peliculas.Pelicula;
 import p.aplic.peliculas.Peliculas;
+import p.aplic.peliculas.Tag;
 import p.util.Constantes;
 import p.util.UtilFile;
 import p.util.xml.XMLUtil;
 
-import javax.swing.*;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -84,7 +84,9 @@ public class Txt2Xml {
         Peliculas pelis;
         try {
             String xmlPath = "F:\\_videos_\\_info_\\películas.xml";
-            pelis = Util.getPeliculas(xmlPath);
+            List<Tag> tags = null; //Util.getTags(System.getProperty("tags"));
+
+            pelis = Util.getPeliculas(xmlPath, tags);
 
             for (Pelicula pelicula : peliculas) {
                 buscarYModificarTiempo(pelicula, pelis);
@@ -323,7 +325,7 @@ public class Txt2Xml {
         return res;
     }
 
-    private void buscarYAgregarPelicula(Pelicula res) {
+    /*private void buscarYAgregarPelicula(Pelicula res) {
         String fotosPath = "F:\\_videos_\\_info_\\tmp\\Libro1_archivos\\";
         List<String> posters = res.getPosters();
         String nombre = res.getNombre() + ".jpg";
@@ -364,6 +366,7 @@ public class Txt2Xml {
             }
         }
     }
+     */
 
     //Ej: s = Million Dollar Baby (2004) - 0,57 + 1,15
     private void agregarNombrePaisAnnusDuracion(Pelicula pel, String s) {

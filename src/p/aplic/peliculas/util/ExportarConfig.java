@@ -15,6 +15,7 @@ public class ExportarConfig {
     private boolean mostrarProblemas = false;
     private boolean mostrarDuracion = false;
     private boolean mostrarPosters = false;
+    private boolean mostrarTags = false;
     private boolean mostrarCritica = false;
     private boolean mostrarDatosTecnicos = false;
     private boolean soloHD = false;
@@ -35,6 +36,7 @@ public class ExportarConfig {
         setMostrarPais(mostrarTodo);
         setMostrarCritica(mostrarTodo);
         setMostrarDatosTecnicos(mostrarTodo);
+        setMostrarTags(mostrarTodo);
     }
 
     public boolean isMostrarId() {
@@ -123,6 +125,14 @@ public class ExportarConfig {
 
     public void setMostrarDatosTecnicos(boolean mostrarDatosTecnicos) {
         this.mostrarDatosTecnicos = mostrarDatosTecnicos;
+    }
+
+    public boolean isMostrarTags() {
+        return mostrarTags;
+    }
+
+    public void setMostrarTags(boolean mostrarTags) {
+        this.mostrarTags = mostrarTags;
     }
 
     public void setSoloHD(boolean b) {

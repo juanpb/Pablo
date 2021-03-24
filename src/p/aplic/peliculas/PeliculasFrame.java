@@ -6,6 +6,7 @@ import p.aplic.peliculas.util.ExportarGUI;
 import p.aplic.peliculas.util.Log;
 import p.aplic.peliculas.util.Util;
 import p.gui.ComboBox;
+import p.gui.ComboCheckBox;
 import p.gui.LabelTextField;
 import p.util.GUI;
 
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.util.Vector;
 
 /**
  * User: JPB
@@ -29,12 +31,14 @@ import java.util.StringTokenizer;
 public class PeliculasFrame extends JFrame implements ListDataListener {
     private static final Logger logger = Logger.getLogger(PeliculasFrame.class);
 
-    private ComboBox estadosCmb = new ComboBox("Estados", new Dimension(90, 40));
+    private ComboBox estadosCmb = new ComboBox("Estados", new Dimension(70, 40));
     private static final String ITEM_TODOS = "Todos";
     private LabelTextField filtroNombre = new LabelTextField("Nombre", new Dimension(90, 40));
-    private LabelTextField filtroAño = new LabelTextField("Años (cvs)", new Dimension(100, 40));
-    private LabelTextField filtroId = new LabelTextField("Id", new Dimension(100, 40));
+    private LabelTextField filtroAño = new LabelTextField("Años (cvs)", new Dimension(50, 40));
+    private LabelTextField filtroId = new LabelTextField("Id", new Dimension(50, 40));
+    private ComboCheckBox cmbTags;
     private Checkbox chkConProblemas = new Checkbox("Sólo Problemas");
+    private Checkbox chkFiltrarTags = new Checkbox("Filtrar tags");
     private Checkbox chkCommitAuto = new Checkbox("Commit auto", true);
     private Modelo listModel;
     private JList tabla = null;
@@ -62,7 +66,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         listModel.addListDataListener(this);
         tabla = new JList(listModel){
             public String getToolTipText(MouseEvent e) {
-                logMemory("getToolTipText");
+                //logMemory("getToolTipText");
                 //selecciono la fila
                 int i = tabla.locationToIndex(e.getPoint());
                 tabla.setSelectedIndex(i);
@@ -95,11 +99,32 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         estados.add(ITEM_TODOS);
         estados.addAll(Pelicula.getEstados());
         cargarComboEstados(estados);
+        cmbTags = new ComboCheckBox(getTagsAsChk(pls.getTags()));
+
         actualizarModelo();
 
         hacerPantalla();
         addListeners();
         ponerTitulo();
+    }
+
+    private JCheckBox[] getTagsAsChk(List<Tag> tags) {
+        int i = 0;
+        JCheckBox[] res = new JCheckBox[tags.size()];
+        for (Tag tag : tags) {
+            res[i++] = new JCheckBox(tag.getNombre());
+        }
+        return res;
+    }
+
+    private Vector getTagsAsVector(List<Tag> tags) {
+        Vector res = new Vector();
+        if (tags != null){
+            for (Tag tag : tags) {
+                res.add(tag);
+            }
+        }
+        return res;
     }
 
     private void mostrarMenu(final Component inv, int x, int y, final Pelicula p) {
@@ -227,6 +252,20 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
                 listModel.setSoloProblemas(chkConProblemas.getState());
             }
         });
+        chkFiltrarTags.addItemListener(new ItemListener(){
+            public void itemStateChanged(ItemEvent e) {
+                if (chkFiltrarTags.getState())
+                    listModel.setFiltroTags(getSelectedTagsId());
+                else
+                    listModel.setFiltroTags(null);
+            }
+        });
+
+        cmbTags.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                listModel.setFiltroTags(getSelectedTagsId());
+            }
+        });
 
         tabla.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e) {
@@ -327,7 +366,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         String x;
         try {
             x = p.util.Util.copiarDesdeElPortapapeles();
-            pe = Util.parsearPelicula(x);
+            pe = Util.parsearPelicula(x, peliculas.getTags());
             //como es un alta le borro el uniqueId
             pe.setUniqueId(null);
         } catch (Exception e) {
@@ -351,18 +390,18 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
 
 
     private void actualizarModelo() {
-        logMemory("1 actualizarModelo");
+        //logMemory("1 actualizarModelo");
         String estado = estadosCmb.getSelectedItem().toString();
         List<Pelicula> pel;
-        logMemory("1 getPelisXXX");
+        //logMemory("1 getPelisXXX");
         if (estado.equals(ITEM_TODOS))
             pel = peliculas.getPeliculas();
         else
             pel = peliculas.getPeliculas((Pelicula.Estado) estadosCmb.getSelectedItem());
-        logMemory("2 getPelisXXX");
+        //logMemory("2 getPelisXXX");
         listModel.setLista(pel);
         tabla.revalidate();
-        logMemory("2 actualizarModelo");
+        //logMemory("2 actualizarModelo");
     }
 
 
@@ -376,7 +415,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         //trabajo con una copia
         Pelicula copiaPelicula = pelicula.clonar();
         
-        final PeliculaFrame pf = new PeliculaFrame(Pelicula.getEstados(),
+        final PeliculaFrame pf = new PeliculaFrame(Pelicula.getEstados(), peliculas.getTags(),
                 peliculas.getContadorDVD());
         pf.setPelicula(copiaPelicula);
         final long ts1 = peliculas.getTimestamp();
@@ -427,7 +466,7 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         mostrarPantallaAlta(null);
     }
     private void mostrarPantallaAlta(Pelicula p) {
-        final PeliculaFrame pf = new PeliculaFrame(Pelicula.getEstados(),
+        final PeliculaFrame pf = new PeliculaFrame(Pelicula.getEstados(), peliculas.getTags(),
                 peliculas.getContadorDVD());
         pf.setPelicula(p);
         pf.addWindowListener(new WindowAdapter(){
@@ -526,7 +565,8 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         armarMenuBar();
         setMenuBar(_menuBar);
         listScroller.setPreferredSize(new Dimension(480, 430));
-        Insets ins1 = new Insets(5, 5, 5, 5);
+        //Insets ins1 = new Insets(5, 5, 5, 5);
+        Insets ins1 = new Insets(0, 2, 2, 2);
 
         DefaultListModel listModelOrd = new DefaultListModel();
         listModelOrd.addElement(IT_OR_ESTADO);
@@ -542,23 +582,43 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         int gap = 2;
         int yy = 0;
 
-        JPanel pnlHeader = new JPanel(new GridLayout(1, 0, gap, gap));
+//        JPanel pnlHeader = new JPanel(new GridLayout(1, 0, gap, gap));
+        JPanel pnlHeader = new JPanel(new GridBagLayout());
         JPanel pnlHeaderChk = new JPanel(new GridLayout(0, 1, 0, 0));
+        JPanel pnlHeaderCmbFlag = new JPanel(new GridLayout(0, 1, 0, 0));
 
-        pnlHeader.add(estadosCmb);
-
-
-        pnlHeader.add(filtroNombre);
-        pnlHeader.add(filtroAño);
-        pnlHeader.add(filtroId);
+        int xH = 0;
+        pnlHeader.add(estadosCmb, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+        pnlHeader.add(filtroNombre, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+        pnlHeader.add(filtroAño, new GridBagConstraints(xH++, 0, 1, 1,1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+        pnlHeader.add(filtroId, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+        pnlHeaderCmbFlag.add(chkFiltrarTags);
+        cmbTags.setPreferredSize(new Dimension(150, 25));
+        pnlHeaderCmbFlag.add(cmbTags);
         pnlHeaderChk.add(chkConProblemas);
         pnlHeaderChk.add(chkCommitAuto);
-        pnlHeader.add(pnlHeaderChk);
-        listScrollerOrd.setPreferredSize(new Dimension(90, 50));
-        pnlHeader.add(listScrollerOrd);
 
-        add(pnlHeader, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+        pnlHeader.add(pnlHeaderCmbFlag, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+        pnlHeader.add(pnlHeaderChk, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                ins1, 0, 0));
+        listScrollerOrd.setPreferredSize(new Dimension(90, 50));
+        pnlHeader.add(listScrollerOrd, new GridBagConstraints(xH++, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                ins1, 0, 0));
+
+        add(pnlHeader, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 ins1, 0, 0));
 
         //Fila 2
@@ -575,12 +635,12 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         pnlBotones.add(btnGenerarHTML);
         pnlBotones.add(btnAgregarPP);
         pnlBotones.add(btnAgregar);
-        add(pnlBotones, new GridBagConstraints(0, yy, 1, 1, 0.0, 0.0,
+        add(pnlBotones, new GridBagConstraints(0, yy, 1, 1, 1.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 ins1, 0, 0));
 
         int hei = (int)GUI.getMaxSize(getGraphicsConfiguration()).getHeight();
-        setPreferredSize(new Dimension(600, hei));
+        setPreferredSize(new Dimension(750, hei));
         pack();
         GUI.centrar(this);
 
@@ -589,6 +649,26 @@ public class PeliculasFrame extends JFrame implements ListDataListener {
         JViewport vp = listScroller.getViewport();
         int h = tabla.getHeight();
         vp.setViewPosition(new Point (0, h));
+
+        //selecciono todos los tags
+        for (int i = 0; i < cmbTags.getItemCount(); i++) {
+            JCheckBox chk = (JCheckBox)cmbTags.getItemAt(i);
+            chk.setSelected(true);
+        }
+
+    }
+
+    private List<String> getSelectedTagsId(){
+        if (!chkFiltrarTags.getState())
+            return null;
+
+        List<String> res = new ArrayList<String>();
+        for (int i = 0; i < cmbTags.getItemCount(); i++) {
+            JCheckBox chk = (JCheckBox)cmbTags.getItemAt(i);
+            if (chk.isSelected())
+                res.add(Tag.getId(chk.getText(), peliculas.getTags()));
+        }
+        return res;
     }
 
     /**************************************************************************/
@@ -641,6 +721,7 @@ class Modelo extends AbstractListModel{
     private String filtroId;
     private boolean soloProblemas = false;
     private List<String> filtroAño = new ArrayList<String>();
+    private List<String> filtroTags = null;
     private Object[] ordenarPor;
 
     public Modelo(){
@@ -661,6 +742,12 @@ class Modelo extends AbstractListModel{
         filtroNombre = filtro.trim();
         actualizarModelo();
     }
+
+    public void setFiltroTags(List<String> tags) {
+        filtroTags = tags;
+        actualizarModelo();
+    }
+
     public void setFiltroId(String filtro) {
         if (filtro.trim().equals(filtroId))
             return ;
@@ -682,7 +769,8 @@ class Modelo extends AbstractListModel{
         if ((filtroNombre == null || filtroNombre.trim().equals(""))
                 && (filtroId == null || filtroId.trim().equals(""))
                 && filtroAño.size() == 0
-                && !soloProblemas ){
+                && !soloProblemas
+                && filtroTags == null){
             listaFiltrada = lista;
         }else{
             listaFiltrada = new ArrayList<Pelicula>();
@@ -714,14 +802,27 @@ class Modelo extends AbstractListModel{
             b = ((id != null) && id.toLowerCase(Util.locale).contains(filtroId));
         
         //filtro por año
-        if (b)
-            b = pasaFiltroAños(p);
+        b &= pasaFiltroAños(p);
 
         //filtro por problemas
         if (b && soloProblemas )
             b = p.getProblemas() != null;
 
+        //filtro tags, si filtroTags es null => no filtra x este campo
+        //todo revisar no fucniona
+        if (filtroTags != null)
+            b &= pasaFiltroTags(p);
+
         return b;
+    }
+
+    private boolean pasaFiltroTags(Pelicula p) {
+        List<Tag> tagsDeLaPeli = p.getTags();
+        for (Tag tag : tagsDeLaPeli) {
+            if (filtroTags.contains(tag.getId()))
+                return true;
+        }
+        return false;
     }
 
     private boolean pasaFiltroAños(Pelicula p) {
