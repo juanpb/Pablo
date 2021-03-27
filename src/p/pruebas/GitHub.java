@@ -1,9 +1,9 @@
 package p.pruebas;
 
-import org.eclipse.egit.github.core.Commit;
-import org.eclipse.egit.github.core.Repository;
-import org.eclipse.egit.github.core.client.GitHubClient;
-import org.eclipse.egit.github.core.service.RepositoryService;
+//import org.eclipse.egit.github.core.Commit;
+//import org.eclipse.egit.github.core.Repository;
+//import org.eclipse.egit.github.core.client.GitHubClient;
+//import org.eclipse.egit.github.core.service.RepositoryService;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
 public class GitHub {
     public static void main(String[] args) throws IOException {
 
-        GitHubClient client = new GitHubClient();
+  /*      GitHubClient client = new GitHubClient();
 //        client.setCredentials("juanpb", args[0]);
         RepositoryService service = new RepositoryService();
         Repository rep = service.getRepository("juanpb", "jpb");
@@ -24,5 +24,6 @@ public class GitHub {
 
 //        for (Repository repo : service.getRepositories("juanpb"))
 //            System.out.println(repo.getName() + " Watchers: " + repo.getWatchers());
-    }
+
+    */}
 }

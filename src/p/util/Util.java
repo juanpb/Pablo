@@ -131,7 +131,7 @@ public class Util {
         try
         {
             Properties system = System.getProperties();
-            File f = new File(pFilename);
+            File f = new File(pFilename.trim());
             FileInputStream fi = new FileInputStream(f);
             system.load(fi);
             fi.close();

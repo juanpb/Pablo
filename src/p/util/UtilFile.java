@@ -407,7 +407,7 @@ public class UtilFile {
     }
 
 	public static List<String> getArchivoPorLinea(String f, String excluirSiEmpiezaCon) throws IOException {
-        return getArchivoPorLinea(new File(f), excluirSiEmpiezaCon);
+        return getArchivoPorLinea(new File(f.trim()), excluirSiEmpiezaCon);
     }
 
     public static List<String> getArchivoPorLinea(File f) throws IOException {
@@ -415,7 +415,8 @@ public class UtilFile {
     }
 
     public static List<String> getArchivoPorLinea(String f, boolean sacarLineasVacias) throws IOException {
-        return getArchivoPorLinea(new File(f), sacarLineasVacias);
+
+        return getArchivoPorLinea(new File(f.trim()), sacarLineasVacias);
     }
 
     public static List<String> getArchivoPorLinea(File f, boolean sacarLineasVacias) throws IOException {

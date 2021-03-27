@@ -11,7 +11,7 @@ import java.util.*;
  * Time: 13:13:28 AM
  */
 public class ConvertirCSV2CSV {
-    private static String ent = "D:\\tmp\\borrar\\javi\\Enroll-24092020.csv";
+    private static String ent = "C:\\tmp\\borrar\\Enroll-24092020.csv";
     private static String sal = ent + "_sal.csv";
 
     public static void main3(String[] args) throws Exception {
@@ -53,11 +53,11 @@ public class ConvertirCSV2CSV {
         List<String> res = new ArrayList<String>();
 
         for (String s : lista) {
-            Fila f = Fila.parse(s);
-            res.add(Fila.getN(f, 0)); //siempre se agrega una fila
+            Fila_v2 f = Fila_v2.parse(s);
+            res.add(Fila_v2.getN(f, 0)); //siempre se agrega una fila
             int i = 1;
             while (i < f.correos.size() || i < f.telefs.size()) {
-                res.add(Fila.getN(f, i++));  //si repite algún campo => genero + filas
+                res.add(Fila_v2.getN(f, i++));  //si repite algún campo => genero + filas
             }
         }
         return res;
@@ -119,7 +119,7 @@ class Fila{
             System.out.println(f);
         }
 
-        return new Fila (id, sam, nom, corr, telfs, uo, pi, um);
+        return new Fila(id, sam, nom, corr, telfs, uo, pi, um);
     }
 
     private static List<String> sacarRepetidos(List<String> list) {
