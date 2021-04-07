@@ -2,9 +2,9 @@
 <Raíz>
     <ContadorDVD>70</ContadorDVD>
     <UniqueID>136</UniqueID>
-    <ContadorVistos>99</ContadorVistos>
+    <ContadorVistos>100</ContadorVistos>
     <ContadorSinVer>105</ContadorSinVer>
-    <Timestamp>1616721806246</Timestamp>
+    <Timestamp>1617755524694</Timestamp>
     <Pelicula uniqueId="1" contador="1">
         <Nombre>Miles Davis - Miles Electric: A Different Kind of Blue</Nombre>
         <Id>DVD 64</Id>
@@ -4022,12 +4022,12 @@ Subs ............ = eng de dut es</DatosTecnicos>
         <Duracion>1.31</Duracion>
         <Poster>jimi-hendrix-in-maui-and-live-in-maui.jpeg</Poster>
     </Pelicula>
-    <Pelicula uniqueId="135" contador="104">
+    <Pelicula uniqueId="135" contador="99">
         <Nombre>Zappa</Nombre>
         <Id>HD</Id>
         <Annus>2020</Annus>
         <Imdb-puntaje>7,6 (1.250)</Imdb-puntaje>
-        <Estado>Sin ver</Estado>
+        <Estado>Visto</Estado>
         <Critica>An in-depth look into the life and work of musician Frank Zappa.</Critica>
         <DatosTecnicos>Zappa.2020.1080p.BluRay.x264-DEV0
 picture &gt;&gt; 1920x1080 crf18 9518kb/s
